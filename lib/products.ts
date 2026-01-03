@@ -98,7 +98,7 @@ export const products: Product[] = [
       { id: "var_efb5f9e8e9e2bb94247251fc58c501dc", name: "3 DAY", price: 29.99, stock: 10 },
       { id: "var_dcb4dc217456c2bea81c9a3ef7cf1ac4", name: "1 WEEK", price: 59.99, stock: 8 },
       { id: "var_1dad2805d8a0974604b6b92e6de2852e", name: "1 MONTH", price: 144.99, stock: 12 },
-      { id: "var_43fad353bfde6323ad72b4e4b0e9f145", name: "3 MONTH", price: 144.99, stock: 12 },
+      { id: "var_43fad353bfde6323ad72b4e4b0e9f145", name: "3 MONTH", price: 409.99, stock: 12 },
       { id: "var_11233800c69fc2f429fafa36b3ea5a2a", name: "LIFETIME", price: 879.99, stock: 20 },
     ],
     videoUrl: "https://www.youtube.com/embed/QDxqg5n4Bzo",
