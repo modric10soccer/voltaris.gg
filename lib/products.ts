@@ -389,73 +389,73 @@ export const products: Product[] = [
 
 // NEW PRODUCT 1 - Add your details here
 {
-  id: "prod_YOUR_PRODUCT_ID_1",
-  slug: "your-product-slug-1",
-  name: "Your New Product Name 1",
-  storrikStoreId: "STORE_YOUR_STORE_ID",
-  storrikProductId: "prod_YOUR_PRODUCT_ID_1",
-  image: "/images/products/your-product-1.jpg",
-  showcaseImages: [
-    "/images/showcase/your-product-1-img1.png",
-    "/images/showcase/your-product-1-img2.png",
+//  id: "prod_YOUR_PRODUCT_ID_1",
+//  slug: "your-product-slug-1",
+//  name: "Your New Product Name 1",
+ // storrikStoreId: "STORE_YOUR_STORE_ID",
+ // storrikProductId: "prod_YOUR_PRODUCT_ID_1",
+ // image: "/images/products/your-product-1.jpg",
+ // showcaseImages: [
+ //   "/images/showcase/your-product-1-img1.png",
+ //   "/images/showcase/your-product-1-img2.png",
+//  ],
+//  description:
+//    "Your product description here.\n\n" +
+//    "**Main Features**\n" +
+//    "[+] Feature 1\n" +
+//    "[+] Feature 2\n" +
+ //   "[+] Feature 3\n\n" +
+  //  "**System Requirements**\n" +
+  //  "**Game Client:** Game Name\n" +
+  //  "**Operating System:** Windows 10/11 (64-bit)",
+  //category: "Rocket League", // or "Fortnite"
+  //isFeatured: true,
+  //badge: "NEW",
+ // variants: [
+  //  { id: "var_YOUR_VARIANT_ID_1", name: "1 DAY", price: 9.99, stock: 50 },
+  //  { id: "var_YOUR_VARIANT_ID_2", name: "1 WEEK", price: 39.99, stock: 50 },
+ //   { id: "var_YOUR_VARIANT_ID_3", name: "1 MONTH", price: 79.99, stock: 50 },
   ],
-  description:
-    "Your product description here.\n\n" +
-    "**Main Features**\n" +
-    "[+] Feature 1\n" +
-    "[+] Feature 2\n" +
-    "[+] Feature 3\n\n" +
-    "**System Requirements**\n" +
-    "**Game Client:** Game Name\n" +
-    "**Operating System:** Windows 10/11 (64-bit)",
-  category: "Rocket League", // or "Fortnite"
-  isFeatured: true,
-  badge: "NEW",
-  variants: [
-    { id: "var_YOUR_VARIANT_ID_1", name: "1 DAY", price: 9.99, stock: 50 },
-    { id: "var_YOUR_VARIANT_ID_2", name: "1 WEEK", price: 39.99, stock: 50 },
-    { id: "var_YOUR_VARIANT_ID_3", name: "1 MONTH", price: 79.99, stock: 50 },
-  ],
-  downloadUrl: "https://your-download-link.com",
-  status: "Undetected",
-  videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
-  reviews: [],
-},
+ // downloadUrl: "https://your-download-link.com",
+ // status: "Undetected",
+ // videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
+ // reviews: [],
+//},
 
 // NEW PRODUCT 2 - Add your details here
-{
-  id: "prod_YOUR_PRODUCT_ID_2",
-  slug: "your-product-slug-2",
-  name: "Your New Product Name 2",
-  storrikStoreId: "STORE_YOUR_STORE_ID",
-  storrikProductId: "prod_YOUR_PRODUCT_ID_2",
-  image: "/images/products/your-product-2.jpg",
-  showcaseImages: [
-    "/images/showcase/your-product-2-img1.png",
-    "/images/showcase/your-product-2-img2.png",
-  ],
-  description:
-    "Your product description here.\n\n" +
-    "**Main Features**\n" +
-    "[+] Feature 1\n" +
-    "[+] Feature 2\n" +
-    "[+] Feature 3\n\n" +
-    "**System Requirements**\n" +
-    "**Game Client:** Game Name\n" +
-    "**Operating System:** Windows 10/11 (64-bit)",
-  category: "Rocket League", // or "Fortnite"
-  isFeatured: false,
-  badge: "HOT",
-  variants: [
-    { id: "var_YOUR_VARIANT_ID_4", name: "1 DAY", price: 12.99, stock: 50 },
-    { id: "var_YOUR_VARIANT_ID_5", name: "1 WEEK", price: 49.99, stock: 50 },
-    { id: "var_YOUR_VARIANT_ID_6", name: "1 MONTH", price: 99.99, stock: 50 },
-  ],
-  downloadUrl: "https://your-download-link.com",
-  status: "Undetected",
-  videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
-  reviews: [],
-},
+//{
+//  id: "prod_YOUR_PRODUCT_ID_2",
+ // slug: "your-product-slug-2",
+ // name: "Your New Product Name 2",
+ // storrikStoreId: "STORE_YOUR_STORE_ID",
+ // storrikProductId: "prod_YOUR_PRODUCT_ID_2",
+ // image: "/images/products/your-product-2.jpg",
+ // showcaseImages: [
+  //  "/images/showcase/your-product-2-img1.png",
+  //  "/images/showcase/your-product-2-img2.png",
+ // ],
+ // description:
+  //  "Your product description here.\n\n" +
+  //  "**Main Features**\n" +
+  //  "[+] Feature 1\n" +
+  //  "[+] Feature 2\n" +
+ //   "[+] Feature 3\n\n" +
+ //   "**System Requirements**\n" +
+ //   "**Game Client:** Game Name\n" +
+ //   "**Operating System:** Windows 10/11 (64-bit)",
+ // category: "Rocket League", // or "Fortnite"
+ // isFeatured: false,
+ // badge: "HOT",
+ // variants: [
+  //  { id: "var_YOUR_VARIANT_ID_4", name: "1 DAY", price: 12.99, stock: 50 },
+  //  { id: "var_YOUR_VARIANT_ID_5", name: "1 WEEK", price: 49.99, stock: 50 },
+  //  { id: "var_YOUR_VARIANT_ID_6", name: "1 MONTH", price: 99.99, stock: 50 },
+ // ],
+ // downloadUrl: "https://your-download-link.com",
+ // status: "Undetected",
+//  videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
+//  reviews: [],
+//},
 
 
 
