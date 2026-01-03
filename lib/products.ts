@@ -299,91 +299,163 @@ export const products: Product[] = [
 
 
 
-  // {
-  //   id: "prod_d60acaa56fe45ddbb86c995fdc4f1fbd",
-  //   slug: "rocket-league-mech-ssl-1v1-bot",
-  //   name: "Rocket League Mech SSL 1v1 Bot",
-  //   storrikStoreId: "STORE_XHjWmh6cHxlNs8p92HBtTN6HwCNVqwxv",
-  //   storrikProductId: "prod_d60acaa56fe45ddbb86c995fdc4f1fbd",
-  //   image: "/images/products/mech-bot-box.jpg",
-  //   showcaseImages: [
-  //     "/images/showcase/mech-ballcam-aerial.png",
-  //     "/images/showcase/mech-aerial-defense.png",
-  //     "/images/showcase/mech-kickoff-start.png",
-  //     "/images/showcase/mech-demo-play.png",
-  //     "/images/showcase/mech-wall-shot.png",
-  //     "/images/showcase/mech-demo-mode.png",
-  //   ],
-  //   description:
-  //     "Introducing Rocket League Mech SSL 1v1 Bot - The Next Evolution in Rocket League AI\n\n" +
-  //     "Mech is the most advanced Rocket League bot on the market, capable of reaching SSL in 1v1 gameplay with unmatched precision and nasty mechanics. This is not just another bot—it's a game-changer, built for serious players who demand the best.\n\n" +
-  //     "**Main Functionality**\n" +
-  //     "[+] Enable / Disable Bot\n" +
-  //     "[+] Freestyle Bot\n" +
-  //     "[+] Mode: 1s, 2s, 3s, Bot 1s, Training\n" +
-  //     "[+] Demoing on/off\n" +
-  //     "[+] Half-flip on/off\n" +
-  //     "[+] Wavedash on/off\n" +
-  //     "[+] Turtle on/off\n" +
-  //     "[+] Ball cam on/off\n" +
-  //     "[+] Stall on/off\n" +
-  //     "[+] Speedflip on/off\n" +
-  //     "[+] Matchmaking ban (auto forfeits + auto quits lobby on ban)\n\n" +
-  //     "**System Requirements**\n" +
-  //     "**Game Client:** Rocket League (Epic Games or Steam)\n" +
-  //     "**Operating System:** Windows 10/11 (64-bit)\n" +
-  //     "**Processor:** Intel Core i5 or AMD Ryzen 5 (4 cores minimum)\n" +
-  //     "**Graphics Card:** NVIDIA GTX 1050 Ti / AMD RX 560 or better\n" +
-  //     "**Display Mode:** Fullscreen or Borderless Windowed\n\n" +
-  //     "**Overview**\n" +
-  //     "Mech SSL Bot is engineered for domination. Whether you're grinding ranks or showcasing your skills, Mech delivers SSL-level performance with an arsenal of advanced mechanics. From half-flips to speedflips, demoing to freestyling, Mech does it all with surgical precision.\n\n" +
-  //     "**Key Features**\n" +
-  //     "[+] SSL 1v1 Dominance: Optimized for 1v1 gameplay, Mech reaches SSL ranks with ease\n" +
-  //     "[+] Nasty Mechanics: Half-flips, wavedashes, speedflips, stalls, and more\n" +
-  //     "[+] Freestyle Mode: For when you want to show off with style\n" +
-  //     "[+] Demo Control: Toggle demoing on/off for strategic plays\n" +
-  //     "[+] Multi-Mode Support: Works in 1s, 2s, 3s, Bot 1s, and Training\n" +
-  //     "[+] Ban Protection: Auto-forfeit and lobby quit on matchmaking bans\n\n" +
-  //     "**Why Mech?**\n" +
-  //     "Mech isn't just powerful—it's versatile. With customizable mechanics and modes, you can tailor the bot to your playstyle. Whether you're a mechanical god or just starting out, Mech adapts to your needs and delivers results.\n\n" +
-  //     "**Additional Info**\n" +
-  //     "Mech is the product of cutting-edge AI development, designed for players who refuse to settle. If you want the best, Mech is your answer. Don't just play Rocket League—dominate it with Mech.",
-  //   category: "Rocket League",
-  //   isFeatured: true,
-  //   badge: "SSL 1v1",
-  //   variants: [
-  //     { id: "VAR_nZAQ2KU3lMsYk9QmJF591ajNjNH8hfQ1", name: "1 DAY", price: 12.99, stock: 50 },
-  //     { id: "VAR_87stMYIAc1O2VO0QOmmdPGw58Of8XOsa", name: "1 WEEK", price: 49.99, stock: 50 },
-  //     { id: "VAR_PpqU93Lds7zQwMdfFLAkfGSgeDeUafYV", name: "1 MONTH", price: 99.99, stock: 50 },
-  //     { id: "VAR_xYfYaB4iNuT0ll00TXEMaZo37T9Thb2P", name: "LIFETIME", price: 299.99, stock: 50 },
-  //   ],
-  //   downloadUrl: "https://transfer.it/t/o03fKZshzLiB",
-  //   status: "Undetected",
-  //   videoUrl: "https://www.youtube.com/embed/8HL4MX2akRs",
-  //   reviews: [
-  //     {
-  //       quote: "Mech is insane! Hit SSL in 1v1s and the mechanics are super clean.",
-  //       author: "MechGod",
-  //       rating: 5,
-  //       verified: true,
-  //       variant: "LIFETIME",
-  //     },
-  //     {
-  //       quote: "The freestyle mode is so fun! Best bot for showcasing skills.",
-  //       author: "FreestylePro",
-  //       rating: 5,
-  //       verified: true,
-  //       variant: "1 MONTH",
-  //     },
-  //     {
-  //       quote: "Demoing is op! Easily outplay opponents with this bot.",
-  //       author: "DemoKing",
-  //       rating: 5,
-  //       verified: true,
-  //       variant: "3 MONTHS",
-  //     },
-  //   ],
-  // },
+  // Mech SSL Bot - ACTIVATED
+{
+  id: "prod_d60acaa56fe45ddbb86c995fdc4f1fbd",
+  slug: "rocket-league-mech-ssl-1v1-bot",
+  name: "Rocket League Mech SSL 1v1 Bot",
+  storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
+  storrikProductId: "prod_d60acaa56fe45ddbb86c995fdc4f1fbd",
+  image: "/images/products/mech-bot-box.jpg",
+  showcaseImages: [
+    "/images/showcase/mech-ballcam-aerial.png",
+    "/images/showcase/mech-aerial-defense.png",
+    "/images/showcase/mech-kickoff-start.png",
+    "/images/showcase/mech-demo-play.png",
+    "/images/showcase/mech-wall-shot.png",
+    "/images/showcase/mech-demo-mode.png",
+  ],
+  description:
+    "Introducing Rocket League Mech SSL 1v1 Bot - The Next Evolution in Rocket League AI\n\n" +
+    "Mech is the most advanced Rocket League bot on the market, capable of reaching SSL in 1v1 gameplay with unmatched precision and nasty mechanics. This is not just another bot—it's a game-changer, built for serious players who demand the best.\n\n" +
+    "**Main Functionality**\n" +
+    "[+] Enable / Disable Bot\n" +
+    "[+] Freestyle Bot\n" +
+    "[+] Mode: 1s, 2s, 3s, Bot 1s, Training\n" +
+    "[+] Demoing on/off\n" +
+    "[+] Half-flip on/off\n" +
+    "[+] Wavedash on/off\n" +
+    "[+] Turtle on/off\n" +
+    "[+] Ball cam on/off\n" +
+    "[+] Stall on/off\n" +
+    "[+] Speedflip on/off\n" +
+    "[+] Matchmaking ban (auto forfeits + auto quits lobby on ban)\n\n" +
+    "**System Requirements**\n" +
+    "**Game Client:** Rocket League (Epic Games or Steam)\n" +
+    "**Operating System:** Windows 10/11 (64-bit)\n" +
+    "**Processor:** Intel Core i5 or AMD Ryzen 5 (4 cores minimum)\n" +
+    "**Graphics Card:** NVIDIA GTX 1050 Ti / AMD RX 560 or better\n" +
+    "**Display Mode:** Fullscreen or Borderless Windowed\n\n" +
+    "**Overview**\n" +
+    "Mech SSL Bot is engineered for domination. Whether you're grinding ranks or showcasing your skills, Mech delivers SSL-level performance with an arsenal of advanced mechanics. From half-flips to speedflips, demoing to freestyling, Mech does it all with surgical precision.\n\n" +
+    "**Key Features**\n" +
+    "[+] SSL 1v1 Dominance: Optimized for 1v1 gameplay, Mech reaches SSL ranks with ease\n" +
+    "[+] Nasty Mechanics: Half-flips, wavedashes, speedflips, stalls, and more\n" +
+    "[+] Freestyle Mode: For when you want to show off with style\n" +
+    "[+] Demo Control: Toggle demoing on/off for strategic plays\n" +
+    "[+] Multi-Mode Support: Works in 1s, 2s, 3s, Bot 1s, and Training\n" +
+    "[+] Ban Protection: Auto-forfeit and lobby quit on matchmaking bans\n\n" +
+    "**Why Mech?**\n" +
+    "Mech isn't just powerful—it's versatile. With customizable mechanics and modes, you can tailor the bot to your playstyle. Whether you're a mechanical god or just starting out, Mech adapts to your needs and delivers results.\n\n" +
+    "**Additional Info**\n" +
+    "Mech is the product of cutting-edge AI development, designed for players who refuse to settle. If you want the best, Mech is your answer. Don't just play Rocket League—dominate it with Mech.",
+  category: "Rocket League",
+  isFeatured: true,
+  badge: "SSL 1v1",
+  variants: [
+    { id: "var_b08564474a8a7580072c79927257d224", name: "1 DAY", price: 11.99, stock: 50 },
+    { id: "var_24eb02ad7d5c2ff7f3c88176ca33c52d", name: "1 WEEK", price: 45.99, stock: 50 },
+    { id: "var_4b3a4924b2178972d32d839cadb6fe83", name: "1 MONTH", price: 91.99, stock: 50 },
+    { id: "var_6d06585b7d2dfdbb73fecf03dfe0a551", name: "3 MONTHS", price: 229.99, stock: 50 },
+    { id: "var_c279ad43bc5822e09aa9a65aad171a84", name: "LIFETIME", price: 275.99, stock: 50 },
+  ],
+  downloadUrl: "https://transfer.it/t/o03fKZshzLiB",
+  status: "Undetected",
+  videoUrl: "https://www.youtube.com/embed/8HL4MX2akRs",
+  reviews: [
+    {
+      quote: "Mech is insane! Hit SSL in 1v1s and the mechanics are super clean.",
+      author: "MechGod",
+      rating: 5,
+      verified: true,
+      variant: "LIFETIME",
+    },
+    {
+      quote: "The freestyle mode is so fun! Best bot for showcasing skills.",
+      author: "FreestylePro",
+      rating: 5,
+      verified: true,
+      variant: "1 MONTH",
+    },
+    {
+      quote: "Demoing is op! Easily outplay opponents with this bot.",
+      author: "DemoKing",
+      rating: 5,
+      verified: true,
+      variant: "3 MONTHS",
+    },
+  ],
+},
+
+// NEW PRODUCT 1 - Add your details here
+{
+  id: "prod_YOUR_PRODUCT_ID_1",
+  slug: "your-product-slug-1",
+  name: "Your New Product Name 1",
+  storrikStoreId: "STORE_YOUR_STORE_ID",
+  storrikProductId: "prod_YOUR_PRODUCT_ID_1",
+  image: "/images/products/your-product-1.jpg",
+  showcaseImages: [
+    "/images/showcase/your-product-1-img1.png",
+    "/images/showcase/your-product-1-img2.png",
+  ],
+  description:
+    "Your product description here.\n\n" +
+    "**Main Features**\n" +
+    "[+] Feature 1\n" +
+    "[+] Feature 2\n" +
+    "[+] Feature 3\n\n" +
+    "**System Requirements**\n" +
+    "**Game Client:** Game Name\n" +
+    "**Operating System:** Windows 10/11 (64-bit)",
+  category: "Rocket League", // or "Fortnite"
+  isFeatured: true,
+  badge: "NEW",
+  variants: [
+    { id: "var_YOUR_VARIANT_ID_1", name: "1 DAY", price: 9.99, stock: 50 },
+    { id: "var_YOUR_VARIANT_ID_2", name: "1 WEEK", price: 39.99, stock: 50 },
+    { id: "var_YOUR_VARIANT_ID_3", name: "1 MONTH", price: 79.99, stock: 50 },
+  ],
+  downloadUrl: "https://your-download-link.com",
+  status: "Undetected",
+  videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
+  reviews: [],
+},
+
+// NEW PRODUCT 2 - Add your details here
+{
+  id: "prod_YOUR_PRODUCT_ID_2",
+  slug: "your-product-slug-2",
+  name: "Your New Product Name 2",
+  storrikStoreId: "STORE_YOUR_STORE_ID",
+  storrikProductId: "prod_YOUR_PRODUCT_ID_2",
+  image: "/images/products/your-product-2.jpg",
+  showcaseImages: [
+    "/images/showcase/your-product-2-img1.png",
+    "/images/showcase/your-product-2-img2.png",
+  ],
+  description:
+    "Your product description here.\n\n" +
+    "**Main Features**\n" +
+    "[+] Feature 1\n" +
+    "[+] Feature 2\n" +
+    "[+] Feature 3\n\n" +
+    "**System Requirements**\n" +
+    "**Game Client:** Game Name\n" +
+    "**Operating System:** Windows 10/11 (64-bit)",
+  category: "Rocket League", // or "Fortnite"
+  isFeatured: false,
+  badge: "HOT",
+  variants: [
+    { id: "var_YOUR_VARIANT_ID_4", name: "1 DAY", price: 12.99, stock: 50 },
+    { id: "var_YOUR_VARIANT_ID_5", name: "1 WEEK", price: 49.99, stock: 50 },
+    { id: "var_YOUR_VARIANT_ID_6", name: "1 MONTH", price: 99.99, stock: 50 },
+  ],
+  downloadUrl: "https://your-download-link.com",
+  status: "Undetected",
+  videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
+  reviews: [],
+},
 
 
 
