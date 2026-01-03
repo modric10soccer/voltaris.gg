@@ -14,8 +14,8 @@ interface CurrencyContextType {
 const CurrencyContext = createContext<CurrencyContextType | undefined>(undefined)
 
 export function CurrencyProvider({ children }: { children: ReactNode }) {
-  const [currency, setCurrency] = useState<Currency>("USD") // Default currency changed to USD
-
+  const [currency, setCurrency] = useState<Currency>("EUR") // ✅ CHANGED: Default currency is now EUR
+  
   // Exchange rates relative to USD (approximate values for demonstration)
   const exchangeRates = {
     USD: {
