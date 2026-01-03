@@ -4,6 +4,9 @@ import { getBlogPostBySlug } from "@/lib/blogs"
 import { notFound } from "next/navigation"
 import AnimatedGradientBg from "@/components/animated-gradient-bg"
 
+export const runtime = "edge"
+
+
 type BlogPostPageProps = {
   params: {
     slug: string

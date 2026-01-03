@@ -5,6 +5,8 @@ import { getProductBySlug, products } from "@/lib/products"
 import { notFound } from "next/navigation"
 import AnimatedGradientBg from "@/components/animated-gradient-bg"
 
+export const runtime = "edge"
+
 type ProductPageProps = {
   params: Promise<{
     slug: string
