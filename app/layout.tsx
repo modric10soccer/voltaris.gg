@@ -61,6 +61,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Payment error handler - MUST load first */}
+        <Script 
+          src="/payment-error-handler.js" 
+          strategy="beforeInteractive"
+        />
         <Script src="https://cdn.storrik.io/embed.js" strategy="afterInteractive" />
       </head>
       <body className={inter.className}>
