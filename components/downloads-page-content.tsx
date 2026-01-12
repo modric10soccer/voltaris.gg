@@ -1,424 +1,250 @@
-"use client"
+// This file contains the downloads page content component
+// It manages the display and functionality of the downloads section
 
-import React from "react"
+'use client';
 
-import { useState } from "react"
-import { Download, FileText, Shield, Clock, AlertCircle, ExternalLink, HelpCircle } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import Link from "next/link"
+import { useState } from 'react';
+import { Download, ExternalLink, AlertCircle } from 'lucide-react';
+import Link from 'next/link';
 
-const userPurchases = [
-  {
-    id: "requiem-008",
-    productName: "Rocket League Requiem SSL Bot",
-    description: "World's first AI engineered for 2v2 domination with apex duo logic",
-    expiryDate: "No Expiry",
-    status: "Active",
-    downloadUrl: "#",
-    version: "Latest",
-    lastUpdated: "Current",
-  },
-  {
-    id: "t2-013",
-    productName: "Rocket League T2 SSL 1v1 Bot",
-    description: "SSL in 1v1 and GC2 in 2s with advanced mechanics and bot controls",
-    expiryDate: "No Expiry",
-    status: "Active",
-    downloadUrl: "#",
-    version: "Latest",
-    lastUpdated: "Current",
-  },
-  {
-    id: "novabot-014",
-    productName: "NovaBot (Flip Reset)",
-    description: "Top 25 worldwide - SSL in 1v1, GC2-GC3 in 2s with flip resets and air dribbles",
-    expiryDate: "No Expiry",
-    status: "Active",
-    downloadUrl: "#",
-    version: "Latest",
-    lastUpdated: "Current",
-  },
-  {
-    id: "mech-011",
-    productName: "Rocket League Mech SSL 1v1 Bot",
-    description: "Most advanced Rocket League bot with SSL 1v1 capability and nasty mechanics",
-    expiryDate: "No Expiry",
-    status: "Active",
-    downloadUrl: "#",
-    version: "Latest",
-    lastUpdated: "Current",
-  },
-  {
-    id: "opti-007",
-    productName: "Rocket League Opti SSL Bot",
-    description: "Revolutionary bot achieving SSL in 2s with walldashes and airdribbles",
-    expiryDate: "No Expiry",
-    status: "Active",
-    downloadUrl: "#",
-    version: "Latest",
-    lastUpdated: "Current",
-  },
-  {
-    id: "multi-009",
-    productName: "Rocket League Multi Bot",
-    description: "Advanced AI with live think view, ball ESP, and trajectory prediction",
-    expiryDate: "No Expiry",
-    status: "Active",
-    downloadUrl: "#",
-    version: "Latest",
-    lastUpdated: "Current",
-  },
-  {
-    id: "1v1-010",
-    productName: "Rocket League 1v1 Bot",
-    description: "Specialized AI for 1v1 dominance with advanced mechanics and prediction",
-    expiryDate: "No Expiry",
-    status: "Updating",
-    downloadUrl: "#",
-    version: "Latest",
-    lastUpdated: "Current",
-  },
-  {
-    id: "unlock-all",
-    productName: "Rocket League Unlock All",
-    description: "Complete mod menu with custom titles, ESP, visuals, and more",
-    expiryDate: "No Expiry",
-    status: "Active",
-    downloadUrl: "#",
-    version: "Latest",
-    lastUpdated: "Current",
-  },
-  {
-    id: "mystery-bot",
-    productName: "Rocket League Mystery Bot",
-    description: "Mystery box containing any Voltaris bot - from NovaBOT to Unlock All",
-    expiryDate: "No Expiry",
-    status: "Active",
-    downloadUrl: "#",
-    version: "Mystery Prize",
-    lastUpdated: "Current",
-  },
-  {
-    id: "ue-001",
-    productName: "Fortnite Private External",
-    description: "Advanced aimbot and ESP for Fortnite with undetected status",
-    expiryDate: "No Expiry",
-    status: "Active",
-    downloadUrl: "#",
-    version: "Latest",
-    lastUpdated: "Current",
-  },
-]
+interface DownloadItem {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+  fileSize?: string;
+  version?: string;
+}
+
+interface DownloadLink {
+  [key: string]: string;
+}
 
 export default function DownloadsPageContent() {
-  const [activeTab, setActiveTab] = useState<"downloads" | "guides" | "support">("downloads")
+  const [downloadedItems, setDownloadedItems] = useState<Set<string>>(new Set());
+  const [activeCategory, setActiveCategory] = useState('all');
 
-  const availableGames = React.useMemo(() => {
-    const games = userPurchases.map((purchase) => {
-      if (purchase.productName.includes("Fortnite")) return "Fortnite"
-      if (purchase.productName.includes("Rocket League")) return "Rocket League"
-      return "Other"
-    })
-    return ["all", ...Array.from(new Set(games))]
-  }, [])
-
-  const getStatusColor = (status: string) => {
-    switch (status.toLowerCase()) {
-      case "active":
-        return "bg-voltaris-red/20 text-voltaris-red border-voltaris-red/30"
-      case "expired":
-        return "bg-red-500/20 text-red-400 border-red-500/30"
-      case "updating":
-        return "bg-yellow-500/20 text-yellow-400 border-yellow-500/30"
-      case "coming soon":
-        return "bg-gray-500/20 text-gray-400 border-gray-500/30"
-      default:
-        return "bg-gray-500/20 text-gray-400 border-gray-500/30"
+  const downloads: DownloadItem[] = [
+    {
+      id: 'rocket-league-mech-ssl-1v1-bot',
+      name: 'Rocket League Mech SSL 1v1 Bot',
+      description: 'Advanced SSL-level bot for 1v1 matches with mechanical precision',
+      category: 'bots',
+      fileSize: '24.5 MB',
+      version: '2.1.0'
+    },
+    {
+      id: 'novabot-flip-reset',
+      name: 'NovaBot (Flip Reset)',
+      description: 'Specialized bot with advanced flip reset mechanics for competitive play',
+      category: 'bots',
+      fileSize: '18.3 MB',
+      version: '1.8.5'
+    },
+    {
+      id: 'rocket-league-requiem-ssl-bot',
+      name: 'Rocket League Requiem SSL Bot',
+      description: 'High-performance SSL bot with strategic gameplay algorithms',
+      category: 'bots',
+      fileSize: '31.2 MB',
+      version: '3.0.1'
+    },
+    {
+      id: 'training-pack-ultimate-mechanics',
+      name: 'Training Pack: Ultimate Mechanics',
+      description: 'Comprehensive training pack covering all essential mechanics',
+      category: 'training',
+      fileSize: '12.8 MB',
+      version: '1.5.0'
+    },
+    {
+      id: 'replay-analysis-tool',
+      name: 'Replay Analysis Tool',
+      description: 'Analyze your replays with detailed statistics and insights',
+      category: 'tools',
+      fileSize: '8.6 MB',
+      version: '2.3.0'
     }
-  }
+  ];
 
-  const handleDownload = (downloadUrl: string, productName: string) => {
-    const downloadLinks: Record<string, string> = {
-      "Fortnite Private External": "https://transfer.it/t/Z1EPPVtFnZTI",
-      "Rocket League Requiem SSL Bot": "https://transfer.it/t/o03fKZshzLiB",
-      "Rocket League T2 SSL 1v1 Bot": "https://transfer.it/t/o03fKZshzLiB",
-      "NovaBot (Flip Reset)": "https://transfer.it/t/o03fKZshzLiB",
-      "Rocket League Mech SSL 1v1 Bot": "https://transfer.it/t/o03fKZshzLiB",
-      "Rocket League Opti SSL Bot": "https://transfer.it/t/wuXPmFkzgTTZ",
-      "Rocket League Multi Bot": "https://transfer.it/t/jNUozlwFVRTY",
-      "Rocket League Unlock All": "https://transfer.it/t/ogqEBc1HVBSQ",
-      "Rocket League Mystery Bot": "mystery",
-    }
+  const handleDownload = (itemId: string, itemName: string) => {
+    // Update downloaded items set
+    const newDownloaded = new Set(downloadedItems);
+    newDownloaded.add(itemId);
+    setDownloadedItems(newDownloaded);
 
-    const link = downloadLinks[productName]
-    if (link === "mystery") {
-      alert("Mystery Bot prizes are revealed after purchase! Check your email for your prize bot download link.")
-    } else if (link) {
-      window.open(link, "_blank", "noopener,noreferrer")
+    // Download links object - maps item IDs to their download URLs
+    const downloadLinks: DownloadLink = {
+      'rocket-league-mech-ssl-1v1-bot': 'https://gofile.io/d/Ug7EMd',
+      'novabot-flip-reset': 'https://gofile.io/d/Ug7EMd',
+      'rocket-league-requiem-ssl-bot': 'https://gofile.io/d/Ug7EMd',
+      'training-pack-ultimate-mechanics': 'https://example.com/training-pack',
+      'replay-analysis-tool': 'https://example.com/replay-tool'
+    };
+
+    const downloadUrl = downloadLinks[itemId];
+
+    if (downloadUrl) {
+      // Open download link in new tab
+      window.open(downloadUrl, '_blank');
+
+      // Log download event for analytics
+      console.log(`Download initiated for: ${itemName}`);
     } else {
-      console.log("[v0] Download link not available for:", productName)
+      console.error(`Download link not found for item: ${itemId}`);
     }
-  }
+
+    // Reset downloaded state after 2 seconds
+    setTimeout(() => {
+      const resetDownloaded = new Set(downloadedItems);
+      resetDownloaded.delete(itemId);
+      setDownloadedItems(resetDownloaded);
+    }, 2000);
+  };
+
+  const filteredDownloads = activeCategory === 'all' 
+    ? downloads 
+    : downloads.filter(item => item.category === activeCategory);
 
   return (
-    <main className="flex-1 py-16 md:py-24">
-      <div className="container px-4 md:px-6">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 px-4">
+      <div className="max-w-6xl mx-auto">
+        {/* Header Section */}
         <div className="text-center mb-12">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-voltaris-red/20 px-4 py-2 text-sm font-medium text-voltaris-red border border-voltaris-red/30 backdrop-blur-sm">
-            <Download className="h-4 w-4" />
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Downloads
-          </div>
-          <h1 className="text-2xl font-bold tracking-tight text-white sm:text-3xl md:text-4xl mb-4 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-            Your Downloads
           </h1>
-          <p className="text-base text-muted-foreground max-w-2xl mx-auto">
-            Access your purchased products, download the latest versions, and get installation support.
+          <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+            Access all our premium bots, training packs, and tools to enhance your Rocket League experience
           </p>
         </div>
 
-        {/* Tab Navigation */}
-        <div className="flex justify-center mb-8">
-          <div className="inline-flex gap-2 p-1">
+        {/* Category Filter */}
+        <div className="flex flex-wrap gap-3 justify-center mb-12">
+          {['all', 'bots', 'training', 'tools'].map(category => (
             <button
-              onClick={() => setActiveTab("downloads")}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all backdrop-blur-sm ${
-                activeTab === "downloads"
-                  ? "bg-voltaris-red/20 text-voltaris-red border border-voltaris-red/30"
-                  : "bg-transparent text-muted-foreground hover:text-foreground border border-transparent"
+              key={category}
+              onClick={() => setActiveCategory(category)}
+              className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${
+                activeCategory === category
+                  ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/50'
+                  : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
               }`}
             >
-              My Downloads
+              {category.charAt(0).toUpperCase() + category.slice(1)}
             </button>
-            <button
-              onClick={() => setActiveTab("guides")}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all backdrop-blur-sm ${
-                activeTab === "guides"
-                  ? "bg-voltaris-red/20 text-voltaris-red border border-voltaris-red/30"
-                  : "bg-transparent text-muted-foreground hover:text-foreground border border-transparent"
-              }`}
+          ))}
+        </div>
+
+        {/* Downloads Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {filteredDownloads.map(item => (
+            <div
+              key={item.id}
+              className="bg-slate-700/50 backdrop-blur-sm border border-slate-600 rounded-lg p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10"
             >
-              Installation Guides
-            </button>
-            <button
-              onClick={() => setActiveTab("support")}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all backdrop-blur-sm ${
-                activeTab === "support"
-                  ? "bg-voltaris-red/20 text-voltaris-red border border-voltaris-red/30"
-                  : "bg-transparent text-muted-foreground hover:text-foreground border border-transparent"
-              }`}
-            >
-              Support
-            </button>
+              <div className="flex items-start justify-between mb-4">
+                <h3 className="text-lg font-bold text-white flex-1 pr-4">
+                  {item.name}
+                </h3>
+                <span className="text-xs px-2 py-1 bg-blue-600/20 text-blue-300 rounded">
+                  {item.category}
+                </span>
+              </div>
+
+              <p className="text-slate-300 text-sm mb-4">
+                {item.description}
+              </p>
+
+              <div className="flex flex-col gap-2 mb-6 text-xs text-slate-400">
+                {item.fileSize && (
+                  <div>
+                    <span className="font-medium">Size:</span> {item.fileSize}
+                  </div>
+                )}
+                {item.version && (
+                  <div>
+                    <span className="font-medium">Version:</span> {item.version}
+                  </div>
+                )}
+              </div>
+
+              <button
+                onClick={() => handleDownload(item.id, item.name)}
+                className={`w-full py-3 px-4 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2 ${
+                  downloadedItems.has(item.id)
+                    ? 'bg-green-600 text-white'
+                    : 'bg-blue-600 text-white hover:bg-blue-700 active:scale-95'
+                }`}
+              >
+                <Download size={18} />
+                {downloadedItems.has(item.id) ? 'Downloaded!' : 'Download'}
+              </button>
+            </div>
+          ))}
+        </div>
+
+        {/* Info Section */}
+        <div className="bg-slate-700/30 border border-slate-600 rounded-lg p-8 mb-8">
+          <div className="flex gap-4">
+            <AlertCircle className="text-blue-400 flex-shrink-0 mt-1" size={24} />
+            <div>
+              <h3 className="text-lg font-bold text-white mb-2">
+                Information
+              </h3>
+              <p className="text-slate-300 mb-2">
+                All downloads are provided as-is. Make sure your system meets the minimum requirements before downloading.
+              </p>
+              <p className="text-slate-300">
+                If you encounter any issues, please contact our support team or visit our{' '}
+                <Link href="/support" className="text-blue-400 hover:text-blue-300 underline">
+                  support page
+                </Link>
+                .
+              </p>
+            </div>
           </div>
         </div>
 
-        {/* Downloads Tab */}
-        {activeTab === "downloads" && (
-          <div className="max-w-4xl mx-auto">
-            {userPurchases.length > 0 ? (
-              <div className="grid gap-6">
-                {userPurchases.map((purchase) => (
-                  <Card key={purchase.id} className="bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 border-zinc-800">
-                    <CardHeader>
-                      <div className="flex items-start justify-between">
-                        <div>
-                          <CardTitle className="text-foreground">{purchase.productName}</CardTitle>
-                          <CardDescription className="mt-1">{purchase.description}</CardDescription>
-                        </div>
-                        <Badge className={getStatusColor(purchase.status)}>{purchase.status}</Badge>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                        <div className="flex items-center gap-2 text-sm">
-                          <Clock className="h-4 w-4 text-muted-foreground" />
-                          <span className="text-muted-foreground">Expires:</span>
-                          <span className="text-foreground">{purchase.expiryDate}</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-sm">
-                          <FileText className="h-4 w-4 text-muted-foreground" />
-                          <span className="text-muted-foreground">Version:</span>
-                          <span className="text-foreground">{purchase.version}</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-sm">
-                          <Shield className="h-4 w-4 text-muted-foreground" />
-                          <span className="text-muted-foreground">Updated:</span>
-                          <span className="text-foreground">{purchase.lastUpdated}</span>
-                        </div>
-                      </div>
-                      <div className="flex gap-3">
-                        <Button
-                          className="bg-voltaris-red/20 text-voltaris-red hover:bg-voltaris-red/30 border border-voltaris-red/30 rounded-full backdrop-blur-sm"
-                          disabled={
-                            purchase.status === "Expired" ||
-                            purchase.status === "Coming Soon" ||
-                            purchase.status === "Updating"
-                          }
-                          onClick={() => handleDownload(purchase.downloadUrl, purchase.productName)}
-                        >
-                          <Download className="h-4 w-4 mr-2" />
-                          {purchase.status === "Coming Soon"
-                            ? "Coming Soon"
-                            : purchase.status === "Updating"
-                              ? "Updating"
-                              : "Download"}
-                        </Button>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
+        {/* Quick Links */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <Link href="/documentation">
+            <div className="bg-slate-700/50 border border-slate-600 rounded-lg p-6 hover:border-blue-500/50 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-3 mb-3">
+                <ExternalLink className="text-blue-400 group-hover:text-blue-300" size={20} />
+                <h4 className="font-bold text-white">Documentation</h4>
               </div>
-            ) : (
-              <Card className="bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 border-zinc-800 text-center py-12">
-                <CardContent>
-                  <Download className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-foreground mb-2">No Downloads Available</h3>
-                  <p className="text-muted-foreground mb-6">
-                    You haven't purchased any products yet. Browse our collection to get started.
-                  </p>
-                  <Button
-                    asChild
-                    className="bg-voltaris-red/20 text-voltaris-red hover:bg-voltaris-red/30 border border-voltaris-red/30 rounded-full backdrop-blur-sm"
-                  >
-                    <Link href="/products">Browse Products</Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            )}
-          </div>
-        )}
-
-        {/* Installation Guides Tab */}
-        {activeTab === "guides" && (
-          <div className="max-w-4xl mx-auto">
-            <Card className="bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 border-zinc-800">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-foreground">
-                  <FileText className="h-5 w-5" />
-                  General Installation Guide
-                </CardTitle>
-                <CardDescription>Follow these steps to install and use your purchased products</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {installationSteps.map((step, index) => (
-                    <div key={index} className="flex gap-4">
-                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-voltaris-red/20 text-voltaris-red flex items-center justify-center text-sm font-semibold">
-                        {index + 1}
-                      </div>
-                      <p className="text-foreground pt-1">{step}</p>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-6">
-                  <Button
-                    asChild
-                    className="w-full bg-voltaris-red/20 text-voltaris-red hover:bg-voltaris-red/30 border border-voltaris-red/30 rounded-full backdrop-blur-sm"
-                  >
-                    <Link href="https://voltaris.gitbook.io/voltaris" target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      View Full Documentation & Guides
-                    </Link>
-                  </Button>
-                </div>
-                <div className="mt-8 p-4 rounded-lg bg-voltaris-red/10 border border-voltaris-red/30">
-                  <div className="flex items-start gap-3">
-                    <AlertCircle className="h-5 w-5 text-voltaris-red flex-shrink-0 mt-0.5" />
-                    <div>
-                      <h4 className="font-semibold text-voltaris-red mb-1">Important Security Notice</h4>
-                      <p className="text-sm text-voltaris-red/80">
-                        Our software may be flagged by antivirus programs as a false positive. This is normal for game
-                        modification tools. Always download from official sources and temporarily disable antivirus
-                        during installation.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        )}
-
-        {/* Support Tab */}
-        {activeTab === "support" && (
-          <div className="max-w-4xl mx-auto">
-            <div className="grid gap-6 md:grid-cols-2">
-              <Card className="bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 border-zinc-800">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-foreground">
-                    <HelpCircle className="h-5 w-5" />
-                    Get Help
-                  </CardTitle>
-                  <CardDescription>Need assistance with your downloads or installation?</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <Button
-                      asChild
-                      className="w-full bg-voltaris-red/20 text-voltaris-red hover:bg-voltaris-red/30 border border-voltaris-red/30 rounded-full backdrop-blur-sm"
-                    >
-                      <Link href="https://discord.gg/voltaris" target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Join Discord Support
-                      </Link>
-                    </Button>
-                    <Button
-                      asChild
-                      className="w-full bg-voltaris-red/20 text-voltaris-red hover:bg-voltaris-red/30 border border-voltaris-red/30 rounded-full backdrop-blur-sm"
-                    >
-                      <Link href="/feedback">
-                        <FileText className="h-4 w-4 mr-2" />
-                        Submit Feedback
-                      </Link>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 border-zinc-800">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-foreground">
-                    <Shield className="h-5 w-5" />
-                    Security & Safety
-                  </CardTitle>
-                  <CardDescription>Important information about using our products safely</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3 text-sm">
-                    <div className="flex items-start gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-voltaris-red mt-2 flex-shrink-0" />
-                      <p className="text-muted-foreground">Always use a VPN when gaming with cheats</p>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-voltaris-red mt-2 flex-shrink-0" />
-                      <p className="text-muted-foreground">Don't share your license keys with others</p>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-voltaris-red mt-2 flex-shrink-0" />
-                      <p className="text-muted-foreground">Keep your products updated for best security</p>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-voltaris-red mt-2 flex-shrink-0" />
-                      <p className="text-muted-foreground">Use at your own risk - we cannot guarantee 100% safety</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <p className="text-slate-300 text-sm">
+                Read our comprehensive guides and documentation
+              </p>
             </div>
-          </div>
-        )}
-      </div>
-    </main>
-  )
-}
+          </Link>
 
-const installationSteps = [
-  "Download the loader from your email or the downloads section below",
-  "Disable Windows Defender and any antivirus software temporarily",
-  "Extract the files to a folder on your desktop",
-  "Run the loader as administrator",
-  "Enter your license key when prompted",
-  "Follow the on-screen instructions to inject the cheat",
-]
+          <Link href="/support">
+            <div className="bg-slate-700/50 border border-slate-600 rounded-lg p-6 hover:border-blue-500/50 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-3 mb-3">
+                <ExternalLink className="text-blue-400 group-hover:text-blue-300" size={20} />
+                <h4 className="font-bold text-white">Support</h4>
+              </div>
+              <p className="text-slate-300 text-sm">
+                Get help from our support team
+              </p>
+            </div>
+          </Link>
+
+          <Link href="/community">
+            <div className="bg-slate-700/50 border border-slate-600 rounded-lg p-6 hover:border-blue-500/50 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-3 mb-3">
+                <ExternalLink className="text-blue-400 group-hover:text-blue-300" size={20} />
+                <h4 className="font-bold text-white">Community</h4>
+              </div>
+              <p className="text-slate-300 text-sm">
+                Join our community and connect with others
+              </p>
+            </div>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
