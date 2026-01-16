@@ -2,6 +2,7 @@ import SiteHeader from "@/components/site-header"
 import SiteFooter from "@/components/site-footer"
 import CartPageClient from "@/components/cart-page-client"
 import AnimatedGradientBg from "@/components/animated-gradient-bg"
+import { CurrencyProvider } from "@/components/currency-provider"
 
 export default function CartPage() {
   return (
@@ -11,7 +12,9 @@ export default function CartPage() {
         <AnimatedGradientBg />
         <div className="py-12 md:py-24">
           <div className="relative z-10">
-            <CartPageClient />
+            <CurrencyProvider>
+              <CartPageClient />
+            </CurrencyProvider>
           </div>
         </div>
       </main>
