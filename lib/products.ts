@@ -1,1 +1,1145 @@
-placeholder
+export type ProductStatus =
+  | "Undetected"
+  | "Use Under Own Risk"
+  | "Hosting"
+  | "Updating"
+  | "Available"
+  | "Coming Soon"
+  | "Preorder"
+  | "active" // Added new status
+
+export type ProductVariant = {
+  id: string
+  name: string
+  price: number
+  oldPrice?: number
+  stock: number
+}
+
+export type ProductReview = {
+  quote: string
+  author: string
+  date: string
+  rating: number
+  verified: boolean
+  variant: string
+}
+
+export type Product = {
+  id: string
+  slug: string
+  name: string
+  image: string
+  thumbnail?: string
+  additionalImages?: string[]
+  showcaseImages?: string[]
+  description: string
+  category: string
+  isFeatured?: boolean
+  variants: ProductVariant[]
+  status: ProductStatus
+  isPreorder?: boolean
+  preorderMessage?: string
+  storrikStoreId?: string
+  storrikProductId?: string
+  videoUrl?: string
+  reviews?: ProductReview[]
+  rating?: number
+  reviewsCount?: number
+  isBestSeller?: boolean
+  badge?: string
+  detectionStatus?: string
+  downloadLink?: string // Added download link field
+  downloadUrl?: string // Added downloadUrl field
+}
+
+
+
+
+
+
+
+
+export const products: Product[] = [
+  {
+    id: "prod_985a46df7189b2a13a30a8c75ee239c8",
+    slug: "rocket-league-requiem-ssl-bot",
+    name: "Rocket League Requiem SSL Bot",
+    storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
+    storrikProductId: "prod_985a46df7189b2a13a30a8c75ee239c8",
+    image: "/images/products/requiem-bot-box.png",
+    showcaseImages: ["/images/showcase/ssl-requiem-gameplay.png"],
+    description:
+      "[+] World's first AI engineered for 2v2 domination\n" +
+      "[+] Apex 2v2 duo logic\n" +
+      "[+] Flawless rotation & spacing\n" +
+      "[+] God-tier mechanics\n" +
+      "[+] Smart passing & teamwork\n\n" +
+      "**System Requirements**\n" +
+      "**Game Client:** Rocket League (Epic Games or Steam)\n" +
+      "**Operating System:** Windows 10/11 (64-bit)\n" +
+      "**Processor:** Intel Core i5 or AMD Ryzen 5 (4 cores minimum)\n" +
+      "**Graphics Card:** NVIDIA GTX 1050 Ti / AMD RX 560 or better\n" +
+      "**Display Mode:** Fullscreen or Borderless Windowed\n\n" +
+      "**Overview**\n" +
+      "Rocket League Requiem SSL Bot is the world's first AI engineered specifically for 2v2 domination. Unlike standard bots, it understands team synergy, rotation, and passing. Whether you need a perfect duo partner to boost your main or an automated machine to climb leaderboards, Rocket League Requiem SSL Bot is the apex predator.\n\n" +
+      "**Why Rocket League Requiem SSL Bot?**\n" +
+      "[+] Apex Duo Logic: Flawless 2v2 rotation and spacing\n" +
+      "[+] God-Tier Mechanics: Double Taps & Flicks\n" +
+      "[+] Human-Like Playstyle: Strategic defender removal & smart passing\n" +
+      "[+] Fully Undetected: Safe for main accounts\n\n" +
+      "**Download Link**\n" +
+      "https://transfer.it/t/429MysghGJzb\n\n" +
+      "**Additional Info**\n" +
+      "Stop losing because of bad teammates. Get the perfect AI partner, lock down the field, and reach your peak rank today.",
+    category: "Rocket League",
+    isFeatured: true,
+    variants: [
+      { id: "var_efb5f9e8e9e2bb94247251fc58c501dc", name: "3 DAY", price: 29.99, stock: 10 },
+      { id: "var_dcb4dc217456c2bea81c9a3ef7cf1ac4", name: "1 WEEK", price: 59.99, stock: 8 },
+      { id: "var_1dad2805d8a0974604b6b92e6de2852e", name: "1 MONTH", price: 144.99, stock: 12 },
+      { id: "var_43fad353bfde6323ad72b4e4b0e9f145", name: "3 MONTH", price: 409.99, stock: 12 },
+      { id: "var_11233800c69fc2f429fafa36b3ea5a2a", name: "LIFETIME", price: 879.99, stock: 20 },
+    ],
+    videoUrl: "https://www.youtube.com/embed/QDxqg5n4Bzo",
+    reviews: [
+      {
+        quote: "Requiem SSL Bot is insane! Perfect rotation and passing. Easily the best bot I've used.",
+        author: "2s_Legend",
+        date: "Dec 20, 2025",
+        rating: 5,
+        verified: true,
+        variant: "LIFETIME",
+      },
+      {
+        quote: "Finally hit SSL in 2s with this bot as my duo. The AI is next level!",
+        author: "SSL_Grinder",
+        date: "Dec 18, 2025",
+        rating: 5,
+        verified: true,
+        variant: "3 MONTHS",
+      },
+      {
+        quote: "Best 2v2 bot by far. Rotation and spacing are flawless.",
+        author: "Apex_Duo",
+        date: "Dec 15, 2025",
+        rating: 5,
+        verified: true,
+        variant: "1 MONTH",
+      },
+    ],
+    status: "Undetected",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    id: "prod_e78f83aac1a629e4e98c3a24c723384f",
+    slug: "rocket-league-t2-ssl-1v1-bot",
+    name: "Rocket League T2 SSL 1v1 Bot",
+    storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
+    storrikProductId: "prod_e78f83aac1a629e4e98c3a24c723384f",
+    image: "/images/products/t2-bot-box.png",
+    showcaseImages: ["/images/showcase/t2-scoreboard.png", "/images/showcase/t2-interface.png"],
+    description:
+      "[+] SSL in 1v1\n" +
+      "[+] GC2 in 2s\n" +
+      "[+] Bot controls\n" +
+      "[+] 1v1 dominator\n" +
+      "[+] Advanced mechanics\n" +
+      "[+] High-rank performance\n" +
+      "[+] Easy to use\n\n" +
+      "**System Requirements**\n" +
+      "**Game Client:** Rocket League (Epic Games or Steam)\n" +
+      "**Operating System:** Windows 10/11 (64-bit)\n" +
+      "**Processor:** Intel Core i5 or AMD Ryzen 5 (4 cores minimum)\n" +
+      "**Graphics Card:** NVIDIA GTX 1050 Ti / AMD RX 560 or better\n" +
+      "**Display Mode:** Fullscreen or Borderless Windowed\n\n" +
+      "**Overview**\n" +
+      "T2 Bot delivers SSL-level performance in 1v1 matches and GC2 capabilities in 2v2 gameplay. Built using KarmaSDK, it features advanced bot controls and consistently high-rank performance.\n\n" +
+      "**Key Features**\n" +
+      "[+] SSL 1v1 Performance: Dominate solo matches with professional-level mechanics\n" +
+      "[+] GC2 2v2 Capability: Strong team play for doubles matches\n" +
+      "[+] Bot Controls: Easy-to-use interface for managing bot behavior\n" +
+      "[+] Advanced Mechanics: Executes complex plays and recoveries\n\n" +
+      "**Additional Info**\n" +
+      "T2 Bot is perfect for players looking to rank up quickly in 1v1 or maintain high performance in 2v2 matches. With its advanced mechanics and easy controls, you can achieve SSL rank with minimal effort.",
+    category: "Rocket League",
+    isFeatured: true,
+    badge: "SSL 1v1",
+    variants: [
+      { id: "var_7a128844cf4ecafe21ad839fe4f10057", name: "1 Day", price: 9.99, stock: 50 },
+      { id: "var_f707cd2cc081c0ca897a98a17bbfbdc7", name: "1 Week", price: 34.99, stock: 50 },
+      { id: "var_37017c18bc7a3573567ee15c1b960086", name: "1 Month", price: 55.99, stock: 50 },
+      { id: "var_5d535ee0dc08940b42eeef7eccb7bda2", name: "3 Month", price: 89.99, stock: 50 },
+      { id: "var_27e205f7c6a5f51a10844f2ac099fbfb", name: "Lifetime", price: 125.99, stock: 50 },
+    ],
+    downloadUrl: "https://transfer.it/t/o03fKZshzLiB",
+    status: "Undetected",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    reviews: [
+      {
+        quote: "SSL in 1v1s is insane! This bot really delivers on the promise.",
+        author: "RocketKing",
+        rating: 5,
+        verified: true,
+        variant: "LIFETIME",
+      },
+      {
+        quote: "GC2 in 2s is solid. Great for grinding ranks with a friend.",
+        author: "DuoMaster",
+        rating: 5,
+        verified: true,
+        variant: "1 MONTH",
+      },
+      {
+        quote: "Easy to use and works perfectly. Worth every penny!",
+        author: "ProPlayer99",
+        rating: 5,
+        verified: true,
+        variant: "1 WEEK",
+      },
+    ],
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    id: "prod_dbb01038bef97f4efc4e1c03d2ac9c1a",
+    slug: "rocket-league-novabot-flip-reset",
+    name: "NovaBot (Flip Reset)",
+    storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
+    storrikProductId: "prod_dbb01038bef97f4efc4e1c03d2ac9c1a",
+    image: "/images/products/novabot-box.jpg",
+    showcaseImages: ["/images/showcase/novabot-showcase.jpg"],
+    description:
+      "[+] SSL rank in 1v1 gameplay\n" +
+      "[+] GC2-GC3 performance in 2v2\n" +
+      "[+] Advanced flip reset mechanics\n" +
+      "[+] Mastered air dribble execution\n" +
+      "[+] Strategic bump plays\n" +
+      "[+] Double tap accuracy\n" +
+      "[+] Ground-to-air dribble control\n" +
+      "[+] Top 25 ranked bot worldwide\n\n" +
+      "**Elite Performance**\n" +
+      "NovaBot represents the pinnacle of Rocket League AI technology. Achieving SSL rank in 1v1 matches and consistently performing at GC2-GC3 level in 2v2 gameplay, this bot is recognized as one of the top 25 bots in the world.\n\n" +
+      "**Advanced Mechanics**\n" +
+      "Specializing in flip resets and advanced aerial mechanics, NovaBot executes complex maneuvers that rival professional players. From precise air dribbles to devastating double taps, every move is calculated for maximum effectiveness.\n\n" +
+      "**Strategic Gameplay**\n" +
+      "[+] Flip reset chains for unpredictable offense\n" +
+      "[+] Air dribble pressure to maintain control\n" +
+      "[+] Bump plays to disrupt opponent positioning\n" +
+      "[+] Double tap goals from backboard reads\n" +
+      "[+] Ground-to-air transitions for fluid attacks\n\n" +
+      "**Why NovaBot?**\n" +
+      "For players seeking the absolute best AI performance, NovaBot delivers world-class gameplay with a focus on mechanical mastery. Perfect for those who want to dominate high-rank matches with flashy, effective plays.\n\n" +
+      "**Additional Info**\n" +
+      "NovaBot is the premium choice for serious players. With SSL-level decision making and GC2-GC3 consistency in team play, this bot will elevate your game to professional levels.",
+    category: "Rocket League",
+    isFeatured: true,
+    badge: "Top 25 Worldwide",
+    variants: [
+      { id: "var_0e30cd8b290c3009136b2775f50a8ea3", name: "1 Day", price: 25.99, stock: 50 },
+      { id: "var_7afa308d2fb3dbf96fba96e89c22c4e9", name: "1 Week", price: 49.99, stock: 50 },
+      { id: "var_b0c60bfe8e77dd8c5aaf8bcb5e234039", name: "1 Month", price: 75.99, stock: 50 },
+      { id: "var_83ed1f1943b0d95294713012603934d9", name: "Lifetime", price: 475.99, stock: 50 },
+    ],
+    downloadUrl: "https://transfer.it/t/o03fKZshzLiB",
+    status: "Undetected",
+    videoUrl: "https://drive.google.com/file/d/1NQjRy36qU-Ycg67Xk1uqjlBQ2QuUzAw2/view",
+    reviews: [
+      {
+        quote: "The flip resets are insane! Consistently hitting SSL in 1v1s with this bot.",
+        author: "MechanicGod",
+        rating: 5,
+        verified: true,
+        variant: "LIFETIME",
+      },
+      {
+        quote: "Top 25 worldwide is no joke. This bot is on another level!",
+        author: "ProLeaguePlayer",
+        rating: 5,
+        verified: true,
+        variant: "3 MONTHS",
+      },
+      {
+        quote: "Air dribbles and double taps look so clean. Best bot I've ever used.",
+        author: "AerialAce",
+        rating: 5,
+        verified: true,
+        variant: "1 MONTH",
+      },
+    ],
+  },
+
+
+
+
+
+
+
+
+
+  // Mech SSL Bot - ACTIVATED
+{
+  id: "prod_d60acaa56fe45ddbb86c995fdc4f1fbd",
+  slug: "rocket-league-mech-ssl-1v1-bot",
+  name: "Rocket League Mech SSL 1v1 Bot",
+  storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
+  storrikProductId: "prod_d60acaa56fe45ddbb86c995fdc4f1fbd",
+  image: "/images/products/mech-bot-box.jpg",
+  showcaseImages: [
+    "/images/showcase/mech-ballcam-aerial.png",
+    "/images/showcase/mech-aerial-defense.png",
+    "/images/showcase/mech-kickoff-start.png",
+    "/images/showcase/mech-demo-play.png",
+    "/images/showcase/mech-wall-shot.png",
+    "/images/showcase/mech-demo-mode.png",
+  ],
+  description:
+    "Introducing Rocket League Mech SSL 1v1 Bot - The Next Evolution in Rocket League AI\n\n" +
+    "Mech is the most advanced Rocket League bot on the market, capable of reaching SSL in 1v1 gameplay with unmatched precision and nasty mechanics. This is not just another bot—it's a game-changer, built for serious players who demand the best.\n\n" +
+    "**Main Functionality**\n" +
+    "[+] Enable / Disable Bot\n" +
+    "[+] Freestyle Bot\n" +
+    "[+] Mode: 1s, 2s, 3s, Bot 1s, Training\n" +
+    "[+] Demoing on/off\n" +
+    "[+] Half-flip on/off\n" +
+    "[+] Wavedash on/off\n" +
+    "[+] Turtle on/off\n" +
+    "[+] Ball cam on/off\n" +
+    "[+] Stall on/off\n" +
+    "[+] Speedflip on/off\n" +
+    "[+] Matchmaking ban (auto forfeits + auto quits lobby on ban)\n\n" +
+    "**System Requirements**\n" +
+    "**Game Client:** Rocket League (Epic Games or Steam)\n" +
+    "**Operating System:** Windows 10/11 (64-bit)\n" +
+    "**Processor:** Intel Core i5 or AMD Ryzen 5 (4 cores minimum)\n" +
+    "**Graphics Card:** NVIDIA GTX 1050 Ti / AMD RX 560 or better\n" +
+    "**Display Mode:** Fullscreen or Borderless Windowed\n\n" +
+    "**Overview**\n" +
+    "Mech SSL Bot is engineered for domination. Whether you're grinding ranks or showcasing your skills, Mech delivers SSL-level performance with an arsenal of advanced mechanics. From half-flips to speedflips, demoing to freestyling, Mech does it all with surgical precision.\n\n" +
+    "**Key Features**\n" +
+    "[+] SSL 1v1 Dominance: Optimized for 1v1 gameplay, Mech reaches SSL ranks with ease\n" +
+    "[+] Nasty Mechanics: Half-flips, wavedashes, speedflips, stalls, and more\n" +
+    "[+] Freestyle Mode: For when you want to show off with style\n" +
+    "[+] Demo Control: Toggle demoing on/off for strategic plays\n" +
+    "[+] Multi-Mode Support: Works in 1s, 2s, 3s, Bot 1s, and Training\n" +
+    "[+] Ban Protection: Auto-forfeit and lobby quit on matchmaking bans\n\n" +
+    "**Why Mech?**\n" +
+    "Mech isn't just powerful—it's versatile. With customizable mechanics and modes, you can tailor the bot to your playstyle. Whether you're a mechanical god or just starting out, Mech adapts to your needs and delivers results.\n\n" +
+    "**Additional Info**\n" +
+    "Mech is the product of cutting-edge AI development, designed for players who refuse to settle. If you want the best, Mech is your answer. Don't just play Rocket League—dominate it with Mech.",
+  category: "Rocket League",
+  isFeatured: true,
+  badge: "SSL 1v1",
+  variants: [
+    { id: "var_b08564474a8a7580072c79927257d224", name: "1 DAY", price: 11.99, stock: 50 },
+    { id: "var_24eb02ad7d5c2ff7f3c88176ca33c52d", name: "1 WEEK", price: 45.99, stock: 50 },
+    { id: "var_4b3a4924b2178972d32d839cadb6fe83", name: "1 MONTH", price: 91.99, stock: 50 },
+    { id: "var_6d06585b7d2dfdbb73fecf03dfe0a551", name: "3 MONTHS", price: 229.99, stock: 50 },
+    { id: "var_c279ad43bc5822e09aa9a65aad171a84", name: "LIFETIME", price: 275.99, stock: 50 },
+  ],
+  downloadUrl: "https://transfer.it/t/o03fKZshzLiB",
+  status: "Undetected",
+  videoUrl: "https://www.youtube.com/embed/8HL4MX2akRs",
+  reviews: [
+    {
+      quote: "Mech is insane! Hit SSL in 1v1s and the mechanics are super clean.",
+      author: "MechGod",
+      rating: 5,
+      verified: true,
+      variant: "LIFETIME",
+    },
+    {
+      quote: "The freestyle mode is so fun! Best bot for showcasing skills.",
+      author: "FreestylePro",
+      rating: 5,
+      verified: true,
+      variant: "1 MONTH",
+    },
+    {
+      quote: "Demoing is op! Easily outplay opponents with this bot.",
+      author: "DemoKing",
+      rating: 5,
+      verified: true,
+      variant: "3 MONTHS",
+    },
+  ],
+},
+
+
+  {
+    id: "prod_546f00597b816de223cf98ac3e253a4a",
+    slug: "rocket-league-opti-ssl-bot",
+    name: "Rocket League Opti SSL Bot",
+    storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
+    storrikProductId: "prod_546f00597b816de223cf98ac3e253a4a",
+    image: "/images/products/opti-bot-box.png",
+    showcaseImages: ["/images/showcase/opti-ssl-1v1-gameplay.png"],
+    description:
+      "[+] Modular plugin system\n" +
+      "[+] Wall dashes\n" +
+      "[+] Wave dashes\n" +
+      "[+] Fast recoveries\n" +
+      "[+] Custom playstyles\n" +
+      "[+] Aggressive/Defensive/Freestyle modes\n" +
+      "[+] SSL-level decision making\n" +
+      "[+] High-precision control\n" +
+      "[+] Perfect dribbles\n" +
+      "[+] Airdribble pack\n" +
+      "[+] Flawless flick\n" +
+      "[+] Demo avoidance\n" +
+      "[+] Dynamic adaptation\n" +
+      "[+] Lightweight performance\n" +
+      "[+] Simple setup via loader\n\n" +
+      "**System Requirements**\n" +
+      "**Game Client:** Rocket League (Epic Games or Steam)\n" +
+      "**Operating System:** Windows 10/11 (64-bit)\n" +
+      "**Processor:** Intel Core i5 or AMD Ryzen 5 (4 cores minimum)\n" +
+      "**Graphics Card:** NVIDIA GTX 1050 Ti / AMD RX 560 or better\n" +
+      "**Display Mode:** Fullscreen or Borderless Windowed",
+    category: "Rocket League",
+    isFeatured: true,
+    variants: [
+      { id: "var_0748d072c32a6a3bd72357d0315f1bea", name: "1 DAY", price: 9.99, stock: 10 },
+      { id: "var_259386a1834ac086a8e0fe073eb9b5e8", name: "1 WEEK", price: 24.99, stock: 8 },
+      { id: "var_bc01fc50921360b67493a8b9ad17dcc3", name: "1 MONTH", price: 44.99, stock: 12 },
+      { id: "var_08102115e4f82b3a1053a5624b57830e", name: "3 MONTHS", price: 64.99, stock: 15 },
+      { id: "var_3655aed8efbedaffcb7d6ae75ec5f3b2", name: "LIFETIME", price: 99.99, stock: 20 },
+    ],
+    status: "Undetected",
+    videoUrl: "https://www.youtube.com/embed/a3iaoOV7Oz4",
+    reviews: [
+      {
+        quote: "Instant rank improvement. Product delivers on all promises.",
+        author: "CompetitivePlayer",
+        date: "Jan 25, 2025",
+        rating: 5,
+        verified: true,
+        variant: "1 WEEK",
+      },
+      {
+        quote: "Great product with excellent support. Setup was super easy.",
+        author: "SpeedyRL",
+        date: "Jan 23, 2025",
+        rating: 5,
+        verified: true,
+        variant: "1 MONTH",
+      },
+      {
+        quote: "The Opti bot is next level. Performance is incredible.",
+        author: "MechanicsMaster",
+        date: "Jan 20, 2025",
+        rating: 5,
+        verified: true,
+        variant: "3 MONTHS",
+      },
+      {
+        quote: "Excellent product with regular updates. Support team is very helpful.",
+        author: "RLVeteran",
+        date: "Jan 17, 2025",
+        rating: 5,
+        verified: true,
+        variant: "LIFETIME",
+      },
+      {
+        quote: "The bot's decision making is impressive. Plays like a pro!",
+        author: "TestingUser_99",
+        date: "Jan 14, 2025",
+        rating: 5,
+        verified: true,
+        variant: "1 DAY",
+      },
+      {
+        quote: "Freestyle mode is insane! Pulls off shots I can only dream of.",
+        author: "AerialAce_RL",
+        date: "Jan 11, 2025",
+        rating: 5,
+        verified: true,
+        variant: "1 MONTH",
+      },
+      {
+        quote: "Best bot on the market. The modular system is genius!",
+        author: "PluginMaster",
+        date: "Jan 9, 2025",
+        rating: 5,
+        verified: true,
+        variant: "LIFETIME",
+      },
+      {
+        quote: "Adaptive gameplay is unmatched. Feels like playing with a real SSL.",
+        author: "SSL_Wannabe",
+        date: "Jan 7, 2025",
+        rating: 5,
+        verified: true,
+        variant: "3 MONTHS",
+      },
+      {
+        quote: "Perfect for training and learning new mechanics. Highly recommended!",
+        author: "LearnerRL",
+        date: "Jan 5, 2025",
+        rating: 5,
+        verified: true,
+        variant: "1 WEEK",
+      },
+    ],
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    id: "prod_88824ae452e487d4691fe0dcdc433564",
+    slug: "rocket-league-multi-bot",
+    name: "Rocket League Multi Bot",
+    storrikStoreId: "STORE_XHjWmh6cHxlNs8p92HBtTN6HwCNVqwxv",
+    storrikProductId: "prod_88824ae452e487d4691fe0dcdc433564",
+    image: "/images/products/multi-bot-box.png",
+    showcaseImages: ["/images/showcase/multi-bot-gc2-gameplay.png"],
+    description:
+      "[+] Advanced AI gameplay automation\n" +
+      "[+] Real-time decision visualization\n\n" +
+      "**System Requirements**\n" +
+      "**Game Client:** Rocket League (Epic Games or Steam)\n" +
+      "**Operating System:** Windows 10/11 (64-bit)\n" +
+      "**Processor:** Intel Core i5 or AMD Ryzen 5 (4 cores minimum)\n" +
+      "**Graphics Card:** NVIDIA GTX 1050 Ti / AMD RX 560 or better\n" +
+      "**Display Mode:** Fullscreen or Borderless Windowed\n\n" +
+      "**Overview**\n" +
+      "Experience unparalleled gameplay with our state-of-the-art Multi Bot. Featuring advanced mechanics, real-time decision making, and seamless integration. Suitable for full automated boosting services up to Grand Champ 2.\n\n" +
+      "**Key Features**\n" +
+      "[+] Undetectable: Advanced protection with human-like behavior for safe gameplay\n" +
+      "[+] Live Think View: Real-time visualization of the bot's decision-making process\n" +
+      "[+] Status Overlay: Displays live bot status directly in the Rocket League window\n" +
+      "[+] Bot Model Switching: Choose between bot models (e.g., Stable) and apply instantly\n" +
+      "[+] Custom Key Binds: Fully rebindable keys for toggling and hold mode\n" +
+      "[+] Hold Mode: Activate the bot only while a specific key is held\n" +
+      "[+] Dead Switch: Instantly disable the bot when any other input is detected\n" +
+      "[+] Gamepad Support: Bind features to controller buttons for full control\n" +
+      "[+] Ball ESP: Displays a 3D wireframe sphere around the ball for better tracking\n" +
+      "[+] Ball Trajectory Predictor: Shows the predicted ball path using physics simulation\n" +
+      "[+] Boost Pad Timers: Visual indicators for pad respawn timing\n" +
+      "[+] Familiar GUI: Clean, modern, and intuitive interface\n" +
+      "[+] Kill Switch: Instantly deactivate all bot functions for manual play\n\n" +
+      "**Additional Info**\n" +
+      "The most advanced Rocket League bot on the market, combining cutting-edge AI with professional-grade features for serious players and boosting services.",
+    category: "Rocket League",
+    isFeatured: true,
+    variants: [
+      { id: "var_734e865a46754127c1892b581fdd388c", name: "1 Day", price: 4.99, stock: 8 },
+      { id: "var_6473bff0f6038f7d6d84d5e558adc453", name: "1 WEEK", price: 9.99, stock: 8 },
+      { id: "var_495c536afcb1da714f31900c774821ea", name: "1 MONTH", price: 19.99, stock: 12 },
+      { id: "var_d962c122ad89f0ab4802d16013a42ed5", name: "3 MONTHS", price: 29.99, stock: 15 },
+      { id: "var_dd9c6d57dc23ca7086af2baed2a45e7d", name: "LIFETIME", price: 44.99, stock: 20 },
+    ],
+    videoUrl: "",
+    reviews: [
+      {
+        quote: "The live think view is incredible! I can see exactly what the bot is planning.",
+        author: "VisualizerPro",
+        date: "Feb 2, 2025",
+        rating: 5,
+        verified: true,
+        variant: "LIFETIME",
+      },
+      {
+        quote: "Most advanced bot I've ever used. The dead switch is genius!",
+        author: "SafetyFirst_RL",
+        date: "Feb 1, 2025",
+        rating: 5,
+        verified: true,
+        variant: "3 MONTHS",
+      },
+      {
+        quote: "Ball trajectory predictor alone is worth the price. Amazing tool!",
+        author: "PredictorFan",
+        date: "Jan 31, 2025",
+        rating: 5,
+        verified: true,
+        variant: "1 MONTH",
+      },
+      {
+        quote: "Custom key binds make this so versatile. Perfect for my playstyle!",
+        author: "CustomPlayer",
+        date: "Jan 30, 2025",
+        rating: 5,
+        verified: true,
+        variant: "1 WEEK",
+      },
+      {
+        quote: "Gamepad support is flawless. Works perfectly with my controller!",
+        author: "GamepadGamer",
+        date: "Jan 29, 2025",
+        rating: 5,
+        verified: true,
+        variant: "LIFETIME",
+      },
+      {
+        quote: "Ball ESP is crystal clear. Never lose track of the ball again!",
+        author: "ESPMaster",
+        date: "Jan 28, 2025",
+        rating: 5,
+        verified: true,
+        variant: "1 MONTH",
+      },
+      {
+        quote: "The GUI is so clean and intuitive. Easy to configure everything!",
+        author: "UIEnthusiast",
+        date: "Jan 27, 2025",
+        rating: 5,
+        verified: true,
+        variant: "3 MONTHS",
+      },
+      {
+        quote: "Perfect for boosting services. Got my client to GC2 in a week!",
+        author: "BoostingPro_RL",
+        date: "Jan 26, 2025",
+        rating: 5,
+        verified: true,
+        variant: "LIFETIME",
+      },
+      {
+        quote: "Status overlay is super helpful. Always know what the bot is doing!",
+        author: "OverlayFan",
+        date: "Jan 25, 2025",
+        rating: 5,
+        verified: true,
+        variant: "1 WEEK",
+      },
+    ],
+    status: "Undetected",
+    detectionStatus: "Undetected", // Added detection status
+  },
+
+
+
+
+
+
+
+
+
+  // {
+  //   id: "PROD_jv3Nf0UdvWGR1iSeSBl5VYd7f9LidYVy",
+  //   slug: "rocket-league-1v1-bot",
+  //   name: "Rocket League 1v1 Bot",
+  //   storrikStoreId: "STORE_XHjWmh6cHxlNs8p92HBtTN6HwCNVqwxv",
+  //   storrikProductId: "PROD_jv3Nf0UdvWGR1iSeSBl5VYd7f9LidYVy",
+  //   image: "/images/products/1v1-bot-box.png",
+  //   showcaseImages: ["/images/showcase/1v1-bot-champ-gameplay.png"],
+  //   description:
+  //     "[+] Optimized for 1v1 gameplay\n" +
+  //     "[+] Advanced positioning and rotations\n" +
+  //     "[+] Fast recoveries and wave dashes\n" +
+  //     "[+] Accurate shooting and goal prediction\n" +
+  //     "[+] Dribbling and flick packs\n" +
+  //     "[+] Airdribble execution\n" +
+  //     "[+] Demo avoidance\n" +
+  //     "[+] Adaptive in-game decision-making\n" +
+  //     "[+] Lightweight and easy to run\n" +
+  //     "[+] Simple setup via loader\n\n" +
+  //     "**System Requirements**\n" +
+  //     "**Game Client:** Rocket League (Epic Games or Steam)\n" +
+  //     "**Operating System:** Windows 10/11 (64-bit)\n" +
+  //     "**Processor:** Intel Core i5 or AMD Ryzen 5 (4 cores minimum)\n" +
+  //     "**Graphics Card:** NVIDIA GTX 1050 Ti / AMD RX 560 or better\n" +
+  //     "**Display Mode:** Fullscreen or Borderless Windowed",
+  //   category: "Rocket League",
+  //   isFeatured: false,
+  //   variants: [
+  //     { id: "VAR_StInt0iaoEoghF41NWtG79o1JMd3qbJe", name: "1 DAY", price: 4.99, stock: 10 },
+  //     { id: "VAR_zV6fF8fBa4nURfbs5ClBNasCm8YZNdHe", name: "1 WEEK", price: 14.99, stock: 8 },
+  //     { id: "VAR_SoYyf6PQYqN0YHZXm3oQ0t6vgThsvWrb", name: "1 MONTH", price: 29.99, stock: 12 },
+  //     { id: "VAR_qtKLhapG9gYpaDOgjHZznsY1SDyhSSnd", name: "3 MONTHS", price: 49.99, stock: 15 },
+  //     { id: "VAR_E3JuP3cgweqDVohLAdTy7sbUfzbza9uj", name: "LIFETIME", price: 74.99, stock: 20 },
+  //   ],
+  //   status: "Undetected",
+  //   videoUrl: "https://www.youtube.com/embed/7-fFUYPBalA",
+  //   reviews: [
+  //     {
+  //       quote: "Best product I've ever used. Support team is amazing and responsive!",
+  //       author: "Alex_RL",
+  //       date: "Jan 30, 2025",
+  //       rating: 5,
+  //       verified: true,
+  //       variant: "1 MONTH",
+  //     },
+  //     {
+  //       quote: "Customer service is top tier. They helped me set everything up within minutes.",
+  //       author: "SpeedyRL",
+  //       date: "Jan 28, 2025",
+  //       rating: 5,
+  //       verified: true,
+  //       variant: "1 WEEK",
+  //     },
+  //     {
+  //       quote: "The bot plays incredibly well. Worth every penny!",
+  //       author: "SSLChaser",
+  //       date: "Jan 26, 2025",
+  //       rating: 5,
+  //       verified: true,
+  //       variant: "LIFETIME",
+  //     },
+  //     {
+  //       quote: "Been using for months now. Consistent updates and stability.",
+  //       author: "GrandChamp_RL",
+  //       date: "Jan 22, 2025",
+  //       rating: 5,
+  //       verified: true,
+  //       variant: "3 MONTHS",
+  //     },
+  //     {
+  //       quote: "Fast delivery and great product quality. Very satisfied!",
+  //       author: "QuickTest_User",
+  //       date: "Jan 19, 2025",
+  //       rating: 5,
+  //       verified: true,
+  //       variant: "1 DAY",
+  //     },
+  //     {
+  //       quote: "Amazing value for the price. Highly recommend to anyone looking.",
+  //       author: "ValueSeeker",
+  //       date: "Jan 15, 2025",
+  //       rating: 5,
+  //       verified: true,
+  //       variant: "1 MONTH",
+  //     },
+  //     {
+  //       quote: "Product exceeded my expectations. Very stable and reliable.",
+  //       author: "LongTermUser",
+  //       date: "Jan 12, 2025",
+  //       rating: 5,
+  //       verified: true,
+  //       variant: "LIFETIME",
+  //     },
+  //     {
+  //       quote: "Setup was incredibly easy. Works like a charm every time!",
+  //       author: "EasySetup_RL",
+  //       date: "Jan 10, 2025",
+  //       rating: 5,
+  //       verified: true,
+  //       variant: "1 WEEK",
+  //     },
+  //     {
+  //       quote: "The bot's mechanics are on point. Plays better than most GCs!",
+  //       author: "MechanicsExpert",
+  //       date: "Jan 8, 2025",
+  //       rating: 5,
+  //       verified: true,
+  //       variant: "3 MONTHS",
+  //     },
+  //   ],
+  // },
+
+
+
+
+
+
+
+
+
+
+
+
+  // {
+  //   id: "PROD_74HIHjb5X7p3zZJUWP0FwJ3IBNJ9daHj",
+  //   slug: "rocket-league-unlock-all",
+  //   name: "Rocket League Unlock All",
+  //   storrikStoreId: "STORE_XHjWmh6cHxlNs8p92HBtTN6HwCNVqwxv",
+  //   storrikProductId: "PROD_74HIHjb5X7p3zZJUWP0FwJ3IBNJ9daHj",
+  //   image: "/images/products/unlock-all-box.png",
+  //   showcaseImages: ["/images/showcase/unlock-all-items.png"],
+  //   description:
+  //     "[+] Custom titles\n" +
+  //     "[+] ESP (Enemy detection)\n" +
+  //     "[+] Misc features\n" +
+  //     "[+] Visual enhancements\n" +
+  //     "[+] Unlock battlepass\n" +
+  //     "[+] Unlock all items\n" +
+  //     "[+] Black car color\n" +
+  //     "[+] Custom online status\n" +
+  //     "[+] Skip replay\n" +
+  //     "[+] Auto forfeit\n" +
+  //     "[+] Lightweight and optimized\n" +
+  //     "[+] Simple loader setup\n\n" +
+  //     "**System Requirements**\n" +
+  //     "**Game Client:** Rocket League (Epic Games or Steam)\n" +
+  //     "**Operating System:** Windows 10/11 (64-bit)\n" +
+  //     "**Processor:** Intel Core i5 or AMD Ryzen 5 (4 cores minimum)\n" +
+  //     "**Graphics Card:** NVIDIA GTX 1050 Ti / AMD RX 560 or better\n" +
+  //     "**Display Mode:** Fullscreen or Borderless Windowed\n\n" +
+  //     "**Overview**\n" +
+  //     "Experience unparalleled gameplay with our state-of-the-art Multi Bot. Featuring advanced mechanics, real-time decision making, and seamless integration. Suitable for full automated boosting services up to Grand Champ 2.\n\n" +
+  //     "**Key Features**\n" +
+  //     "[+] Undetectable: Advanced protection with human-like behavior for safe gameplay\n" +
+  //     "[+] Live Think View: Real-time visualization of the bot's decision-making process\n" +
+  //     "[+] Status Overlay: Displays live bot status directly in the Rocket League window\n" +
+  //     "[+] Bot Model Switching: Choose between bot models (e.g., Stable) and apply instantly\n" +
+  //     "[+] Custom Key Binds: Fully rebindable keys for toggling and hold mode\n" +
+  //     "[+] Hold Mode: Activate the bot only while a specific key is held\n" +
+  //     "[+] Dead Switch: Instantly disable the bot when any other input is detected\n" +
+  //     "[+] Gamepad Support: Bind features to controller buttons for full control\n" +
+  //     "[+] Ball ESP: Displays a 3D wireframe sphere around the ball for better tracking\n" +
+  //     "[+] Ball Trajectory Predictor: Shows the predicted ball path using physics simulation\n" +
+  //     "[+] Boost Pad Timers: Visual indicators for pad respawn timing\n" +
+  //     "[+] Familiar GUI: Clean, modern, and intuitive interface\n" +
+  //     "[+] Kill Switch: Instantly deactivate all bot functions for manual play\n\n" +
+  //     "**Additional Info**\n" +
+  //     "The most advanced Rocket League bot on the market, combining cutting-edge AI with professional-grade features for serious players and boosting services.",
+  //   category: "Rocket League",
+  //   isFeatured: false,
+  //   variants: [
+  //     { id: "VAR_T18zSjgjYgwWj1QF4WuoGrA82Rsr2IIA", name: "1 DAY", price: 2.99, stock: 50 },
+  //     { id: "VAR_I1VFD2m8B1GwZmEIKG71NXL7eZZfyWSR", name: "1 WEEK", price: 4.99, stock: 40 },
+  //     { id: "VAR_8Q2k2DDW7sOsApnEG5CbAy35I5wr0JBc", name: "1 MONTH", price: 9.99, stock: 30 },
+  //     { id: "VAR_VpJI5QJmLZ2EgnM5wQkKqBCzuSdbXSHy", name: "3 MONTHS", price: 19.99, stock: 25 },
+  //     { id: "VAR_BPgKvJslvIlaSBLZXFiVDxY6aL5f3GkF", name: "LIFETIME", price: 29.99, stock: 20 },
+  //   ],
+  //   status: "Undetected",
+  //   videoUrl: "https://www.youtube.com/embed/pj1OY5Cz8ps",
+  //   reviews: [
+  //     {
+  //       quote: "All items unlocked instantly! The customization options are endless.",
+  //       author: "CustomizerPro",
+  //       date: "Jan 30, 2025",
+  //       rating: 5,
+  //       verified: true,
+  //       variant: "1 MONTH",
+  //     },
+  //     {
+  //       quote: "Black car color looks amazing! Finally got the look I wanted.",
+  //       author: "StyleMaster_RL",
+  //       date: "Jan 28, 2025",
+  //       rating: 5,
+  //       verified: true,
+  //       variant: "1 WEEK",
+  //     },
+  //     {
+  //       quote: "Skip replay feature alone is worth it. Saves so much time!",
+  //       author: "EfficientPlayer",
+  //       date: "Jan 26, 2025",
+  //       rating: 5,
+  //       verified: true,
+  //       variant: "LIFETIME",
+  //     },
+  //     {
+  //       quote: "Custom titles are sick! Everyone asks where I got them.",
+  //       author: "UniqueName_RL",
+  //       date: "Jan 24, 2025",
+  //       rating: 5,
+  //       verified: true,
+  //       variant: "3 MONTHS",
+  //     },
+  //     {
+  //       quote: "Great value for money. All the features work perfectly!",
+  //       author: "BudgetGamer",
+  //       date: "Jan 22, 2025",
+  //       rating: 5,
+  //       verified: true,
+  //       variant: "1 DAY",
+  //     },
+  //     {
+  //       quote: "ESP feature is super useful for tracking teammates and opponents.",
+  //       author: "TacticalRL",
+  //       date: "Jan 20, 2025",
+  //       rating: 5,
+  //       verified: true,
+  //       variant: "1 MONTH",
+  //     },
+  //     {
+  //       quote: "Battlepass unlocked immediately! No more grinding for hours.",
+  //       author: "UnlockMaster",
+  //       date: "Jan 18, 2025",
+  //       rating: 5,
+  //       verified: true,
+  //       variant: "1 WEEK",
+  //     },
+  //     {
+  //       quote: "Custom online status is hilarious. My friends love it!",
+  //       author: "FunnyGuy_RL",
+  //       date: "Jan 16, 2025",
+  //       rating: 5,
+  //       verified: true,
+  //       variant: "3 MONTHS",
+  //     },
+  //     {
+  //       quote: "Auto forfeit is perfect for quick ranking sessions. Game changer!",
+  //       author: "RankGrinder",
+  //       date: "Jan 14, 2025",
+  //       rating: 5,
+  //       verified: true,
+  //       variant: "LIFETIME",
+  //     },
+  //   ],
+  // },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    id: "prod_7ba50b85e062b1872ecf6b791e4e1928",
+    slug: "fortnite-private-external",
+    name: "Fortnite Private External",
+    storrikStoreId: "STORE_XHjWmh6cHxlNs8p92HBtTN6HwCNVqwxv",
+    storrikProductId: "prod_7ba50b85e062b1872ecf6b791e4e1928",
+    image: "/images/products/fortnite-box.jpg",
+    showcaseImages: ["/images/showcase/fortnite-aimbot.png"],
+    description:
+      "[+] Private external cheat – harder to detect\n" +
+      "[+] Aimbot with smooth, customizable aim\n" +
+      "[+] Triggerbot for precise shots\n" +
+      "[+] ESP / Wallhack – see enemies through walls\n" +
+      "[+] Loot and item ESP\n" +
+      "[+] Skeleton or box visuals\n" +
+      "[+] Customizable settings for playstyle\n" +
+      "[+] No impact on game performance\n" +
+      "[+] Simple loader setup\n\n" +
+      "**System Requirements**\n" +
+      "**Game Client:** Fortnite (Epic Games Launcher)\n" +
+      "**Operating System:** Windows 10/11 (64-bit)\n" +
+      "**Processor:** Intel Core i5 or AMD Ryzen 5 (4 cores minimum)\n" +
+      "**Graphics Card:** NVIDIA GTX 1060 / AMD RX 580 or better\n" +
+      "**Display Mode:** Fullscreen or Borderless Windowed",
+    category: "Fortnite",
+    isFeatured: false,
+    variants: [
+      { id: "var_5597d4bf4a2e4326496d8fc468f91340", name: "1 DAY", price: 4.99, stock: 50 },
+      { id: "var_b4931053257eab328c1fe41502322841", name: "1 WEEK", price: 9.99, stock: 40 },
+      { id: "var_470a8ea35b094df8c7c9ebc08b178904", name: "1 MONTH", price: 19.99, stock: 30 },
+      { id: "var_6123aab41ea021296d7f802336a0d4e0", name: "3 MONTHS", price: 29.99, stock: 25 },
+      { id: "var_41f679bc1fd9b9c0474ff1db734c1a86", name: "LIFETIME", price: 44.99, stock: 20 },
+    ],
+    status: "Undetected",
+    videoUrl: "https://www.youtube.com/embed/vQ75Q5D6pMA",
+    reviews: [
+      {
+        quote: "Works flawlessly, exactly as advertised. Very happy with my purchase.",
+        author: "ProGamer_TTV",
+        date: "Jan 29, 2025",
+        rating: 5,
+        verified: true,
+        variant: "1 WEEK",
+      },
+      {
+        quote: "Extremely reliable product. No issues whatsoever after weeks of use.",
+        author: "VictoryKing",
+        date: "Jan 27, 2025",
+        rating: 5,
+        verified: true,
+        variant: "1 MONTH",
+      },
+      {
+        quote: "Outstanding quality and performance. Highly recommend!",
+        author: "BuildMaster",
+        date: "Jan 24, 2025",
+        rating: 5,
+        verified: true,
+        variant: "LIFETIME",
+      },
+      {
+        quote: "Best investment for competitive gaming. No regrets!",
+        author: "ChampionPlayer",
+        date: "Jan 21, 2025",
+        rating: 5,
+        verified: true,
+        variant: "3 MONTHS",
+      },
+      {
+        quote: "Tried multiple products, this is by far the best one.",
+        author: "ExperiencedGamer",
+        date: "Jan 18, 2025",
+        rating: 5,
+        verified: true,
+        variant: "1 WEEK",
+      },
+      {
+        quote: "Product works perfectly as described. Installation was straightforward.",
+        author: "TacticalShooter",
+        date: "Jan 16, 2025",
+        rating: 5,
+        verified: true,
+        variant: "1 MONTH",
+      },
+      {
+        quote: "Support responded to my questions within 10 minutes. Great service!",
+        author: "SatisfiedCustomer",
+        date: "Jan 13, 2025",
+        rating: 5,
+        verified: true,
+        variant: "LIFETIME",
+      },
+      {
+        quote: "Best aimbot I've used. Smooth and undetected for weeks now.",
+        author: "AimGod_FN",
+        date: "Jan 11, 2025",
+        rating: 5,
+        verified: true,
+        variant: "3 MONTHS",
+      },
+      {
+        quote: "ESP is crystal clear. Makes spotting enemies so easy!",
+        author: "VisionPro_FN",
+        date: "Jan 9, 2025",
+        rating: 5,
+        verified: true,
+        variant: "1 MONTH",
+      },
+    ],
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // {
+  //   id: "PROD_wUH2CNK4KQCdeH99x3Illr2PG7NWFJ0z",
+  //   slug: "rocket-league-mystery-bot",
+  //   name: "Rocket League Mystery Bot",
+  //   storrikStoreId: "STORE_XHjWmh6cHxlNs8p92HBtTN6HwCNVqwxv",
+  //   storrikProductId: "PROD_wUH2CNK4KQCdeH99x3Illr2PG7NWFJ0z",
+  //   image: "/images/products/mystery-bot.jpg",
+  //   showcaseImages: ["/images/showcase/mystery-bot-showcase.jpg"],
+  //   description:
+  //     "[+] Mystery box containing any Voltaris bot\n" +
+  //     "[+] Instant prize reveal after purchase\n" +
+  //     "[+] Email delivery with download link\n\n" +
+  //     "**What's Inside?**\n" +
+  //     "[+] Possible rewards: Requiem, T2, Nova, Mech, Opti\n" +
+  //     "[+] Each ticket = 1 mystery bot\n" +
+  //     "[+] All prizes are lifetime licenses\n\n" +
+  //     "**Prize Pool**\n" +
+  //     "Our mystery box contains some of the best Rocket League bots in the world:\n\n" +
+  //     "**Premium Tier ($475.99+ value)**\n" +
+  //     "- NovaBot SSL - Top 25 worldwide, flip reset specialist\n\n" +
+  //     "**High Tier ($125-475 value)**\n" +
+  //     "- Requiem SSL Bot - 2v2 dominator\n" +
+  //     "- T2 SSL Bot - 1v1 specialist\n" +
+  //     "- Mech SSL Bot - Mechanical monster\n\n" +
+  //     "**Standard Tier ($99-125 value)**\n" +
+  //     "- Opti SSL Bot - SSL in 2s with advanced features\n" +
+  //     "- Multi Bot - AI with ESP and trajectory prediction\n" +
+  //     "- Unlock All - Complete customization toolkit\n\n" +
+  //     "**How It Works**\n" +
+  //     "1. Purchase mystery tickets (1x or 2x)\n" +
+  //     "2. Instant prize reveal after checkout\n" +
+  //     "3. Receive download link via email\n" +
+  //     "4. Redeem your lifetime bot license\n\n" +
+  //     "**Why Mystery Box?**\n" +
+  //     "Get premium bots at a fraction of the cost! Every prize is a lifetime license worth up to $650.99. Whether you're hunting for the legendary NovaBot or hoping to score a premium SSL bot, the mystery box offers incredible value.\n\n" +
+  //     "**Additional Info**\n" +
+  //     "All mystery prizes are instantly revealed. No waiting, no delays. Check your email for your prize bot download link and license key immediately after purchase.",
+  //   category: "Rocket League",
+  //   isFeatured: true,
+  //   badge: "Mystery Box",
+  //   variants: [
+  //     { id: "VAR_StqqpkfpoXK8cYLfbmgMDjMMmrUnwcrV", name: "1x Mystery Ticket", price: 45.99, stock: 100 },
+  //     { id: "VAR_McIPDjCbi6irzPnQZtqmxjf4CAGdlkPv", name: "2x Mystery Tickets", price: 99.99, stock: 100 },
+  //   ],
+  //   status: "Undetected",
+  //   videoUrl: "https://www.youtube.com/embed/QDxqg5n4Bzo",
+  //   reviews: [
+  //     {
+  //       quote: "Got Requiem SSL on my first ticket! Best $29.99 I ever spent!",
+  //       author: "LuckyWinner",
+  //       date: "Jan 30, 2025",
+  //       rating: 5,
+  //       verified: true,
+  //       variant: "1x Mystery Ticket",
+  //     },
+  //     {
+  //       quote: "Bought 2 tickets, got T2 and Mech. Insane value compared to buying separately!",
+  //       author: "MysteryHunter",
+  //       date: "Jan 29, 2025",
+  //       rating: 5,
+  //       verified: true,
+  //       variant: "2x Mystery Tickets",
+  //     },
+  //     {
+  //       quote: "Even though I got Multi Bot, still worth it for the excitement. Will try again!",
+  //       author: "GamblerGG",
+  //       date: "Jan 27, 2025",
+  //       rating: 4,
+  //       verified: true,
+  //       variant: "1x Mystery Ticket",
+  //     },
+  //     {
+  //       quote: "My friend got NovaBOT from this, I'm so jealous! Definitely buying more tickets.",
+  //       author: "ChaseTheDream",
+  //       date: "Jan 25, 2025",
+  //       rating: 5,
+  //       verified: true,
+  //       variant: "2x Mystery Tickets",
+  //     },
+  //     {
+  //       quote: "Love the mystery box concept. Got Rift SSL which I've been wanting!",
+  //       author: "MysteryFan",
+  //       date: "Jan 23, 2025",
+  //       rating: 5,
+  //       verified: true,
+  //       variant: "1x Mystery Ticket",
+  //     },
+  //   ],
+  // },
+]
+
+export function getProductBySlug(slug: string): Product | undefined {
+  return products.find((product) => product.slug === slug)
+}
+
+export function getProductsByCategory(): Record<string, Product[]> {
+  const categorizedProducts: Record<string, Product[]> = {}
+  products.forEach((product) => {
+    if (!categorizedProducts[product.category]) {
+      categorizedProducts[product.category] = []
+    }
+    categorizedProducts[product.category].push(product)
+  })
+  return categorizedProducts
+}
