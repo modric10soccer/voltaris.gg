@@ -405,7 +405,6 @@ export const products: Product[] = [
       "[+] Wave dashes\n" +
       "[+] Fast recoveries\n" +
       "[+] Custom playstyles\n" +
-      "[+] Aggressive/Defensive/Freestyle modes\n" +
       "[+] SSL-level decision making\n" +
       "[+] High-precision control\n" +
       "[+] Perfect dribbles\n" +
@@ -1131,6 +1130,74 @@ export const products: Product[] = [
   //     },
   //   ],
   // },
+  {
+    id: "prod_c8fb8c4a0d7627858b32a6f7fc054424",
+    slug: "arc-raiders-frost",
+    name: "Arc Raiders Frost",
+    storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
+    storrikProductId: "prod_c8fb8c4a0d7627858b32a6f7fc054424",
+    image: "/images/products/arc-raiders-frost-box.png",
+    description:
+      "Windows 10 & 11\n" +
+      "External Client\n" +
+      "Intel & AMD CPU's\n\n" +
+      "Aimbot\n" +
+      "Targeting Options\n" +
+      "Enabled\n" +
+      "Speed\n" +
+      "Field of View\n" +
+      "Max Distance\n" +
+      "Retarget Time\n" +
+      "Detach Time\n" +
+      "Hitbox Selection Interface\n" +
+      "Filtering Options\n" +
+      "Filter Invisible\n" +
+      "Draw Aimbot FOV\n\n" +
+      "Triggerbot\n" +
+      "Targeting Options\n" +
+      "Enabled\n" +
+      "Hitbox Expansion\n" +
+      "Retarget Time\n" +
+      "Magnetic Triggerbot\n" +
+      "Hitbox Selection Interface\n" +
+      "Filtering Options\n" +
+      "Filter Invisible\n\n" +
+      "Player ESP\n" +
+      "Main ESP Settings\n" +
+      "Loot ESP\n" +
+      "Box\n" +
+      "Head Dot\n" +
+      "Skeleton\n" +
+      "Out of FOV Arrows\n" +
+      "Distance\n" +
+      "Name\n" +
+      "Visible\n" +
+      "Team\n" +
+      "Draggable ESP System\n\n" +
+      "Config\n" +
+      "Configuration Management\n" +
+      "Config Name Input\n" +
+      "Add Config (+)\n" +
+      "Config List\n" +
+      "Action Buttons\n" +
+      "LOAD\n" +
+      "SAVE\n" +
+      "DELETE\n" +
+      "CLEAR\n\n" +
+      "Miscellaneous Settings\n" +
+      "Overlay FPS\n" +
+      "Developer Mode",
+    category: "Arc Raiders",
+    isFeatured: false,
+    variants: [
+      { id: "var_2780f0659e2d69ce2a04f365f01193d0", name: "1 DAY", price: 0, stock: 0 },
+      { id: "var_73833cf395a22aa3f41d300c01c42812", name: "1 MONTH", price: 0, stock: 0 },
+      { id: "var_e22338ce8724e41b0bb613e05c9dc4c5", name: "3 DAY", price: 0, stock: 0 },
+      { id: "var_e8a19e414a74674fd9b63be01e6a4ff7", name: "1 WEEK", price: 0, stock: 0 },
+      { id: "var_f8eb4b39657027e3f40db1e8bca7b941", name: "LIFETIME", price: 0, stock: 0 },
+    ],
+    status: "Available",
+  },
 ]
 
 export function getProductBySlug(slug: string): Product | undefined {
