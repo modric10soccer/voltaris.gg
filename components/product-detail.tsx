@@ -54,7 +54,8 @@ export default function ProductDetail({ product, allProducts }: ProductDetailPro
   }, [activeTab, product.showcaseImages])
 
   const handleQuantityChange = (delta: number) => {
-    setQuantity(Math.max(1, quantity + delta))
+    // Quantity locked to 1 - users can only buy 1 product at a time
+    setQuantity(1)
   }
 
   const handleImageChange = (direction: "prev" | "next") => {
@@ -370,7 +371,7 @@ export default function ProductDetail({ product, allProducts }: ProductDetailPro
 
           <div className="space-y-8">
             {activeTab === "description" && (
-              <div className="bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 border border-zinc-800 rounded-2xl p-8">
+              <div className="bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 border border-zinc-800 rounded-2xl p-8 min-h-[500px]">
                 <div className="space-y-8">
                   {Object.entries(categorizedFeatures).map(([categoryName, features]) => (
                     <div key={categoryName} className="space-y-4">
@@ -392,7 +393,7 @@ export default function ProductDetail({ product, allProducts }: ProductDetailPro
             )}
 
             {activeTab === "video" && product.videoUrl && (
-              <div className="bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 border border-zinc-800 rounded-2xl p-8">
+              <div className="bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 border border-zinc-800 rounded-2xl p-8 min-h-[500px]">
                 <div className="relative rounded-xl overflow-hidden h-[400px]">
                   <iframe
                     width="100%"
@@ -409,7 +410,7 @@ export default function ProductDetail({ product, allProducts }: ProductDetailPro
             )}
 
             {activeTab === "showcase" && product.showcaseImages && product.showcaseImages.length > 0 && (
-              <div className="bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 border border-zinc-800 rounded-2xl p-8">
+              <div className="bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 border border-zinc-800 rounded-2xl p-8 min-h-[500px]">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div className="relative rounded-xl overflow-hidden aspect-video group">
                     <Image
@@ -440,7 +441,7 @@ export default function ProductDetail({ product, allProducts }: ProductDetailPro
                   </div>
 
                   <div className="space-y-4">
-                    <h3 className="text-2xl font-bold text-white">Product Showcase</h3>
+                    <h3 className="text-2xl font-bold text-white">{product.name}</h3>
                     <p className="text-zinc-300 leading-relaxed">
                       Experience {product.name} in action. Our showcase highlights the key features and capabilities
                       that make this product stand out. See real gameplay footage and demonstrations of the advanced
@@ -479,7 +480,7 @@ export default function ProductDetail({ product, allProducts }: ProductDetailPro
             )}
 
             {activeTab === "reviews" && (
-              <div className="bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 border border-zinc-800 rounded-2xl p-8">
+              <div className="bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 border border-zinc-800 rounded-2xl p-8 min-h-[500px]">
                 <h3 className="text-2xl font-bold text-white mb-6">Customer Reviews</h3>
                 {product.reviews && product.reviews.length > 0 ? (
                   <div className="space-y-4">
@@ -539,7 +540,11 @@ export default function ProductDetail({ product, allProducts }: ProductDetailPro
                       {relatedProduct.name}
                     </h3>
                     <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
-                      {relatedProduct.description.split("\n")[0]}
+                      {relatedProduct.name.includes("1v1 Bot")
+                        ? "[+] Advanced Bot in 1v1 Gameplay"
+                        : relatedProduct.name.includes("Unlock All")
+                          ? "[+] Advanced ESP Customization Mod"
+                          : relatedProduct.description.split("\n")[0]}
                     </p>
                     <div className="flex items-center justify-between">
                       <span className="text-voltaris-red font-semibold">

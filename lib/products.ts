@@ -685,7 +685,7 @@ export const products: Product[] = [
       { id: "VAR_qtKLhapG9gYpaDOgjHZznsY1SDyhSSnd", name: "3 MONTHS", price: 49.99, stock: 15 },
       { id: "VAR_E3JuP3cgweqDVohLAdTy7sbUfzbza9uj", name: "LIFETIME", price: 74.99, stock: 20 },
     ],
-    status: "active",
+    status: "Undetected",
     videoUrl: "https://www.youtube.com/watch?v=I_IyCKcb61E",
     reviews: [
       {
@@ -828,7 +828,7 @@ export const products: Product[] = [
       { id: "VAR_VpJI5QJmLZ2EgnM5wQkKqBCzuSdbXSHy", name: "3 MONTHS", price: 19.99, stock: 25 },
       { id: "VAR_BPgKvJslvIlaSBLZXFiVDxY6aL5f3GkF", name: "LIFETIME", price: 29.99, stock: 20 },
     ],
-    status: "active",
+    status: "Undetected",
     videoUrl: "https://www.youtube.com/embed/pj1OY5Cz8ps",
     reviews: [
       {

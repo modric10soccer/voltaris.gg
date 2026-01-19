@@ -3,14 +3,17 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Plus, Minus, Trash2, ShoppingCart, Zap } from "lucide-react"
+import { Trash2, ShoppingCart, Zap, Heart } from "lucide-react"
 import { useCart } from "@/contexts/cart-context"
+import { useWishlist } from "@/contexts/wishlist-context"
 import { formatPrice } from "@/lib/utils"
 import { useState } from "react"
 
 export default function CartPageClient() {
   const { items, updateQuantity, removeItem, getTotalPrice, getCartDetails, clearCart } = useCart()
+  const { getWishlistDetails } = useWishlist()
   const cartDetails = getCartDetails()
+  const wishlistDetails = getWishlistDetails()
   const [isClearing, setIsClearing] = useState(false)
 
   const handleUpdateQuantity = (productId: string, variantId: string, newQuantity: number) => {
@@ -85,25 +88,7 @@ export default function CartPageClient() {
                   <h3 className="text-xl font-bold text-foreground mb-1 truncate">{item.product.name}</h3>
                   <p className="text-voltaris-red text-sm font-semibold mb-3">{item.variant.name}</p>
                   <div className="flex items-center gap-3">
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className="h-8 w-8 rounded-lg border-zinc-700 text-foreground hover:bg-voltaris-red/10 hover:border-voltaris-red bg-transparent"
-                      onClick={() => handleUpdateQuantity(item.product.id, item.variant.id, item.quantity - 1)}
-                      disabled={item.quantity <= 1}
-                    >
-                      <Minus className="h-4 w-4" />
-                    </Button>
-                    <span className="text-lg font-bold text-foreground min-w-[3ch] text-center">{item.quantity}</span>
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className="h-8 w-8 rounded-lg border-zinc-700 text-foreground hover:bg-voltaris-red/10 hover:border-voltaris-red bg-transparent"
-                      onClick={() => handleUpdateQuantity(item.product.id, item.variant.id, item.quantity + 1)}
-                      disabled={item.quantity >= item.variant.stock}
-                    >
-                      <Plus className="h-4 w-4" />
-                    </Button>
+                    <span className="text-lg font-bold text-foreground">Qty: {item.quantity}</span>
                   </div>
                 </div>
                 <div className="flex flex-col items-end gap-3 flex-shrink-0">
@@ -165,6 +150,38 @@ export default function CartPageClient() {
                 Clear Cart
               </Button>
             </div>
+          </div>
+        </div>
+      )}
+
+      {wishlistDetails.length > 0 && (
+        <div className="mt-16">
+          <div className="flex items-center gap-3 mb-8">
+            <Heart className="h-6 w-6 text-voltaris-red" />
+            <h2 className="text-2xl font-bold text-foreground">Your Wishlist</h2>
+            <span className="text-sm text-muted-foreground">({wishlistDetails.length} items)</span>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {wishlistDetails.map((item) => (
+              <Link key={`${item.product.id}-${item.variant.id}`} href={`/products/${item.product.slug}`}>
+                <div className="group relative overflow-hidden rounded-2xl border border-zinc-800 bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 p-4 text-left transition-all duration-300 hover:scale-[1.02] hover:border-voltaris-red/50 flex flex-col h-full cursor-pointer">
+                  <div className="relative mb-4 rounded-xl overflow-hidden h-48">
+                    <Image
+                      src={item.product.image || "/placeholder.svg"}
+                      alt={item.product.name}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">{item.product.name}</h3>
+                  <p className="text-sm text-muted-foreground mb-4">{item.variant.name}</p>
+                  <div className="flex items-center justify-between mt-auto">
+                    <span className="text-voltaris-red font-semibold">{formatPrice(item.variant.price)}</span>
+                    <span className="text-xs text-nano-blue">In Stock</span>
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       )}

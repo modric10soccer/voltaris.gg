@@ -8,7 +8,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
-import { ArrowRight, Loader2, ShoppingCart, Shield, Mail, Check, Copy } from "lucide-react"
+import { ArrowRight, Loader2, ShoppingCart, Shield, Mail, Check, Copy, Trash2 } from "lucide-react"
 import { getProductBySlug } from "@/lib/products"
 import { formatPrice } from "@/lib/utils"
 import { useCart } from "@/contexts/cart-context"
@@ -42,7 +42,7 @@ export default function CheckoutForm({ productSlug }: CheckoutFormProps) {
   const variantId = searchParams.get("variantId")
   const quantityParam = Number.parseInt(searchParams.get("quantity") || "1")
 
-  const { getCartDetails } = useCart()
+  const { getCartDetails, removeItem } = useCart()
   const cartDetails = getCartDetails()
 
   const [agreedToTerms, setAgreedToTerms] = useState(false)
@@ -369,7 +369,7 @@ export default function CheckoutForm({ productSlug }: CheckoutFormProps) {
                 <div className="w-10 h-10 rounded-xl bg-voltaris-red/10 flex items-center justify-center">
                   <ShoppingCart className="h-5 w-5 text-voltaris-red" />
                 </div>
-                <h2 className="text-2xl font-bold text-white">{t.orderSummary}</h2>
+                <h2 className="text-2xl font-bold text-white">Cart</h2>
               </div>
 
               <div className="space-y-4 mb-8">
@@ -395,6 +395,13 @@ export default function CheckoutForm({ productSlug }: CheckoutFormProps) {
                     <span className="font-bold text-foreground whitespace-nowrap">
                       {formatPrice(item.variant.price * item.quantity)}
                     </span>
+                    <button
+                      onClick={() => removeItem(item.product.id, item.variant.id)}
+                      className="flex-shrink-0 p-2 text-muted-foreground hover:text-voltaris-red hover:bg-voltaris-red/10 rounded-lg transition-all"
+                      title="Remove from cart"
+                    >
+                      <Trash2 className="h-4 w-4" />
+                    </button>
                   </div>
                 ))}
               </div>
