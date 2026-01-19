@@ -1217,7 +1217,7 @@ export const products: Product[] = [
       { id: "var_af3aa6519622c3f964898939afc1cd75", name: "1 MONTH", price: 59.99, stock: 50 },
     ],
     status: "Available",
-  },,
+  },
   {
     id: "prod_dc36c7b479e2bb47764069013c107e70",
     slug: "r6-siege-crusader",
