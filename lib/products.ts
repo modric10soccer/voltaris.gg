@@ -1,3 +1,4 @@
+export type ProductStatus =
   | "Undetected"
   | "Use Under Own Risk"
   | "Hosting"
