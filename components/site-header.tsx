@@ -8,13 +8,11 @@ import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuIte
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
 import { Menu, ShoppingCart, ChevronDown, MessageCircle, User, Globe, Search, X } from "lucide-react"
 import Image from "next/image"
-import { useAuth } from "@/contexts/auth-context"
 import { useCart } from "@/contexts/cart-context"
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 
 export default function SiteHeader() {
-  const { user } = useAuth()
   const { getTotalItems } = useCart()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
