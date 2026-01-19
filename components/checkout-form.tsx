@@ -15,7 +15,6 @@ import { useCart } from "@/contexts/cart-context"
 import { openStorrikCheckout, type StorrikCheckoutOptions } from "@/lib/storrik-integration"
 import { CRYPTO_WALLETS, CRYPTO_LABELS, calculateCryptoAmount, type CryptoType } from "@/lib/crypto-payment"
 import TrustBadges from "@/components/trust-badges"
-import { useLanguage } from "@/contexts/language-context"
 import { translations } from "@/lib/translations"
 
 declare global {
@@ -54,8 +53,7 @@ export default function CheckoutForm({ productSlug }: CheckoutFormProps) {
   const [copiedAddress, setCopiedAddress] = useState<string | null>(null)
   const [copiedAmount, setCopiedAmount] = useState(false)
   const [userWalletAddress, setUserWalletAddress] = useState("")
-  const { language } = useLanguage()
-  const t = translations[language]
+  const t = translations["en"]
 
   const itemsToProcess = React.useMemo(() => {
     if (productSlug && variantId) {

@@ -5,7 +5,6 @@ import { MessageCircle, X, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { motion, AnimatePresence } from "framer-motion"
-import { useLanguage } from "@/contexts/language-context"
 import { translations } from "@/lib/translations"
 import { products } from "@/lib/products"
 
@@ -28,8 +27,7 @@ export default function LiveChatWidget() {
     },
   ])
   const [isLoading, setIsLoading] = useState(false)
-  const { language } = useLanguage()
-  const t = translations[language]
+  const t = translations["en"]
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
   const scrollToBottom = () => {

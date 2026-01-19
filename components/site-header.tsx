@@ -8,14 +8,12 @@ import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuIte
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
 import { Menu, ShoppingCart, ChevronDown, MessageCircle, User, Globe, Search, X } from "lucide-react"
 import Image from "next/image"
-import { useLanguage } from "@/contexts/language-context"
 import { useAuth } from "@/contexts/auth-context"
 import { useCart } from "@/contexts/cart-context"
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 
 export default function SiteHeader() {
-  const { language, setLanguage } = useLanguage()
   const { user } = useAuth()
   const { getTotalItems } = useCart()
   const [isScrolled, setIsScrolled] = useState(false)
@@ -38,20 +36,6 @@ export default function SiteHeader() {
       setIsSearchOpen(false)
       setSearchQuery("")
     }
-  }
-
-  const getLanguageLabel = (lang: string) => {
-    const labels: { [key: string]: string } = {
-      en: "English",
-      es: "Español",
-      fr: "Français",
-      de: "Deutsch",
-      pt: "Português",
-      ru: "Русский",
-      zh: "中文",
-      ja: "日本語",
-    }
-    return labels[lang] || "English"
   }
 
   return (
@@ -137,34 +121,7 @@ export default function SiteHeader() {
             </nav>
           )}
           <div className="flex items-center gap-2 ml-auto">
-            {!isSearchOpen && (
-              <>
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="hidden lg:flex items-center gap-1 text-sm text-muted-foreground hover:text-voltaris-red hover:bg-voltaris-red/10 border border-transparent hover:border-voltaris-red/30 transition-all rounded-full"
-                    >
-                      <Globe className="h-4 w-4 text-voltaris-red" />
-                      <span className="hidden xl:inline">{getLanguageLabel(language)}</span>
-                      <ChevronDown className="h-4 w-4" />
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end" className="bg-zinc-900 border border-voltaris-red/30">
-                    {["en", "es", "fr", "de", "pt", "ru", "zh", "ja"].map((lang) => (
-                      <DropdownMenuItem
-                        key={lang}
-                        className="text-muted-foreground hover:text-voltaris-red hover:bg-voltaris-red/10 focus:text-voltaris-red focus:bg-voltaris-red/10 transition-colors"
-                        onClick={() => setLanguage(lang as any)}
-                      >
-                        {getLanguageLabel(lang)}
-                      </DropdownMenuItem>
-                    ))}
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </>
-            )}
+
 
             <Button
               asChild
@@ -248,27 +205,6 @@ export default function SiteHeader() {
                   <Link href="/updates" className="text-lg font-semibold text-foreground" prefetch={false}>
                     Updates
                   </Link>
-
-                  <div className="pt-4 border-t border-dark-border">
-                    <p className="text-sm font-medium text-muted-foreground mb-2">Language</p>
-                    <div className="flex flex-wrap gap-2">
-                      {["en", "es", "fr", "de"].map((lang) => (
-                        <Button
-                          key={lang}
-                          variant={language === lang ? "default" : "outline"}
-                          size="sm"
-                          className={
-                            language === lang
-                              ? "bg-voltaris-red/20 text-voltaris-red border border-voltaris-red/30 hover:bg-voltaris-red/30"
-                              : "border border-zinc-800"
-                          }
-                          onClick={() => setLanguage(lang as any)}
-                        >
-                          {getLanguageLabel(lang)}
-                        </Button>
-                      ))}
-                    </div>
-                  </div>
 
                   <Link
                     href="/account"
