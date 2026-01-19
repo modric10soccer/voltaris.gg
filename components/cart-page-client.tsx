@@ -5,7 +5,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Plus, Minus, Trash2, ShoppingCart, Zap } from "lucide-react"
 import { useCart } from "@/contexts/cart-context"
-import { useCurrency } from "@/contexts/currency-context"
+import { useCurrency } from "@/components/currency-provider"
 import { useState } from "react"
 
 export default function CartPageClient() {

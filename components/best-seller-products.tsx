@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Package, TrendingUp } from "lucide-react"
 import Link from "next/link"
 import { products } from "@/lib/products"
-import { useCurrency } from "@/contexts/currency-context"
+import { useCurrency } from "@/components/currency-provider"
 import ScrollReveal from "@/components/scroll-reveal"
 
 export default function BestSellerProducts() {

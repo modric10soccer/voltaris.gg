@@ -20,7 +20,7 @@ import {
   Star,
 } from "lucide-react"
 import { useRouter } from "next/navigation"
-import { useCurrency } from "@/contexts/currency-context"
+import { useCurrency } from "@/components/currency-provider"
 import { cn } from "@/lib/utils"
 
 type ProductDetailProps = {

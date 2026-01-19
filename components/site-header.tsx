@@ -8,7 +8,7 @@ import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuIte
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
 import { Menu, ShoppingCart, ChevronDown, MessageCircle, User, Globe, Search, X } from "lucide-react"
 import Image from "next/image"
-import { useCurrency } from "@/contexts/currency-context"
+import { useCurrency } from "@/components/currency-provider"
 import { useLanguage } from "@/contexts/language-context"
 import { useAuth } from "@/contexts/auth-context"
 import { useCart } from "@/contexts/cart-context"

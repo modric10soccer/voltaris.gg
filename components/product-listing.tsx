@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { getProductsByCategory } from "@/lib/products"
-import { useCurrency } from "@/contexts/currency-context"
+import { useCurrency } from "@/components/currency-provider"
 import { useState, useMemo } from "react"
 import ScrollReveal from "@/components/scroll-reveal"
 
