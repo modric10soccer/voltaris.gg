@@ -13,7 +13,6 @@ import {
   Minus,
   Plus,
   ShoppingCart,
-  Expand,
   Shield,
   Zap,
   Sparkles,
@@ -35,7 +34,6 @@ export default function ProductDetail({ product, allProducts }: ProductDetailPro
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [activeTab, setActiveTab] = useState<TabType>("description")
   const [showcaseIndex, setShowcaseIndex] = useState(0)
-  const [isZoomOpen, setIsZoomOpen] = useState(false)
   const router = useRouter()
   const { addItem } = useCart()
   const { addItem: addToWishlist, removeItem: removeFromWishlist, isInWishlist } = useWishlist()
@@ -418,17 +416,8 @@ export default function ProductDetail({ product, allProducts }: ProductDetailPro
                       src={product.showcaseImages[showcaseIndex] || "/placeholder.svg"}
                       alt={`Showcase ${showcaseIndex + 1}`}
                       fill
-                      className="object-contain cursor-pointer"
-                      onClick={() => setIsZoomOpen(true)}
+                      className="object-contain"
                     />
-
-                    <button
-                      onClick={() => setIsZoomOpen(true)}
-                      className="absolute top-4 right-4 bg-voltaris-red/20 hover:bg-voltaris-red/30 text-voltaris-red border border-voltaris-red/30 p-2 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100"
-                      aria-label="Expand image"
-                    >
-                      <Expand className="h-5 w-5" />
-                    </button>
 
                     {product.showcaseImages.length > 1 && (
                       <>

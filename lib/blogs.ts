@@ -8,9 +8,9 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
-    id: "january-2025-rift-release",
-    slug: "january-2025-rift-release",
-    title: "Rocket League Rift SSL Bot | Official Release",
+    id: "january-2025-nova-release",
+    slug: "january-2025-nova-release",
+    title: "Rocket League Nova SSL Bot | Official Release",
     description: "Revolutionary new bot with flip reset mechanics and GC3+ to SSL performance!",
     publishedDate: "Jan 22, 2025",
   },
