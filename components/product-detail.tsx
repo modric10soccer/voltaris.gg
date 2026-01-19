@@ -394,17 +394,15 @@ export default function ProductDetail({ product, allProducts }: ProductDetailPro
 
             {activeTab === "video" && product.videoUrl && (
               <div className="bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 border border-zinc-800 rounded-2xl p-8 min-h-[500px]">
-                <div className="relative rounded-xl overflow-hidden h-[400px]">
+                <div className="relative rounded-xl overflow-hidden" style={{ paddingBottom: '56.25%', height: 0 }}>
                   <iframe
-                    width="100%"
-                    height="100%"
-                    src={`${product.videoUrl}?autoplay=0&rel=0&modestbranding=1`}
+                    src={`${product.videoUrl}?autoplay=0&rel=0&modestbranding=1&enablejsapi=1`}
                     title={`${product.name} Video`}
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
                     referrerPolicy="strict-origin-when-cross-origin"
-                    className="absolute inset-0 w-full h-full"
+                    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
                   />
                 </div>
               </div>
