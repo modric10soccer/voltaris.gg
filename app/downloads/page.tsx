@@ -18,4 +18,15 @@ export default function DownloadsPage() {
       <SiteFooter />
     </div>
   )
+}>
+      <SiteHeader />
+      <main className="flex-1 pt-20 relative overflow-hidden">
+        <AnimatedGradientBg />
+        <div className="relative z-10">
+          <DownloadsPageContent />
+        </div>
+      </main>
+      <SiteFooter />
+    </div>
+  )
 }
