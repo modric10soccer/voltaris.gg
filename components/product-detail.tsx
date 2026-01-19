@@ -398,11 +398,12 @@ export default function ProductDetail({ product, allProducts }: ProductDetailPro
                   <iframe
                     width="100%"
                     height="100%"
-                    src={product.videoUrl}
+                    src={`${product.videoUrl}?autoplay=0&rel=0&modestbranding=1`}
                     title={`${product.name} Video`}
                     frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
+                    referrerPolicy="strict-origin-when-cross-origin"
                     className="absolute inset-0 w-full h-full"
                   />
                 </div>

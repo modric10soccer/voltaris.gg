@@ -11,8 +11,12 @@ export const metadata: Metadata = {
   description: "Premium Rocket League and Fortnite tools and services",
   metadataBase: new URL("https://voltaris.gg"),
   icons: {
-    icon: "/icon.svg",
-    apple: "/icon-light-32x32.png",
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" }
+    ],
+    apple: "/apple-icon.png",
+    shortcut: "/icon.svg",
   },
 };
 
