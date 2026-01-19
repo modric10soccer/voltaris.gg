@@ -1225,6 +1225,11 @@ export const products: Product[] = [
     storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
     storrikProductId: "prod_dc36c7b479e2bb47764069013c107e70",
     image: "/images/products/r6-crusader.png",
+    showcaseImages: [
+      "/images/showcase/r6-crusader-esp.png",
+      "/images/showcase/r6-crusader-gameplay1.png",
+      "/images/showcase/r6-crusader-gameplay2.png",
+    ],
     description:
       "[+] Professional Grade Aimbot\n" +
       "[+] Full Map ESP\n" +
