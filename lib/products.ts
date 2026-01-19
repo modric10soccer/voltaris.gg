@@ -1177,12 +1177,12 @@ export const products: Product[] = [
     status: "Available",
   },
   {
-    id: "prod_r6_perp_001",
-    slug: "r6-siege-perp",
-    name: "R6 Siege Perp",
+    id: "prod_0084ffd824317d81ee0fe58c05ad913f",
+    slug: "r6-siege-perc",
+    name: "R6 Siege Perc",
     storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
-    storrikProductId: "prod_r6_perp_001",
-    image: "/images/products/r6-perp-box.png",
+    storrikProductId: "prod_0084ffd824317d81ee0fe58c05ad913f",
+    image: "/images/products/R6%20Perc.png",
     description:
       "[+] Advanced Aimbot System\n" +
       "[+] Wall ESP Detection\n" +
@@ -1201,7 +1201,7 @@ export const products: Product[] = [
       "**RAM:** 8GB minimum\n" +
       "**GPU:** NVIDIA GTX 960 / AMD RX 470 or better\n\n" +
       "**Overview**\n" +
-      "The Perp operator cheat provides advanced aiming capabilities with wall detection and team awareness. Dominate tactical gameplay with precision targeting and enhanced map awareness.\n\n" +
+      "The Perc operator cheat provides advanced aiming capabilities with wall detection and team awareness. Dominate tactical gameplay with precision targeting and enhanced map awareness.\n\n" +
       "**Key Features**\n" +
       "[+] Real-time wall penetration ESP\n" +
       "[+] Smooth, configurable aimbot\n" +
@@ -1212,21 +1212,19 @@ export const products: Product[] = [
     category: "Rainbow Six Siege",
     isFeatured: false,
     variants: [
-      { id: "var_r6_perp_1d", name: "1 DAY", price: 4.99, stock: 50 },
-      { id: "var_r6_perp_1w", name: "1 WEEK", price: 14.99, stock: 50 },
-      { id: "var_r6_perp_1m", name: "1 MONTH", price: 29.99, stock: 50 },
-      { id: "var_r6_perp_3m", name: "3 MONTHS", price: 59.99, stock: 50 },
-      { id: "var_r6_perp_lt", name: "LIFETIME", price: 99.99, stock: 50 },
+      { id: "var_e2c343748502e614d2c32f71c0ec25f4", name: "1 DAY", price: 9.99, stock: 50 },
+      { id: "var_700623bf6f5fabefbd263e3c67d1369d", name: "1 WEEK", price: 29.99, stock: 50 },
+      { id: "var_af3aa6519622c3f964898939afc1cd75", name: "1 MONTH", price: 59.99, stock: 50 },
     ],
     status: "Available",
-  },
+  },,
   {
-    id: "prod_r6_crusader_001",
+    id: "prod_dc36c7b479e2bb47764069013c107e70",
     slug: "r6-siege-crusader",
     name: "R6 Siege Crusader",
     storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
-    storrikProductId: "prod_r6_crusader_001",
-    image: "/images/products/r6-crusader-box.png",
+    storrikProductId: "prod_dc36c7b479e2bb47764069013c107e70",
+    image: "/images/products/R6%20Crusader.png",
     description:
       "[+] Professional Grade Aimbot\n" +
       "[+] Full Map ESP\n" +
@@ -1256,21 +1254,19 @@ export const products: Product[] = [
     category: "Rainbow Six Siege",
     isFeatured: false,
     variants: [
-      { id: "var_r6_crusader_1d", name: "1 DAY", price: 4.99, stock: 50 },
-      { id: "var_r6_crusader_1w", name: "1 WEEK", price: 14.99, stock: 50 },
-      { id: "var_r6_crusader_1m", name: "1 MONTH", price: 29.99, stock: 50 },
-      { id: "var_r6_crusader_3m", name: "3 MONTHS", price: 59.99, stock: 50 },
-      { id: "var_r6_crusader_lt", name: "LIFETIME", price: 99.99, stock: 50 },
+      { id: "var_4183b78bfdb480360a6d7d8f067eddc7", name: "1 DAY", price: 4.99, stock: 50 },
+      { id: "var_cb4169758261650c60d3cb08b0a5ba7e", name: "1 WEEK", price: 24.99, stock: 50 },
+      { id: "var_6aa6e423ebd250498397478007b0d03e", name: "1 MONTH", price: 44.99, stock: 50 },
     ],
     status: "Available",
   },
   {
-    id: "prod_r6_onyx_lite_001",
+    id: "prod_e6e5a51add7e069b2e4f30cf92f7ca85",
     slug: "r6-siege-onyx-lite",
     name: "R6 Siege Onyx Lite",
     storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
-    storrikProductId: "prod_r6_onyx_lite_001",
-    image: "/images/products/r6-onyx-lite-box.png",
+    storrikProductId: "prod_e6e5a51add7e069b2e4f30cf92f7ca85",
+    image: "/images/products/R6%20Onyx%20Lite.png",
     description:
       "[+] Lightweight Aimbot\n" +
       "[+] Basic ESP\n" +
@@ -1300,11 +1296,9 @@ export const products: Product[] = [
     category: "Rainbow Six Siege",
     isFeatured: false,
     variants: [
-      { id: "var_r6_onyx_1d", name: "1 DAY", price: 2.99, stock: 50 },
-      { id: "var_r6_onyx_1w", name: "1 WEEK", price: 9.99, stock: 50 },
-      { id: "var_r6_onyx_1m", name: "1 MONTH", price: 19.99, stock: 50 },
-      { id: "var_r6_onyx_3m", name: "3 MONTHS", price: 39.99, stock: 50 },
-      { id: "var_r6_onyx_lt", name: "LIFETIME", price: 79.99, stock: 50 },
+      { id: "var_5d83e1a89a233fb4be1add35b2386d41", name: "1 DAY", price: 5.99, stock: 50 },
+      { id: "var_eabbb90d5202126a5b56ee30a0b42200", name: "1 WEEK", price: 12.99, stock: 50 },
+      { id: "var_5e22d339643671a92a9b96c7bb82be76", name: "1 MONTH", price: 27.99, stock: 50 },
     ],
     status: "Available",
   },
@@ -1314,7 +1308,7 @@ export const products: Product[] = [
     name: "R6 Siege Viper",
     storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
     storrikProductId: "prod_r6_viper_001",
-    image: "/images/products/r6-viper-box.png",
+    image: "/images/products/R6%20Viper.png",
     description:
       "[+] Premium Aimbot\n" +
       "[+] Advanced ESP System\n" +
@@ -1358,7 +1352,7 @@ export const products: Product[] = [
     name: "HWID Spoofer",
     storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
     storrikProductId: "prod_hwid_spoofer_001",
-    image: "/images/products/hwid-spoofer-box.png",
+    image: "/images/products/HWID%20Spoofer.png",
     description:
       "[+] Hardware ID Spoofing\n" +
       "[+] Ban Bypass\n" +
