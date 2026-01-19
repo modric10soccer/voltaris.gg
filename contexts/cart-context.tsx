@@ -32,14 +32,21 @@ export function CartProvider({ children }: { children: ReactNode }) {
   // Load cart from localStorage on initial mount
   useEffect(() => {
     const storedCart = localStorage.getItem("nano_cart")
+    console.log("[cart] Hydrating from localStorage:", storedCart)
     if (storedCart) {
-      setItems(JSON.parse(storedCart))
+      try {
+        setItems(JSON.parse(storedCart))
+        console.log("[cart] Loaded items:", JSON.parse(storedCart))
+      } catch (e) {
+        console.error("[cart] Failed to parse stored cart:", e)
+      }
     }
     setIsHydrated(true)
   }, [])
 
   // Save cart to localStorage whenever it changes
   useEffect(() => {
+    console.log("[cart] Saving to localStorage:", items)
     localStorage.setItem("nano_cart", JSON.stringify(items))
   }, [items])
 

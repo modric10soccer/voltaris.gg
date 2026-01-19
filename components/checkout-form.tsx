@@ -63,8 +63,9 @@ export default function CheckoutForm({ productSlug }: CheckoutFormProps) {
         return [{ product: foundProduct, variant: foundVariant, quantity: quantityParam }]
       }
     }
+    console.log("[checkout] cartDetails:", cartDetails, "isHydrated:", isHydrated)
     return cartDetails
-  }, [productSlug, variantId, quantityParam, cartDetails])
+  }, [productSlug, variantId, quantityParam, cartDetails, isHydrated])
 
   React.useEffect(() => {
     if (itemsToProcess.length > 1) {
