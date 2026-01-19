@@ -524,7 +524,7 @@ export const products: Product[] = [
     name: "Rocket League Multi Bot",
     storrikStoreId: "STORE_XHjWmh6cHxlNs8p92HBtTN6HwCNVqwxv",
     storrikProductId: "prod_88824ae452e487d4691fe0dcdc433564",
-    image: "/images/products/multi-bot-box.png",
+    image: "/images/products/multibot-bot-box.png",
     showcaseImages: ["/images/showcase/multi-bot-gc2-gameplay.png"],
     description:
       "[+] GC2 Rank Automation\n" +
@@ -924,7 +924,7 @@ export const products: Product[] = [
     name: "Fortnite Private External",
     storrikStoreId: "STORE_XHjWmh6cHxlNs8p92HBtTN6HwCNVqwxv",
     storrikProductId: "prod_7ba50b85e062b1872ecf6b791e4e1928",
-    image: "/images/products/fortnite-box.jpg",
+    image: "/images/products/fortnite-private-box.jpg",
     showcaseImages: ["/images/showcase/fortnite-aimbot.png"],
     description:
       "[+] Private External Cheat\n" +
