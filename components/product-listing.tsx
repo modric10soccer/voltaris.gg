@@ -4,13 +4,12 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { getProductsByCategory } from "@/lib/products"
-import { useCurrency } from "@/components/currency-provider"
+import { formatPrice } from "@/lib/utils"
 import { useState, useMemo } from "react"
 import ScrollReveal from "@/components/scroll-reveal"
 
 export default function ProductListing() {
   const categorizedProducts = getProductsByCategory()
-  const { formatPrice } = useCurrency()
   const [selectedCategory, setSelectedCategory] = useState("All Products")
 
   const allProducts = useMemo(() => {

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
-import { CurrencyProvider } from "@/components/currency-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,9 +30,7 @@ export default function RootLayout({
           src="/payment-error-handler.js"
           strategy="beforeInteractive"
         />
-        <CurrencyProvider>
-          {children}
-        </CurrencyProvider>
+        {children}
       </body>
     </html>
   );

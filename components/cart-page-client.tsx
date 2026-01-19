@@ -5,12 +5,11 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Plus, Minus, Trash2, ShoppingCart, Zap } from "lucide-react"
 import { useCart } from "@/contexts/cart-context"
-import { useCurrency } from "@/components/currency-provider"
+import { formatPrice } from "@/lib/utils"
 import { useState } from "react"
 
 export default function CartPageClient() {
   const { items, updateQuantity, removeItem, getTotalPrice, getCartDetails, clearCart } = useCart()
-  const { formatPrice } = useCurrency()
   const cartDetails = getCartDetails()
   const [isClearing, setIsClearing] = useState(false)
 

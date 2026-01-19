@@ -5,11 +5,10 @@ import { Button } from "@/components/ui/button"
 import { Package, TrendingUp } from "lucide-react"
 import Link from "next/link"
 import { products } from "@/lib/products"
-import { useCurrency } from "@/components/currency-provider"
 import ScrollReveal from "@/components/scroll-reveal"
+import { formatPrice } from "@/lib/utils"
 
 export default function BestSellerProducts() {
-  const { formatPrice } = useCurrency()
   const featuredProducts = products.filter((p) => p.isFeatured).slice(0, 4)
 
   return (

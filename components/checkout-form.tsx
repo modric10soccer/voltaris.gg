@@ -10,7 +10,7 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
 import { ArrowRight, Loader2, ShoppingCart, Shield, Mail, Check, Copy } from "lucide-react"
 import { getProductBySlug } from "@/lib/products"
-import { useCurrency } from "@/components/currency-provider"
+import { formatPrice } from "@/lib/utils"
 import { useCart } from "@/contexts/cart-context"
 import { openStorrikCheckout, type StorrikCheckoutOptions } from "@/lib/storrik-integration"
 import { CRYPTO_WALLETS, CRYPTO_LABELS, calculateCryptoAmount, type CryptoType } from "@/lib/crypto-payment"
@@ -54,8 +54,6 @@ export default function CheckoutForm({ productSlug }: CheckoutFormProps) {
   const [copiedAddress, setCopiedAddress] = useState<string | null>(null)
   const [copiedAmount, setCopiedAmount] = useState(false)
   const [userWalletAddress, setUserWalletAddress] = useState("")
-  const currencyContext = useCurrency()
-  const { formatPrice, convertPrice } = currencyContext
   const { language } = useLanguage()
   const t = translations[language]
 
@@ -71,7 +69,7 @@ export default function CheckoutForm({ productSlug }: CheckoutFormProps) {
   }, [productSlug, variantId, quantityParam, cartDetails])
 
   const subtotal = itemsToProcess.reduce((sum, item) => sum + item.variant.price * item.quantity, 0)
-  const total = convertPrice(subtotal)
+  const total = subtotal
 
   const copyToClipboard = (text: string, label: string) => {
     navigator.clipboard.writeText(text)

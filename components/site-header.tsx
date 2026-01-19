@@ -8,7 +8,6 @@ import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuIte
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
 import { Menu, ShoppingCart, ChevronDown, MessageCircle, User, Globe, Search, X } from "lucide-react"
 import Image from "next/image"
-import { useCurrency } from "@/components/currency-provider"
 import { useLanguage } from "@/contexts/language-context"
 import { useAuth } from "@/contexts/auth-context"
 import { useCart } from "@/contexts/cart-context"
@@ -16,7 +15,6 @@ import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 
 export default function SiteHeader() {
-  const { currency, setCurrency } = useCurrency()
   const { language, setLanguage } = useLanguage()
   const { user } = useAuth()
   const { getTotalItems } = useCart()
@@ -39,23 +37,6 @@ export default function SiteHeader() {
       router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`)
       setIsSearchOpen(false)
       setSearchQuery("")
-    }
-  }
-
-  const getCurrencySymbol = (currencyCode: string) => {
-    switch (currencyCode) {
-      case "USD":
-        return "$"
-      case "EUR":
-        return "€"
-      case "GBP":
-        return "£"
-      case "CAD":
-        return "C$"
-      case "AUD":
-        return "A$"
-      default:
-        return ""
     }
   }
 
@@ -197,33 +178,9 @@ export default function SiteHeader() {
                   <DropdownMenuContent align="end" className="bg-zinc-900 border border-voltaris-red/30">
                     <DropdownMenuItem
                       className="text-muted-foreground hover:text-voltaris-red hover:bg-voltaris-red/10 focus:text-voltaris-red focus:bg-voltaris-red/10 transition-colors"
-                      onClick={() => setCurrency("USD")}
+                      onClick={() => setLanguage("en")}
                     >
-                      USD
-                    </DropdownMenuItem>
-                    <DropdownMenuItem
-                      className="text-muted-foreground hover:text-voltaris-red hover:bg-voltaris-red/10 focus:text-voltaris-red focus:bg-voltaris-red/10 transition-colors"
-                      onClick={() => setCurrency("EUR")}
-                    >
-                      EUR
-                    </DropdownMenuItem>
-                    <DropdownMenuItem
-                      className="text-muted-foreground hover:text-voltaris-red hover:bg-voltaris-red/10 focus:text-voltaris-red focus:bg-voltaris-red/10 transition-colors"
-                      onClick={() => setCurrency("GBP")}
-                    >
-                      GBP
-                    </DropdownMenuItem>
-                    <DropdownMenuItem
-                      className="text-muted-foreground hover:text-voltaris-red hover:bg-voltaris-red/10 focus:text-voltaris-red focus:bg-voltaris-red/10 transition-colors"
-                      onClick={() => setCurrency("CAD")}
-                    >
-                      CAD
-                    </DropdownMenuItem>
-                    <DropdownMenuItem
-                      className="text-muted-foreground hover:text-voltaris-red hover:bg-voltaris-red/10 focus:text-voltaris-red focus:bg-voltaris-red/10 transition-colors"
-                      onClick={() => setCurrency("AUD")}
-                    >
-                      AUD
+                      {getLanguageLabel("en")}
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
@@ -329,27 +286,6 @@ export default function SiteHeader() {
                           onClick={() => setLanguage(lang as any)}
                         >
                           {getLanguageLabel(lang)}
-                        </Button>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="pt-4 border-t border-dark-border">
-                    <p className="text-sm font-medium text-muted-foreground mb-2">Currency</p>
-                    <div className="flex flex-wrap gap-2">
-                      {["USD", "EUR", "GBP", "CAD", "AUD"].map((curr) => (
-                        <Button
-                          key={curr}
-                          variant={currency === curr ? "default" : "outline"}
-                          size="sm"
-                          className={
-                            currency === curr
-                              ? "bg-voltaris-red/20 text-voltaris-red border border-voltaris-red/30 hover:bg-voltaris-red/30"
-                              : "border border-zinc-800"
-                          }
-                          onClick={() => setCurrency(curr as any)}
-                        >
-                          {curr}
                         </Button>
                       ))}
                     </div>

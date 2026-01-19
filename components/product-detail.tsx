@@ -20,8 +20,7 @@ import {
   Star,
 } from "lucide-react"
 import { useRouter } from "next/navigation"
-import { useCurrency } from "@/components/currency-provider"
-import { cn } from "@/lib/utils"
+import { cn, formatPrice } from "@/lib/utils"
 
 type ProductDetailProps = {
   product: Product
@@ -38,7 +37,6 @@ export default function ProductDetail({ product, allProducts }: ProductDetailPro
   const [showcaseIndex, setShowcaseIndex] = useState(0)
   const [isZoomOpen, setIsZoomOpen] = useState(false)
   const router = useRouter()
-  const { formatPrice } = useCurrency()
   const { addItem } = useCart()
   const { addItem: addToWishlist, removeItem: removeFromWishlist, isInWishlist } = useWishlist()
 
