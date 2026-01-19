@@ -55,14 +55,6 @@ export default function CheckoutForm({ productSlug }: CheckoutFormProps) {
   const [userWalletAddress, setUserWalletAddress] = useState("")
   const t = translations["en"]
 
-  React.useEffect(() => {
-    if (itemsToProcess.length > 1) {
-      setError("Please checkout items one at a time for now.")
-    } else {
-      setError((prev) => (prev === "Please checkout items one at a time for now." ? null : prev))
-    }
-  }, [itemsToProcess])
-
   const itemsToProcess = React.useMemo(() => {
     if (productSlug && variantId) {
       const foundProduct = getProductBySlug(productSlug)
@@ -73,6 +65,14 @@ export default function CheckoutForm({ productSlug }: CheckoutFormProps) {
     }
     return cartDetails
   }, [productSlug, variantId, quantityParam, cartDetails])
+
+  React.useEffect(() => {
+    if (itemsToProcess.length > 1) {
+      setError("Please checkout items one at a time for now.")
+    } else {
+      setError((prev) => (prev === "Please checkout items one at a time for now." ? null : prev))
+    }
+  }, [itemsToProcess])
 
   const subtotal = itemsToProcess.reduce((sum, item) => sum + item.variant.price * item.quantity, 0)
   const total = subtotal
