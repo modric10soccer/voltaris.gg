@@ -413,6 +413,7 @@ export default function ProductDetail({ product, allProducts }: ProductDetailPro
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div className="relative rounded-xl overflow-hidden aspect-video group">
                     <Image
+                      key={showcaseIndex}
                       src={product.showcaseImages[showcaseIndex] || "/placeholder.svg"}
                       alt={`Showcase ${showcaseIndex + 1}`}
                       fill

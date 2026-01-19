@@ -1308,11 +1308,11 @@ export const products: Product[] = [
     status: "Available",
   },
   {
-    id: "prod_r6_viper_001",
+    id: "prod_642fc916af1891e181b6e0c08739b9e2",
     slug: "r6-siege-viper",
     name: "R6 Siege Viper",
     storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
-    storrikProductId: "prod_r6_viper_001",
+    storrikProductId: "prod_642fc916af1891e181b6e0c08739b9e2",
     image: "/images/products/r6-viper.png",
     description:
       "[+] Premium Aimbot\n" +
@@ -1343,20 +1343,18 @@ export const products: Product[] = [
     category: "Rainbow Six Siege",
     isFeatured: false,
     variants: [
-      { id: "var_r6_viper_1d", name: "1 DAY", price: 5.99, stock: 50 },
-      { id: "var_r6_viper_1w", name: "1 WEEK", price: 16.99, stock: 50 },
-      { id: "var_r6_viper_1m", name: "1 MONTH", price: 34.99, stock: 50 },
-      { id: "var_r6_viper_3m", name: "3 MONTHS", price: 69.99, stock: 50 },
-      { id: "var_r6_viper_lt", name: "LIFETIME", price: 119.99, stock: 50 },
+      { id: "var_d0c3fa233ff3b0a326f6e30870ce74b8", name: "1 DAY", price: 5.99, stock: 50 },
+      { id: "var_8286951bd761d795d450f8bf92e6496c", name: "1 WEEK", price: 16.99, stock: 50 },
+      { id: "var_3abe0e4660e9600e9e086ed538c34b6f", name: "1 MONTH", price: 34.99, stock: 50 },
     ],
     status: "Available",
   },
   {
-    id: "prod_hwid_spoofer_001",
+    id: "prod_169846c7a9dc81cb7f83ca43b2e11672",
     slug: "hwid-spoofer",
-    name: "HWID Spoofer",
+    name: "Temp HWID Spoofer",
     storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
-    storrikProductId: "prod_hwid_spoofer_001",
+    storrikProductId: "prod_169846c7a9dc81cb7f83ca43b2e11672",
     image: "/images/products/hwid-spoofer.png",
     description:
       "[+] Hardware ID Spoofing\n" +
@@ -1387,10 +1385,11 @@ export const products: Product[] = [
     category: "Utility",
     isFeatured: false,
     variants: [
-      { id: "var_hwid_spoof_1w", name: "1 WEEK", price: 9.99, stock: 50 },
-      { id: "var_hwid_spoof_1m", name: "1 MONTH", price: 19.99, stock: 50 },
-      { id: "var_hwid_spoof_3m", name: "3 MONTHS", price: 39.99, stock: 50 },
-      { id: "var_hwid_spoof_lt", name: "LIFETIME", price: 79.99, stock: 50 },
+      { id: "var_c4d0453f3aecbe28991e651092904c1c", name: "1 DAY", price: 9.99, stock: 50 },
+      { id: "var_e5fa18d40d86ed93acd3beea28e58e2b", name: "1 WEEK", price: 14.99, stock: 50 },
+      { id: "var_3f5752689362fc677150297b3c6179a4", name: "3 DAYS", price: 12.99, stock: 50 },
+      { id: "var_55ef6909fd16919b8fe44cfe851ff4dc", name: "1 MONTH", price: 29.99, stock: 50 },
+      { id: "var_569172b01bd668337175275afd9d23e6", name: "LIFETIME", price: 99.99, stock: 50 },
     ],
     status: "Available",
   },
