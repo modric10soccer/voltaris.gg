@@ -6,19 +6,21 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Copy, Loader2 } from "lucide-react"
 import { CRYPTO_LABELS } from "@/lib/crypto-payment"
+import { formatPrice } from "@/lib/utils"
 import SiteHeader from "@/components/site-header"
 import AnimatedGradientBg from "@/components/animated-gradient-bg"
 
 export default function PendingPage() {
   const router = useRouter()
   const [paymentInfo, setPaymentInfo] = useState<any>(null)
+  const [missingPayment, setMissingPayment] = useState(false)
 
   useEffect(() => {
     const stored = sessionStorage.getItem("pendingPayment")
     if (stored) {
       setPaymentInfo(JSON.parse(stored))
     } else {
-      router.push("/products")
+      setMissingPayment(true)
     }
   }, [router])
 
@@ -26,6 +28,26 @@ export default function PendingPage() {
     if (paymentInfo?.transactionId) {
       navigator.clipboard.writeText(paymentInfo.transactionId)
     }
+  }
+
+  if (missingPayment && !paymentInfo) {
+    return (
+      <div className="min-h-[calc(100vh-64px)] bg-black text-foreground pt-20 flex items-center justify-center px-4">
+        <div className="max-w-md text-center space-y-4">
+          <Loader2 className="h-10 w-10 mx-auto text-voltaris-red" />
+          <h1 className="text-2xl font-bold">No pending payment found</h1>
+          <p className="text-muted-foreground">Start a new crypto checkout to see payment verification details here.</p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Button asChild className="bg-voltaris-red/20 hover:bg-voltaris-red/30 text-voltaris-red border border-voltaris-red/30 rounded-full px-6">
+              <Link href="/checkout">Go to Checkout</Link>
+            </Button>
+            <Button asChild variant="outline" className="rounded-full border border-voltaris-red/30 text-voltaris-red hover:bg-voltaris-red/10 px-6">
+              <Link href="/products">Browse Products</Link>
+            </Button>
+          </div>
+        </div>
+      </div>
+    )
   }
 
   if (!paymentInfo) {
@@ -73,8 +95,8 @@ export default function PendingPage() {
                       </span>
                     </div>
                     <div className="flex justify-between items-center py-2 border-b border-zinc-800">
-                      <span className="text-muted-foreground">Amount (USD)</span>
-                      <span className="font-semibold text-foreground">${paymentInfo.total.toFixed(2)} USD</span>
+                      <span className="text-muted-foreground">Amount (EUR)</span>
+                      <span className="font-semibold text-foreground">{formatPrice(paymentInfo.total)}</span>
                     </div>
                     {paymentInfo.userWalletAddress && (
                       <div className="flex justify-between items-start py-2 border-b border-zinc-800">
@@ -108,7 +130,7 @@ export default function PendingPage() {
                           <p className="font-medium text-foreground">{item.product.name}</p>
                           <p className="text-sm text-muted-foreground">{item.variant.name}</p>
                         </div>
-                        <span className="font-semibold text-foreground">${item.variant.price.toFixed(2)}</span>
+                        <span className="font-semibold text-foreground">{formatPrice(item.variant.price)}</span>
                       </div>
                     ))}
                   </div>

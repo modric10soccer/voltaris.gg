@@ -21,8 +21,8 @@ export async function submitFeedback(formData: FormData) {
   await new Promise((resolve) => setTimeout(resolve, 1000))
 
   if (rating > 0 && comment.length > 0 && productId) {
-    return { status: true, message: "Thank you for your feedback!" }
-  } else {
-    return { status: false, message: "Please provide a rating, comment, and select a product." }
+    return { status: true, message: "" }
   }
+
+  return { status: false, message: "Please provide a rating, comment, and select a product." }
 }

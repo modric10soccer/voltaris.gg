@@ -17,12 +17,10 @@ export default function FeedbackForm() {
   const [selectedProductId, setSelectedProductId] = useState("")
   const [isPending, startTransition] = useTransition()
   const [error, setError] = useState<string | null>(null)
-  const [success, setSuccess] = useState<string | null>(null)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setError(null)
-    setSuccess(null)
 
     if (rating === 0) {
       setError("Please select a star rating.")
@@ -49,7 +47,6 @@ export default function FeedbackForm() {
         setRating(0)
         setComment("")
         setSelectedProductId("")
-        setSuccess(result.message)
       } else {
         setError(result.message)
       }
@@ -118,8 +115,6 @@ export default function FeedbackForm() {
       </div>
 
       {error && <p className="text-red-500 text-sm mt-4">{error}</p>}
-      {success && <p className="text-green-500 text-sm mt-4">{success}</p>}
-
       <Button
         type="submit"
         className="w-full bg-voltaris-red/20 hover:bg-voltaris-red/30 text-voltaris-red border border-voltaris-red/30 px-8 py-6 text-lg font-semibold rounded-full shadow-lg transition-all duration-300 ease-in-out backdrop-blur-sm hover:scale-[1.02] active:scale-[0.98]"

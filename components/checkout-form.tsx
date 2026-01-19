@@ -42,7 +42,7 @@ export default function CheckoutForm({ productSlug }: CheckoutFormProps) {
   const variantId = searchParams.get("variantId")
   const quantityParam = Number.parseInt(searchParams.get("quantity") || "1")
 
-  const { getCartDetails, removeItem } = useCart()
+  const { getCartDetails, removeItem, isHydrated } = useCart()
   const cartDetails = getCartDetails()
 
   const [agreedToTerms, setAgreedToTerms] = useState(false)
@@ -54,6 +54,14 @@ export default function CheckoutForm({ productSlug }: CheckoutFormProps) {
   const [copiedAmount, setCopiedAmount] = useState(false)
   const [userWalletAddress, setUserWalletAddress] = useState("")
   const t = translations["en"]
+
+  React.useEffect(() => {
+    if (itemsToProcess.length > 1) {
+      setError("Please checkout items one at a time for now.")
+    } else {
+      setError((prev) => (prev === "Please checkout items one at a time for now." ? null : prev))
+    }
+  }, [itemsToProcess])
 
   const itemsToProcess = React.useMemo(() => {
     if (productSlug && variantId) {
@@ -147,15 +155,32 @@ export default function CheckoutForm({ productSlug }: CheckoutFormProps) {
     }
   }
 
-  if (itemsToProcess.length === 0) {
+  if (!isHydrated) {
     return (
       <div className="flex min-h-[calc(100vh-64px)] items-center justify-center text-foreground">
-        <div className="flex flex-col items-center justify-center py-16 text-muted-foreground">
-          <ShoppingCart className="h-24 w-24 mb-4 text-primary/50" />
-          <p className="text-xl mb-6">{t.noItemsToCheckout}</p>
-          <Button asChild className="bg-primary text-black hover:bg-primary/90">
-            <Link href="/products">{t.continueShopping}</Link>
-          </Button>
+        <div className="flex items-center gap-3 text-muted-foreground">
+          <Loader2 className="h-5 w-5 animate-spin" />
+          <span>Loading your cart...</span>
+        </div>
+      </div>
+    )
+  }
+
+  if (itemsToProcess.length === 0) {
+    return (
+      <div className="flex min-h-[calc(100vh-64px)] items-center justify-center text-foreground px-4">
+        <div className="flex flex-col items-center justify-center py-12 px-6 text-center bg-zinc-900/60 border border-zinc-800 rounded-2xl">
+          <ShoppingCart className="h-20 w-20 mb-4 text-voltaris-red" />
+          <p className="text-xl mb-3">{t.noItemsToCheckout}</p>
+          <p className="text-sm text-muted-foreground mb-6">Add at least one product to proceed to checkout.</p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Button asChild className="bg-voltaris-red/20 text-voltaris-red hover:bg-voltaris-red/30 border border-voltaris-red/30 rounded-full px-6">
+              <Link href="/products">Add a Product</Link>
+            </Button>
+            <Button asChild variant="outline" className="rounded-full border border-voltaris-red/30 text-voltaris-red hover:bg-voltaris-red/10 px-6">
+              <Link href="/cart">Return to Cart</Link>
+            </Button>
+          </div>
         </div>
       </div>
     )
@@ -447,7 +472,7 @@ export default function CheckoutForm({ productSlug }: CheckoutFormProps) {
               <Button
                 onClick={handleCheckout}
                 className="w-full bg-voltaris-red/20 hover:bg-voltaris-red/30 text-voltaris-red border border-voltaris-red/30 h-14 text-lg font-semibold rounded-full backdrop-blur-sm transition-all"
-                disabled={isPending || !agreedToTerms}
+                disabled={isPending || !agreedToTerms || itemsToProcess.length !== 1}
               >
                 {isPending ? (
                   <>

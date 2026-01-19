@@ -22,23 +22,23 @@ export const CRYPTO_ICONS: Record<CryptoType, string> = {
   LTC: "₿",
   BTC: "₿",
   ETH: "Ξ",
-  USDC_POLYGON: "$",
-  USDC_SOLANA: "$",
-  USDC_ETH: "$",
+  USDC_POLYGON: "€",
+  USDC_SOLANA: "€",
+  USDC_ETH: "€",
 }
 
 export const CRYPTO_RATES: Record<CryptoType, number> = {
-  BTC: 95000, // $95,000 per BTC
-  ETH: 3500, // $3,500 per ETH
-  LTC: 85, // $85 per LTC
-  USDC_POLYGON: 1, // $1 per USDC
-  USDC_SOLANA: 1, // $1 per USDC
-  USDC_ETH: 1, // $1 per USDC
+  BTC: 95000, // €95,000 per BTC (approx)
+  ETH: 3500, // €3,500 per ETH (approx)
+  LTC: 85, // €85 per LTC (approx)
+  USDC_POLYGON: 1, // €1 per USDC
+  USDC_SOLANA: 1, // €1 per USDC
+  USDC_ETH: 1, // €1 per USDC
 }
 
-export function calculateCryptoAmount(usdAmount: number, cryptoType: CryptoType): string {
+export function calculateCryptoAmount(eurAmount: number, cryptoType: CryptoType): string {
   const rate = CRYPTO_RATES[cryptoType]
-  const cryptoAmount = usdAmount / rate
+  const cryptoAmount = eurAmount / rate
 
   // Format with appropriate decimal places
   if (cryptoType === "BTC") {

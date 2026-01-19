@@ -13,6 +13,7 @@ export type CartItem = {
 
 interface CartContextType {
   items: CartItem[]
+  isHydrated: boolean
   addItem: (productId: string, variantId: string, quantity: number) => void
   removeItem: (productId: string, variantId: string) => void
   updateQuantity: (productId: string, variantId: string, newQuantity: number) => void
@@ -26,6 +27,7 @@ const CartContext = createContext<CartContextType | undefined>(undefined)
 
 export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([])
+  const [isHydrated, setIsHydrated] = useState(false)
 
   // Load cart from localStorage on initial mount
   useEffect(() => {
@@ -33,6 +35,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
     if (storedCart) {
       setItems(JSON.parse(storedCart))
     }
+    setIsHydrated(true)
   }, [])
 
   // Save cart to localStorage whenever it changes
@@ -95,12 +98,13 @@ export function CartProvider({ children }: { children: ReactNode }) {
   }, [items])
 
   const getTotalPrice = useCallback(() => {
-    return getCartDetails().reduce((total, item) => total + item.product.variants[0].price * item.quantity, 0)
+    return getCartDetails().reduce((total, item) => total + item.variant.price * item.quantity, 0)
   }, [getCartDetails])
 
   const contextValue = React.useMemo(
     () => ({
       items,
+      isHydrated,
       addItem,
       removeItem,
       updateQuantity,
@@ -109,7 +113,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       getTotalPrice,
       getCartDetails,
     }),
-    [items, addItem, removeItem, updateQuantity, clearCart, getTotalItems, getTotalPrice, getCartDetails],
+    [items, isHydrated, addItem, removeItem, updateQuantity, clearCart, getTotalItems, getTotalPrice, getCartDetails],
   )
 
   return <CartContext.Provider value={contextValue}>{children}</CartContext.Provider>

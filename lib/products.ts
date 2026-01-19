@@ -829,7 +829,7 @@ export const products: Product[] = [
       { id: "VAR_BPgKvJslvIlaSBLZXFiVDxY6aL5f3GkF", name: "LIFETIME", price: 29.99, stock: 20 },
     ],
     status: "Undetected",
-    videoUrl: "https://www.youtube.com/embed/pj1OY5Cz8ps",
+    videoUrl: "https://www.youtube.com/embed/I6fMA5OWiDw",
     reviews: [
       {
         quote: "All items unlocked instantly! The customization options are endless.",

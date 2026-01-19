@@ -6,7 +6,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu"
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
-import { Menu, ShoppingCart, ChevronDown, MessageCircle, User, Globe, Search, X } from "lucide-react"
+import { Menu, ShoppingCart, ChevronDown, MessageCircle, User, Globe, Search, X, Heart } from "lucide-react"
 import Image from "next/image"
 import { useCart } from "@/contexts/cart-context"
 import { useEffect, useState } from "react"
@@ -103,6 +103,13 @@ export default function SiteHeader() {
                 Status
               </Link>
               <Link
+                href="/wishlist"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground"
+                prefetch={false}
+              >
+                Wishlist
+              </Link>
+              <Link
                 href="/reviews"
                 className="text-sm font-medium text-muted-foreground hover:text-foreground"
                 prefetch={false}
@@ -130,6 +137,18 @@ export default function SiteHeader() {
               <Link href="/account" prefetch={false}>
                 <User className="h-5 w-5" />
                 <span className="sr-only">Account</span>
+              </Link>
+            </Button>
+
+            <Button
+              asChild
+              variant="ghost"
+              size="icon"
+              className="text-muted-foreground hover:text-voltaris-red hover:bg-voltaris-red/10 hover:border-voltaris-red/30 border border-transparent transition-all rounded-full relative"
+            >
+              <Link href="/wishlist" prefetch={false}>
+                <Heart className="h-5 w-5" />
+                <span className="sr-only">Wishlist</span>
               </Link>
             </Button>
 
@@ -196,6 +215,9 @@ export default function SiteHeader() {
                   </Link>
                   <Link href="/status" className="text-lg font-semibold text-foreground" prefetch={false}>
                     Status
+                  </Link>
+                  <Link href="/wishlist" className="text-lg font-semibold text-foreground" prefetch={false}>
+                    Wishlist
                   </Link>
                   <Link href="/reviews" className="text-lg font-semibold text-foreground" prefetch={false}>
                     Reviews

@@ -3,17 +3,14 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Trash2, ShoppingCart, Zap, Heart } from "lucide-react"
+import { Trash2, ShoppingCart, Zap } from "lucide-react"
 import { useCart } from "@/contexts/cart-context"
-import { useWishlist } from "@/contexts/wishlist-context"
 import { formatPrice } from "@/lib/utils"
 import { useState } from "react"
 
 export default function CartPageClient() {
   const { items, updateQuantity, removeItem, getTotalPrice, getCartDetails, clearCart } = useCart()
-  const { getWishlistDetails } = useWishlist()
   const cartDetails = getCartDetails()
-  const wishlistDetails = getWishlistDetails()
   const [isClearing, setIsClearing] = useState(false)
 
   const handleUpdateQuantity = (productId: string, variantId: string, newQuantity: number) => {
@@ -154,37 +151,6 @@ export default function CartPageClient() {
         </div>
       )}
 
-      {wishlistDetails.length > 0 && (
-        <div className="mt-16">
-          <div className="flex items-center gap-3 mb-8">
-            <Heart className="h-6 w-6 text-voltaris-red" />
-            <h2 className="text-2xl font-bold text-foreground">Your Wishlist</h2>
-            <span className="text-sm text-muted-foreground">({wishlistDetails.length} items)</span>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {wishlistDetails.map((item) => (
-              <Link key={`${item.product.id}-${item.variant.id}`} href={`/products/${item.product.slug}`}>
-                <div className="group relative overflow-hidden rounded-2xl border border-zinc-800 bg-gradient-to-br from-zinc-900/90 to-zinc-950/90 p-4 text-left transition-all duration-300 hover:scale-[1.02] hover:border-voltaris-red/50 flex flex-col h-full cursor-pointer">
-                  <div className="relative mb-4 rounded-xl overflow-hidden h-48">
-                    <Image
-                      src={item.product.image || "/placeholder.svg"}
-                      alt={item.product.name}
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">{item.product.name}</h3>
-                  <p className="text-sm text-muted-foreground mb-4">{item.variant.name}</p>
-                  <div className="flex items-center justify-between mt-auto">
-                    <span className="text-voltaris-red font-semibold">{formatPrice(item.variant.price)}</span>
-                    <span className="text-xs text-nano-blue">In Stock</span>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
     </div>
   )
 }
