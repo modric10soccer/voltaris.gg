@@ -102,7 +102,7 @@ export const products: Product[] = [
       { id: "var_43fad353bfde6323ad72b4e4b0e9f145", name: "3 MONTH", price: 409.99, stock: 12 },
       { id: "var_11233800c69fc2f429fafa36b3ea5a2a", name: "LIFETIME", price: 879.99, stock: 20 },
     ],
-    videoUrl: "https://www.youtube.com/watch?v=qxcWQy_XNGU",
+    videoUrl: "https://www.youtube.com/embed/qxcWQy_XNGU",
     reviews: [
       {
         quote: "Requiem SSL Bot is insane! Perfect rotation and passing. Easily the best bot I've used.",
@@ -186,7 +186,7 @@ export const products: Product[] = [
     ],
     downloadUrl: "https://gofile.io/d/NZjDO1",
     status: "Undetected",
-    videoUrl: "https://www.youtube.com/watch?v=aYa60t7grg0",
+    videoUrl: "https://www.youtube.com/embed/aYa60t7grg0",
     reviews: [
       {
         quote: "SSL in 1v1s is insane! This bot really delivers on the promise.",
@@ -266,7 +266,7 @@ export const products: Product[] = [
     ],
     downloadUrl: "https://gofile.io/d/NZjDO1",
     status: "Undetected",
-    videoUrl: "https://www.youtube.com/watch?v=GojV6ruv6Pk",
+    videoUrl: "https://www.youtube.com/embed/GojV6ruv6Pk",
     reviews: [
       {
         quote: "The flip resets are insane! Consistently hitting SSL in 1v1s with this bot.",
@@ -363,7 +363,7 @@ export const products: Product[] = [
   ],
   downloadUrl: "https://gofile.io/d/NZjDO1",
   status: "Undetected",
-  videoUrl: "https://www.youtube.com/watch?v=WoL0NSLGMzU",
+  videoUrl: "https://www.youtube.com/embed/WoL0NSLGMzU",
   reviews: [
     {
       quote: "Mech is insane! Hit SSL in 1v1s and the mechanics are super clean.",
@@ -431,7 +431,7 @@ export const products: Product[] = [
       { id: "var_3655aed8efbedaffcb7d6ae75ec5f3b2", name: "LIFETIME", price: 99.99, stock: 20 },
     ],
     status: "Undetected",
-    videoUrl: "https://www.youtube.com/watch?v=a3iaoOV7Oz4",
+    videoUrl: "https://www.youtube.com/embed/a3iaoOV7Oz4",
     reviews: [
       {
         quote: "Instant rank improvement. Product delivers on all promises.",
@@ -686,7 +686,7 @@ export const products: Product[] = [
       { id: "VAR_E3JuP3cgweqDVohLAdTy7sbUfzbza9uj", name: "LIFETIME", price: 74.99, stock: 20 },
     ],
     status: "Undetected",
-    videoUrl: "https://www.youtube.com/watch?v=I_IyCKcb61E",
+    videoUrl: "https://www.youtube.com/embed/I_IyCKcb61E",
     reviews: [
       {
         quote: "Best product I've ever used. Support team is amazing and responsive!",
@@ -953,7 +953,7 @@ export const products: Product[] = [
       { id: "var_41f679bc1fd9b9c0474ff1db734c1a86", name: "LIFETIME", price: 44.99, stock: 20 },
     ],
     status: "Undetected",
-    videoUrl: "https://www.youtube.com/watch?v=vQ75Q5D6pMA",
+    videoUrl: "https://www.youtube.com/embed/vQ75Q5D6pMA",
     reviews: [
       {
         quote: "Works flawlessly, exactly as advertised. Very happy with my purchase.",
