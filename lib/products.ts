@@ -1176,6 +1176,225 @@ export const products: Product[] = [
     ],
     status: "Available",
   },
+  {
+    id: "prod_r6_perp_001",
+    slug: "r6-siege-perp",
+    name: "R6 Siege Perp",
+    storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
+    storrikProductId: "prod_r6_perp_001",
+    image: "/images/products/r6-perp-box.png",
+    description:
+      "[+] Advanced Aimbot System\n" +
+      "[+] Wall ESP Detection\n" +
+      "[+] Team Highlight\n" +
+      "[+] Predicted Shots\n" +
+      "[+] Recoil Reduction\n" +
+      "[+] Custom Aim Speed\n" +
+      "[+] Hitbox Customization\n" +
+      "[+] FOV Adjustment\n" +
+      "[+] Trigger Bot\n" +
+      "[+] Undetected External\n\n" +
+      "**System Requirements**\n" +
+      "**Game Client:** Rainbow Six Siege (Ubisoft+)\n" +
+      "**Operating System:** Windows 10/11 (64-bit)\n" +
+      "**Processor:** Intel Core i5 or AMD Ryzen 5\n" +
+      "**RAM:** 8GB minimum\n" +
+      "**GPU:** NVIDIA GTX 960 / AMD RX 470 or better\n\n" +
+      "**Overview**\n" +
+      "The Perp operator cheat provides advanced aiming capabilities with wall detection and team awareness. Dominate tactical gameplay with precision targeting and enhanced map awareness.\n\n" +
+      "**Key Features**\n" +
+      "[+] Real-time wall penetration ESP\n" +
+      "[+] Smooth, configurable aimbot\n" +
+      "[+] Team identification system\n" +
+      "[+] Advanced trajectory prediction\n" +
+      "[+] Minimal performance impact\n" +
+      "[+] Easy loader setup",
+    category: "Rainbow Six Siege",
+    isFeatured: false,
+    variants: [
+      { id: "var_r6_perp_1d", name: "1 DAY", price: 4.99, stock: 50 },
+      { id: "var_r6_perp_1w", name: "1 WEEK", price: 14.99, stock: 50 },
+      { id: "var_r6_perp_1m", name: "1 MONTH", price: 29.99, stock: 50 },
+      { id: "var_r6_perp_3m", name: "3 MONTHS", price: 59.99, stock: 50 },
+      { id: "var_r6_perp_lt", name: "LIFETIME", price: 99.99, stock: 50 },
+    ],
+    status: "Available",
+  },
+  {
+    id: "prod_r6_crusader_001",
+    slug: "r6-siege-crusader",
+    name: "R6 Siege Crusader",
+    storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
+    storrikProductId: "prod_r6_crusader_001",
+    image: "/images/products/r6-crusader-box.png",
+    description:
+      "[+] Professional Grade Aimbot\n" +
+      "[+] Full Map ESP\n" +
+      "[+] Enemy Detection\n" +
+      "[+] Operator Identification\n" +
+      "[+] Ability Tracking\n" +
+      "[+] Smooth Aim Curves\n" +
+      "[+] Anti-Aim Detection\n" +
+      "[+] Distance Based Adjustment\n" +
+      "[+] Auto Trigger\n" +
+      "[+] External Undetected\n\n" +
+      "**System Requirements**\n" +
+      "**Game Client:** Rainbow Six Siege (Ubisoft+)\n" +
+      "**Operating System:** Windows 10/11 (64-bit)\n" +
+      "**Processor:** Intel Core i5 or AMD Ryzen 5\n" +
+      "**RAM:** 8GB minimum\n" +
+      "**GPU:** NVIDIA GTX 960 / AMD RX 470 or better\n\n" +
+      "**Overview**\n" +
+      "Crusader delivers professional-grade cheats for Rainbow Six Siege with comprehensive ESP and intelligent aimbot systems. Perfect for competitive play with advanced operator tracking and ability detection.\n\n" +
+      "**Key Features**\n" +
+      "[+] Real-time operator detection\n" +
+      "[+] Ability cooldown tracking\n" +
+      "[+] Full map visualization\n" +
+      "[+] Professional aim smoothing\n" +
+      "[+] Distance-based adjustments\n" +
+      "[+] Completely undetected",
+    category: "Rainbow Six Siege",
+    isFeatured: false,
+    variants: [
+      { id: "var_r6_crusader_1d", name: "1 DAY", price: 4.99, stock: 50 },
+      { id: "var_r6_crusader_1w", name: "1 WEEK", price: 14.99, stock: 50 },
+      { id: "var_r6_crusader_1m", name: "1 MONTH", price: 29.99, stock: 50 },
+      { id: "var_r6_crusader_3m", name: "3 MONTHS", price: 59.99, stock: 50 },
+      { id: "var_r6_crusader_lt", name: "LIFETIME", price: 99.99, stock: 50 },
+    ],
+    status: "Available",
+  },
+  {
+    id: "prod_r6_onyx_lite_001",
+    slug: "r6-siege-onyx-lite",
+    name: "R6 Siege Onyx Lite",
+    storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
+    storrikProductId: "prod_r6_onyx_lite_001",
+    image: "/images/products/r6-onyx-lite-box.png",
+    description:
+      "[+] Lightweight Aimbot\n" +
+      "[+] Basic ESP\n" +
+      "[+] Enemy Outline\n" +
+      "[+] Distance Display\n" +
+      "[+] Low Resource Usage\n" +
+      "[+] Quick Setup\n" +
+      "[+] Minimal Configuration\n" +
+      "[+] Stability Focused\n" +
+      "[+] Silent Operation\n" +
+      "[+] External Hack\n\n" +
+      "**System Requirements**\n" +
+      "**Game Client:** Rainbow Six Siege (Ubisoft+)\n" +
+      "**Operating System:** Windows 10/11 (64-bit)\n" +
+      "**Processor:** Intel Core i5 or AMD Ryzen 5\n" +
+      "**RAM:** 6GB minimum\n" +
+      "**GPU:** NVIDIA GTX 750 / AMD RX 460 or better\n\n" +
+      "**Overview**\n" +
+      "Onyx Lite is the streamlined version for casual players seeking essential features without bloat. Lightweight yet effective with minimal system impact and lightning-fast setup.\n\n" +
+      "**Key Features**\n" +
+      "[+] Minimal system footprint\n" +
+      "[+] Fast, reliable aimbot\n" +
+      "[+] Clean ESP visualization\n" +
+      "[+] One-click configuration\n" +
+      "[+] Ultra-stable operation\n" +
+      "[+] Perfect for entry-level use",
+    category: "Rainbow Six Siege",
+    isFeatured: false,
+    variants: [
+      { id: "var_r6_onyx_1d", name: "1 DAY", price: 2.99, stock: 50 },
+      { id: "var_r6_onyx_1w", name: "1 WEEK", price: 9.99, stock: 50 },
+      { id: "var_r6_onyx_1m", name: "1 MONTH", price: 19.99, stock: 50 },
+      { id: "var_r6_onyx_3m", name: "3 MONTHS", price: 39.99, stock: 50 },
+      { id: "var_r6_onyx_lt", name: "LIFETIME", price: 79.99, stock: 50 },
+    ],
+    status: "Available",
+  },
+  {
+    id: "prod_r6_viper_001",
+    slug: "r6-siege-viper",
+    name: "R6 Siege Viper",
+    storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
+    storrikProductId: "prod_r6_viper_001",
+    image: "/images/products/r6-viper-box.png",
+    description:
+      "[+] Premium Aimbot\n" +
+      "[+] Advanced ESP System\n" +
+      "[+] Tactical HUD\n" +
+      "[+] Custom Filtering\n" +
+      "[+] Velocity Prediction\n" +
+      "[+] Fine Aim Control\n" +
+      "[+] Multiple Aim Modes\n" +
+      "[+] Loadout Detection\n" +
+      "[+] Visual Customization\n" +
+      "[+] Undetected External\n\n" +
+      "**System Requirements**\n" +
+      "**Game Client:** Rainbow Six Siege (Ubisoft+)\n" +
+      "**Operating System:** Windows 10/11 (64-bit)\n" +
+      "**Processor:** Intel Core i5 or AMD Ryzen 5\n" +
+      "**RAM:** 8GB minimum\n" +
+      "**GPU:** NVIDIA GTX 960 / AMD RX 470 or better\n\n" +
+      "**Overview**\n" +
+      "Viper represents the apex of R6 Siege cheats with premium features and tactical intelligence. Advanced velocity prediction and loadout detection give you the ultimate competitive edge.\n\n" +
+      "**Key Features**\n" +
+      "[+] Predictive ballistics system\n" +
+      "[+] Enemy loadout detection\n" +
+      "[+] Customizable tactical HUD\n" +
+      "[+] Multiple aiming profiles\n" +
+      "[+] Advanced filtering options\n" +
+      "[+] Premium undetection",
+    category: "Rainbow Six Siege",
+    isFeatured: false,
+    variants: [
+      { id: "var_r6_viper_1d", name: "1 DAY", price: 5.99, stock: 50 },
+      { id: "var_r6_viper_1w", name: "1 WEEK", price: 16.99, stock: 50 },
+      { id: "var_r6_viper_1m", name: "1 MONTH", price: 34.99, stock: 50 },
+      { id: "var_r6_viper_3m", name: "3 MONTHS", price: 69.99, stock: 50 },
+      { id: "var_r6_viper_lt", name: "LIFETIME", price: 119.99, stock: 50 },
+    ],
+    status: "Available",
+  },
+  {
+    id: "prod_hwid_spoofer_001",
+    slug: "hwid-spoofer",
+    name: "HWID Spoofer",
+    storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
+    storrikProductId: "prod_hwid_spoofer_001",
+    image: "/images/products/hwid-spoofer-box.png",
+    description:
+      "[+] Hardware ID Spoofing\n" +
+      "[+] Ban Bypass\n" +
+      "[+] Deep System Integration\n" +
+      "[+] Multiple Spoof Modes\n" +
+      "[+] Permanent Changes\n" +
+      "[+] Drive Serial Modification\n" +
+      "[+] MAC Address Spoofing\n" +
+      "[+] Motherboard ID Change\n" +
+      "[+] Secure Operation\n" +
+      "[+] Works with Multiple Games\n\n" +
+      "**System Requirements**\n" +
+      "**Operating System:** Windows 10/11 (64-bit)\n" +
+      "**Admin Rights:** Required\n" +
+      "**Processor:** Intel Core i3 or AMD Ryzen 3\n" +
+      "**RAM:** 2GB minimum\n" +
+      "**Storage:** 100MB free space\n\n" +
+      "**Overview**\n" +
+      "Hardware ID Spoofer enables complete system identification masking across multiple games and anti-cheat systems. Perfect for ban recovery or fresh starts with full hardware identity modification.\n\n" +
+      "**Key Features**\n" +
+      "[+] Deep-level HWID spoofing\n" +
+      "[+] Anti-cheat bypass capability\n" +
+      "[+] Permanent modifications option\n" +
+      "[+] Multiple spoof profiles\n" +
+      "[+] Secure encrypted operation\n" +
+      "[+] Compatible with most games",
+    category: "Utility",
+    isFeatured: false,
+    variants: [
+      { id: "var_hwid_spoof_1w", name: "1 WEEK", price: 9.99, stock: 50 },
+      { id: "var_hwid_spoof_1m", name: "1 MONTH", price: 19.99, stock: 50 },
+      { id: "var_hwid_spoof_3m", name: "3 MONTHS", price: 39.99, stock: 50 },
+      { id: "var_hwid_spoof_lt", name: "LIFETIME", price: 79.99, stock: 50 },
+    ],
+    status: "Available",
+  },
 ]
 
 export function getProductBySlug(slug: string): Product | undefined {
