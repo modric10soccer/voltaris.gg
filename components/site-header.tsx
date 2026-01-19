@@ -210,7 +210,7 @@ export default function SiteHeader() {
                     prefetch={false}
                   >
                     <User className="h-5 w-5" />
-                    {user ? user.username : "Account"}
+                    Account
                   </Link>
 
                   <Link
