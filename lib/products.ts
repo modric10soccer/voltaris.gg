@@ -1182,7 +1182,7 @@ export const products: Product[] = [
     name: "R6 Siege Perc",
     storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
     storrikProductId: "prod_0084ffd824317d81ee0fe58c05ad913f",
-    image: "/images/products/R6%20Perc.png",
+    image: "/images/products/r6-perc.png",
     description:
       "[+] Advanced Aimbot System\n" +
       "[+] Wall ESP Detection\n" +
@@ -1224,7 +1224,7 @@ export const products: Product[] = [
     name: "R6 Siege Crusader",
     storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
     storrikProductId: "prod_dc36c7b479e2bb47764069013c107e70",
-    image: "/images/products/R6%20Crusader.png",
+    image: "/images/products/r6-crusader.png",
     description:
       "[+] Professional Grade Aimbot\n" +
       "[+] Full Map ESP\n" +
@@ -1266,7 +1266,7 @@ export const products: Product[] = [
     name: "R6 Siege Onyx Lite",
     storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
     storrikProductId: "prod_e6e5a51add7e069b2e4f30cf92f7ca85",
-    image: "/images/products/R6%20Onyx%20Lite.png",
+    image: "/images/products/r6-onyx-lite.png",
     description:
       "[+] Lightweight Aimbot\n" +
       "[+] Basic ESP\n" +
@@ -1308,7 +1308,7 @@ export const products: Product[] = [
     name: "R6 Siege Viper",
     storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
     storrikProductId: "prod_r6_viper_001",
-    image: "/images/products/R6%20Viper.png",
+    image: "/images/products/r6-viper.png",
     description:
       "[+] Premium Aimbot\n" +
       "[+] Advanced ESP System\n" +
@@ -1352,7 +1352,7 @@ export const products: Product[] = [
     name: "HWID Spoofer",
     storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
     storrikProductId: "prod_hwid_spoofer_001",
-    image: "/images/products/HWID%20Spoofer.png",
+    image: "/images/products/hwid-spoofer.png",
     description:
       "[+] Hardware ID Spoofing\n" +
       "[+] Ban Bypass\n" +
