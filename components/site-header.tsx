@@ -164,29 +164,6 @@ export default function SiteHeader() {
                   </DropdownMenuContent>
                 </DropdownMenu>
 
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="hidden lg:flex items-center gap-1 text-sm text-muted-foreground hover:text-voltaris-red hover:bg-voltaris-red/10 border border-transparent hover:border-voltaris-red/30 transition-all rounded-full"
-                    >
-                      <span className="text-voltaris-red">{getCurrencySymbol(currency)}</span> - {currency}{" "}
-                      <ChevronDown className="h-4 w-4" />
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end" className="bg-zinc-900 border border-voltaris-red/30">
-                    <DropdownMenuItem
-                      className="text-muted-foreground hover:text-voltaris-red hover:bg-voltaris-red/10 focus:text-voltaris-red focus:bg-voltaris-red/10 transition-colors"
-                      onClick={() => setLanguage("en")}
-                    >
-                      {getLanguageLabel("en")}
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </>
-            )}
-
             <Button
               asChild
               variant="ghost"
