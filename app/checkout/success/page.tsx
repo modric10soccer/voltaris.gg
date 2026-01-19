@@ -5,6 +5,8 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import AnimatedGradientBg from "@/components/animated-gradient-bg"
 
+export const dynamic = "force-dynamic"
+
 export default function CheckoutSuccessPage() {
   return (
     <div className="flex min-h-screen flex-col bg-background">
