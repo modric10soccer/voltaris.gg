@@ -1138,56 +1138,33 @@ export const products: Product[] = [
     storrikProductId: "prod_c8fb8c4a0d7627858b32a6f7fc054424",
     image: "/images/products/arc-raiders-frost-box.png",
     description:
+      "[+] Windows 10 & 11 Support\n" +
+      "[+] External Client\n" +
+      "[+] Intel & AMD CPU Compatible\n" +
+      "[+] Advanced Aimbot System\n" +
+      "[+] Magnetic Triggerbot\n" +
+      "[+] Full Player & Loot ESP\n" +
+      "[+] Draggable ESP System\n" +
+      "[+] Config Management\n" +
+      "[+] Developer Mode\n\n" +
       "**System Requirements**\n" +
-      "Windows 10 & 11\n" +
-      "External Client\n" +
-      "Intel & AMD CPU's\n\n" +
-      "**Aimbot**\n" +
-      "- Targeting Options\n" +
-      "- Enabled\n" +
-      "- Speed\n" +
-      "- Field of View\n" +
-      "- Max Distance\n" +
-      "- Retarget Time\n" +
-      "- Detach Time\n" +
-      "- Hitbox Selection Interface\n" +
-      "- Filtering Options\n" +
-      "- Filter Invisible\n" +
-      "- Draw Aimbot FOV\n\n" +
+      "**Operating System:** Windows 10 & 11\n" +
+      "**Client Type:** External\n" +
+      "**CPU Support:** Intel & AMD\n\n" +
+      "**Aimbot Features**\n" +
+      "Full targeting control with customizable speed, field of view, and max distance. Features hitbox selection interface with retarget and detach timing controls. Advanced filtering options to ignore invisible targets, with visual FOV circle overlay.\n\n" +
       "**Triggerbot**\n" +
-      "- Targeting Options\n" +
-      "- Enabled\n" +
-      "- Hitbox Expansion\n" +
-      "- Retarget Time\n" +
-      "- Magnetic Triggerbot\n" +
-      "- Hitbox Selection Interface\n" +
-      "- Filtering Options\n" +
-      "- Filter Invisible\n\n" +
+      "Intelligent triggerbot with hitbox expansion and magnetic mode for enhanced accuracy. Includes retarget timing and filtering to ensure clean, invisible-target-free engagement.\n\n" +
       "**Player ESP**\n" +
-      "- Main ESP Settings\n" +
-      "- Loot ESP\n" +
-      "- Box\n" +
-      "- Head Dot\n" +
-      "- Skeleton\n" +
-      "- Out of FOV Arrows\n" +
-      "- Distance\n" +
-      "- Name\n" +
-      "- Visible\n" +
-      "- Team\n" +
-      "- Draggable ESP System\n\n" +
-      "**Config**\n" +
-      "- Configuration Management\n" +
-      "- Config Name Input\n" +
-      "- Add Config (+)\n" +
-      "- Config List\n" +
-      "- Action Buttons\n" +
-      "- LOAD\n" +
-      "- SAVE\n" +
-      "- DELETE\n" +
-      "- CLEAR\n\n" +
-      "**Miscellaneous Settings**\n" +
-      "- Overlay FPS\n" +
-      "- Developer Mode",
+      "Complete ESP suite featuring box, head dot, skeleton, and out-of-FOV arrows. Display distance, name, visibility status, and team information. Fully draggable ESP system for custom screen positioning.\n\n" +
+      "**Loot ESP**\n" +
+      "Track valuable items and loot with dedicated ESP features.\n\n" +
+      "**Config System**\n" +
+      "Built-in configuration management with the ability to create, save, load, delete, and clear configs. Name and organize multiple setups for different playstyles.\n\n" +
+      "**Miscellaneous**\n" +
+      "Overlay FPS display and developer mode for advanced users.\n\n" +
+      "**Overview**\n" +
+      "Arc Raiders Frost delivers a comprehensive external cheat solution with industry-leading aimbot, ESP, and customization features. Designed for both casual and competitive players seeking an edge in Arc Raiders.",
     category: "Arc Raiders",
     isFeatured: false,
     variants: [
