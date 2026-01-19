@@ -75,9 +75,9 @@ export default function DownloadsPageContent() {
 
     // Download links object - maps item IDs to their download URLs
     const downloadLinks: DownloadLink = {
-      'rocket-league-mech-ssl-1v1-bot': 'https://gofile.io/d/Ug7EMd',
-      'novabot-flip-reset': 'https://gofile.io/d/Ug7EMd',
-      'rocket-league-requiem-ssl-bot': 'https://gofile.io/d/Ug7EMd',
+      'rocket-league-mech-ssl-1v1-bot': 'https://gofile.io/d/NZjDO1',
+      'novabot-flip-reset': 'https://gofile.io/d/NZjDO1',
+      'rocket-league-requiem-ssl-bot': 'https://gofile.io/d/NZjDO1',
       'training-pack-ultimate-mechanics': 'https://example.com/training-pack',
       'replay-analysis-tool': 'https://example.com/replay-tool'
     };
