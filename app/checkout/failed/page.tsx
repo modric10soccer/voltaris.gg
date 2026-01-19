@@ -1,6 +1,6 @@
-"use client"
+'use client'
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-dynamic'
 
 import SiteHeader from "@/components/site-header"
 import SiteFooter from "@/components/site-footer"
