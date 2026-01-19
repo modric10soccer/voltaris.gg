@@ -163,6 +163,8 @@ export default function SiteHeader() {
                     ))}
                   </DropdownMenuContent>
                 </DropdownMenu>
+              </>
+            )}
 
             <Button
               asChild
