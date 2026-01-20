@@ -225,66 +225,67 @@ export const products: Product[] = [
 
 
   {
-    id: "prod_dbb01038bef97f4efc4e1c03d2ac9c1a",
-    slug: "rocket-league-novabot-flip-reset",
-    name: "Rocket League Nova SSL Bot",
+    id: "prod_5d0e7a1e55f28eba51dbd0f419984cfb",
+    slug: "rocket-league-wolvot-ssl-bot",
+    name: "Rocket League Wolvot SSL Bot",
     storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
-    storrikProductId: "prod_dbb01038bef97f4efc4e1c03d2ac9c1a",
+    storrikProductId: "prod_5d0e7a1e55f28eba51dbd0f419984cfb",
     image: "/images/products/novabot-box.jpg",
     showcaseImages: ["/images/showcase/novabot-showcase.jpg"],
     description:
       "[+] SSL Rank in 1v1 Gameplay\n" +
-      "[+] GC2-GC3 performance in 2v2\n" +
-      "[+] Advanced flip reset mechanics\n" +
-      "[+] Mastered air dribble execution\n" +
-      "[+] Strategic bump plays\n" +
-      "[+] Double tap accuracy\n" +
-      "[+] Ground-to-air dribble control\n" +
-      "[+] Top 25 ranked bot worldwide\n\n" +
-      "**Elite Performance**\n" +
-      "NovaBot represents the pinnacle of Rocket League AI technology. Achieving SSL rank in 1v1 matches and consistently performing at GC2-GC3 level in 2v2 gameplay, this bot is recognized as one of the top 25 bots in the world.\n\n" +
-      "**Advanced Mechanics**\n" +
-      "Specializing in flip resets and advanced aerial mechanics, NovaBot executes complex maneuvers that rival professional players. From precise air dribbles to devastating double taps, every move is calculated for maximum effectiveness.\n\n" +
-      "**Strategic Gameplay**\n" +
-      "[+] Flip reset chains for unpredictable offense\n" +
-      "[+] Air dribble pressure to maintain control\n" +
-      "[+] Bump plays to disrupt opponent positioning\n" +
-      "[+] Double tap goals from backboard reads\n" +
-      "[+] Ground-to-air transitions for fluid attacks\n\n" +
-      "**Why NovaBot?**\n" +
-      "For players seeking the absolute best AI performance, NovaBot delivers world-class gameplay with a focus on mechanical mastery. Perfect for those who want to dominate high-rank matches with flashy, effective plays.\n\n" +
+      "[+] Flip Reset Specialist\n" +
+      "[+] Advanced aerial mechanics\n" +
+      "[+] Perfect flip reset chains\n" +
+      "[+] Air dribble mastery\n" +
+      "[+] Wall to air transitions\n" +
+      "[+] Backboard reads\n" +
+      "[+] Undetected & reliable\n\n" +
+      "**SSL Performance**\n" +
+      "Wolvot is an elite Rocket League bot built specifically for SSL players who want to dominate flip reset plays. With precision mechanics and consistent execution, Wolvot delivers professional-level gameplay in competitive matches.\n\n" +
+      "**Flip Reset Mastery**\n" +
+      "Specialized in flip reset mechanics, Wolvot executes complex aerial maneuvers with surgical precision. Every movement is calculated for maximum impact and scoring potential.\n\n" +
+      "**Competitive Edge**\n" +
+      "[+] Flip reset chains that catch defenders off-guard\n" +
+      "[+] Air dribble pressure to maintain possession\n" +
+      "[+] Wall-to-air transitions for creative plays\n" +
+      "[+] Backboard reads for high-percentage shots\n" +
+      "[+] Consistent SSL-level decision making\n\n" +
+      "**Why Wolvot?**\n" +
+      "Wolvot is engineered for serious competitive players who demand reliability and advanced mechanics. If you want to master flip resets and reach new heights in competitive Rocket League, Wolvot is your answer.\n\n" +
       "**Additional Info**\n" +
-      "NovaBot is the premium choice for serious players. With SSL-level decision making and GC2-GC3 consistency in team play, this bot will elevate your game to professional levels.",
+      "Wolvot combines mechanical mastery with tactical awareness, making it the go-to choice for SSL players seeking a flip reset specialist bot.",
     category: "Rocket League",
     isFeatured: true,
-    badge: "Top 25 Worldwide",
+    badge: "Flip Reset King",
     variants: [
-      { id: "var_0e30cd8b290c3009136b2775f50a8ea3", name: "1 Day", price: 25.99, stock: 50 },
-      { id: "var_7afa308d2fb3dbf96fba96e89c22c4e9", name: "1 Week", price: 49.99, stock: 50 },
-      { id: "var_b0c60bfe8e77dd8c5aaf8bcb5e234039", name: "1 Month", price: 75.99, stock: 50 },
-      { id: "var_83ed1f1943b0d95294713012603934d9", name: "Lifetime", price: 475.99, stock: 50 },
+      { id: "var_5a17241f32b6a4c517a6f1e0053ceb97", name: "3 DAYS", price: 39.99, stock: 50 },
+      { id: "var_6f81eb6216434c21887bedc2e3328dc7", name: "1 WEEK", price: 59.99, stock: 50 },
+      { id: "var_a8450162d97d92565495dfab310d7213", name: "1 MONTH", price: 119.99, stock: 50 },
+      { id: "var_80fb2b4dcb5b7d728f33b98dc842b433", name: "3 MONTHS", price: 199.99, stock: 50 },
+      { id: "var_a4f4ab080044889185d65fcb80b89257", name: "LIFETIME", price: 399.99, stock: 50 },
     ],
     downloadUrl: "https://gofile.io/d/NZjDO1",
     status: "Undetected",
     videoUrl: "https://www.youtube.com/embed/GojV6ruv6Pk",
     reviews: [
       {
-        quote: "The flip resets are insane! Consistently hitting SSL in 1v1s with this bot.",
-        author: "MechanicGod",
+        quote: "Wolvot's flip reset chains are absolutely insane! Finally at SSL with this bot.",
+        author: "FlipResetKing",
         rating: 5,
         verified: true,
         variant: "LIFETIME",
       },
       {
-        quote: "Top 25 worldwide is no joke. This bot is on another level!",
-        author: "ProLeaguePlayer",
+        quote: "The consistency is unmatched. Every flip reset is executed perfectly.",
+        author: "CompetitivePlayer",
         rating: 5,
         verified: true,
         variant: "3 MONTHS",
       },
       {
-        quote: "Air dribbles and double taps look so clean. Best bot I've ever used.",
-        author: "AerialAce",
+        quote: "Best flip reset bot I've ever used. Well worth the investment.",
+        author: "ProMechanics",
         rating: 5,
         verified: true,
         variant: "1 MONTH",
@@ -389,6 +390,89 @@ export const products: Product[] = [
   ],
 },
 
+  {
+    id: "prod_20dbdc5ffecad4f375df62ffd3ae7070",
+    slug: "bf6-nova",
+    name: "BF6 Nova",
+    storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
+    storrikProductId: "prod_20dbdc5ffecad4f375df62ffd3ae7070",
+    image: "/images/products/bf6-nova-box.png",
+    description:
+      "[+] Advanced Aimbot System\n" +
+      "[+] Full-Map ESP Detection\n" +
+      "[+] Enemy Position Tracking\n" +
+      "[+] Operator Identification\n" +
+      "[+] Smooth Aim Curves\n" +
+      "[+] Anti-Aim Detection\n" +
+      "[+] Customizable Settings\n" +
+      "[+] External Undetected\n\n" +
+      "**System Requirements**\n" +
+      "**Game Client:** Battlefield 6\n" +
+      "**Operating System:** Windows 10/11 (64-bit)\n" +
+      "**Processor:** Intel Core i5 or AMD Ryzen 5\n" +
+      "**RAM:** 8GB minimum\n" +
+      "**GPU:** NVIDIA GTX 1060 or better\n\n" +
+      "**Overview**\n" +
+      "BF6 Nova delivers professional-grade cheating tools for Battlefield 6 with comprehensive ESP and intelligent aimbot systems. Perfect for competitive play with advanced targeting and detection features.\n\n" +
+      "**Key Features**\n" +
+      "[+] Real-time enemy detection and tracking\n" +
+      "[+] Full map awareness with ESP\n" +
+      "[+] Smooth, natural aimbot curves\n" +
+      "[+] Customizable sensitivity settings\n" +
+      "[+] Completely undetected and stable\n" +
+      "[+] Easy-to-use interface",
+    category: "Battlefield 6",
+    isFeatured: false,
+    variants: [
+      { id: "var_bfabd0e0f39dd6f14b9fa5a7b84dcbd8", name: "1 DAY", price: 9.99, stock: 50 },
+      { id: "var_3d83e2527700077f047707eca7f163c2", name: "1 WEEK", price: 29.99, stock: 50 },
+      { id: "var_128310363959850a25773a24d4c28490", name: "1 MONTH", price: 59.99, stock: 50 },
+      { id: "var_8392e709f47ba801d2162269d86ded85", name: "3 MONTHS", price: 155.99, stock: 50 },
+    ],
+    status: "Available",
+  },
+
+  {
+    id: "prod_c5226f707ea6200051b0a20e5448c311",
+    slug: "rocket-league-kumori-bot",
+    name: "Kumori (Airroll) Rocket League Kumori Bot",
+    storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
+    storrikProductId: "prod_c5226f707ea6200051b0a20e5448c311",
+    image: "/images/products/kumori-bot-box.png",
+    description:
+      "[+] GC3 - SSL Performance\n" +
+      "[+] Advanced Airroll Mechanics\n" +
+      "[+] Smooth Ball Control\n" +
+      "[+] Aerial Consistency\n" +
+      "[+] Wall Plays & Rotations\n" +
+      "[+] Flip Reset Capable\n" +
+      "[+] 1v1 Specialist\n" +
+      "[+] High-Speed Gameplay\n\n" +
+      "**Advanced Mechanics**\n" +
+      "Kumori specializes in advanced airroll mechanics, delivering smooth and consistent aerial plays. With mastery of complex rotations and ball control, Kumori dominates 1v1 matches at GC3 and SSL levels.\n\n" +
+      "**System Requirements**\n" +
+      "**Game Client:** Rocket League (Epic Games or Steam)\n" +
+      "**Operating System:** Windows 10/11 (64-bit)\n" +
+      "**Processor:** Intel Core i5 or AMD Ryzen 5\n\n" +
+      "**1v1 Dominance**\n" +
+      "[+] Advanced airroll execution for unpredictable play\n" +
+      "[+] Smooth transitions between offensive and defensive plays\n" +
+      "[+] High-speed aerial mechanics\n" +
+      "[+] Precise ball control on walls and ceilings\n" +
+      "[+] Consistent GC3-SSL performance\n\n" +
+      "**Why Kumori?**\n" +
+      "Kumori is engineered for players who want mastery of airroll mechanics and advanced aerial plays. Perfect for 1v1 grinders looking to reach and maintain SSL rank with style and precision.",
+    category: "Rocket League",
+    isFeatured: false,
+    variants: [
+      { id: "var_9f97bdd5c66a13710df5b29fe9489b2e", name: "3 DAYS", price: 9.99, stock: 50 },
+      { id: "var_ca5ab33b90c430b112400826a9c122b5", name: "1 WEEK", price: 19.99, stock: 50 },
+      { id: "var_5c398e0cdabcfee729b8d41f927146d5", name: "1 MONTH", price: 29.99, stock: 50 },
+      { id: "var_e30533537e76dffc310198507d31eebc", name: "3 MONTHS", price: 59.99, stock: 50 },
+      { id: "var_9558093622d9dc1183b84dd3f65cc4e8", name: "LIFETIME", price: 149.99, stock: 50 },
+    ],
+    status: "Available",
+  },
 
   {
     id: "prod_546f00597b816de223cf98ac3e253a4a",
