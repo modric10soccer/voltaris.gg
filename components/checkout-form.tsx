@@ -53,6 +53,7 @@ export default function CheckoutForm({ productSlug }: CheckoutFormProps) {
   const [copiedAddress, setCopiedAddress] = useState<string | null>(null)
   const [copiedAmount, setCopiedAmount] = useState(false)
   const [userWalletAddress, setUserWalletAddress] = useState("")
+  const [graceActive, setGraceActive] = useState(false)
   const t = translations["en"]
 
   const itemsToProcess = React.useMemo(() => {
@@ -74,6 +75,18 @@ export default function CheckoutForm({ productSlug }: CheckoutFormProps) {
       setError((prev) => (prev === "Please checkout items one at a time for now." ? null : prev))
     }
   }, [itemsToProcess])
+
+  // Grace period: if cart has items but details mapping hasn't resolved yet, keep a short loading state
+  React.useEffect(() => {
+    const totalItems = getTotalItems()
+    if (isHydrated && totalItems > 0 && itemsToProcess.length === 0) {
+      setGraceActive(true)
+      const t = setTimeout(() => setGraceActive(false), 1200)
+      return () => clearTimeout(t)
+    } else {
+      setGraceActive(false)
+    }
+  }, [isHydrated, itemsToProcess, getTotalItems])
 
   const subtotal = itemsToProcess.reduce((sum, item) => sum + item.variant.price * item.quantity, 0)
   const total = subtotal
@@ -156,18 +169,17 @@ export default function CheckoutForm({ productSlug }: CheckoutFormProps) {
     }
   }
 
-  if (!isHydrated) {
+  if (!isHydrated || graceActive) {
     return (
       <div className="flex min-h-[calc(100vh-64px)] items-center justify-center text-foreground">
         <div className="flex items-center gap-3 text-muted-foreground">
           <Loader2 className="h-5 w-5 animate-spin" />
-          <span>Loading your cart...</span>
+          <span>{!isHydrated ? "Loading your cart..." : "Preparing your checkout…"}</span>
         </div>
       </div>
     )
   }
 
-  // Avoid a brief empty state if items exist but details haven't resolved yet
   if (itemsToProcess.length === 0) {
     const totalItems = getTotalItems()
     if (totalItems > 0) {
