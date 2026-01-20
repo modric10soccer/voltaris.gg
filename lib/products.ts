@@ -230,8 +230,8 @@ export const products: Product[] = [
     name: "Rocket League Wolvot SSL Bot",
     storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
     storrikProductId: "prod_5d0e7a1e55f28eba51dbd0f419984cfb",
-    image: "/images/products/novabot-box.jpg",
-    showcaseImages: ["/images/showcase/novabot-showcase.jpg"],
+    image: "/images/products/wolvot-bot-box.jpg",
+    showcaseImages: ["/images/showcase/wolvot-showcase.jpg"],
     description:
       "[+] SSL Rank in 1v1 Gameplay\n" +
       "[+] Flip Reset Specialist\n" +
@@ -267,7 +267,7 @@ export const products: Product[] = [
     ],
     downloadUrl: "https://gofile.io/d/NZjDO1",
     status: "Undetected",
-    videoUrl: "https://www.youtube.com/embed/GojV6ruv6Pk",
+    videoUrl: "https://www.youtube.com/embed/wolvot-video",
     reviews: [
       {
         quote: "Wolvot's flip reset chains are absolutely insane! Finally at SSL with this bot.",
