@@ -34,7 +34,7 @@ declare global {
 }
 
 interface CheckoutFormProps {
-  productSlug: string
+  productSlug?: string
 }
 
 export default function CheckoutForm({ productSlug }: CheckoutFormProps) {
@@ -79,9 +79,17 @@ export default function CheckoutForm({ productSlug }: CheckoutFormProps) {
   // Grace period: if cart has items but details mapping hasn't resolved yet, keep a short loading state
   React.useEffect(() => {
     const totalItems = getTotalItems()
-    if (isHydrated && totalItems > 0 && itemsToProcess.length === 0) {
+    let hasStoredItems = false
+    try {
+      if (typeof window !== "undefined") {
+        const raw = localStorage.getItem("nano_cart")
+        hasStoredItems = !!raw && JSON.parse(raw || "[]").length > 0
+      }
+    } catch {}
+
+    if ((isHydrated && totalItems > 0 && itemsToProcess.length === 0) || (!isHydrated && hasStoredItems)) {
       setGraceActive(true)
-      const t = setTimeout(() => setGraceActive(false), 1200)
+      const t = setTimeout(() => setGraceActive(false), 2500)
       return () => clearTimeout(t)
     } else {
       setGraceActive(false)
