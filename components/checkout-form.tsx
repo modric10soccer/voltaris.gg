@@ -42,7 +42,7 @@ export default function CheckoutForm({ productSlug }: CheckoutFormProps) {
   const variantId = searchParams.get("variantId")
   const quantityParam = Number.parseInt(searchParams.get("quantity") || "1")
 
-  const { getCartDetails, removeItem, isHydrated } = useCart()
+  const { getCartDetails, getTotalItems, removeItem, isHydrated } = useCart()
   const cartDetails = getCartDetails()
 
   const [agreedToTerms, setAgreedToTerms] = useState(false)
@@ -167,7 +167,19 @@ export default function CheckoutForm({ productSlug }: CheckoutFormProps) {
     )
   }
 
+  // Avoid a brief empty state if items exist but details haven't resolved yet
   if (itemsToProcess.length === 0) {
+    const totalItems = getTotalItems()
+    if (totalItems > 0) {
+      return (
+        <div className="flex min-h-[calc(100vh-64px)] items-center justify-center text-foreground">
+          <div className="flex items-center gap-3 text-muted-foreground">
+            <Loader2 className="h-5 w-5 animate-spin" />
+            <span>Preparing your checkout…</span>
+          </div>
+        </div>
+      )
+    }
     return (
       <div className="flex min-h-[calc(100vh-64px)] items-center justify-center text-foreground px-4">
         <div className="flex flex-col items-center justify-center py-12 px-6 text-center bg-zinc-900/60 border border-zinc-800 rounded-2xl">

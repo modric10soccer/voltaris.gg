@@ -1,4 +1,4 @@
-export const runtime = 'edge';
+// Use default runtime to ensure robust client hydration for cart
 
 import SiteHeader from "@/components/site-header"
 import SiteFooter from "@/components/site-footer"
