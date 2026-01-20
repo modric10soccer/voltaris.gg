@@ -1182,7 +1182,7 @@ export const products: Product[] = [
     name: "R6 Siege Perc",
     storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
     storrikProductId: "prod_0084ffd824317d81ee0fe58c05ad913f",
-    image: "/images/products/r6-perc.png",
+    image: "/images/products/r6-perc.png?v=3",
     description:
       "[+] Advanced Aimbot System\n" +
       "[+] Wall ESP Detection\n" +
