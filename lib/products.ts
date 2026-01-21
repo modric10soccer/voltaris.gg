@@ -64,13 +64,14 @@ export const products: Product[] = [
   {
     id: "prod_985a46df7189b2a13a30a8c75ee239c8",
     slug: "rocket-league-requiem-ssl-bot",
-    name: "Rocket League Requiem SSL Bot",
+    name: "Rocket League Requiem v5 (Hell Mode)",
     storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
     storrikProductId: "prod_985a46df7189b2a13a30a8c75ee239c8",
     image: "/images/products/requiem-bot-box.png",
     showcaseImages: ["/images/showcase/ssl-requiem-gameplay.png"],
     downloadUrl: "https://gofile.io/d/NZjDO1",
     description:
+      "[+] Top 100 2v2 Ranked Performance\n" +
       "[+] SSL Rank in 2v2 Gameplay\n" +
       "[+] Apex 2v2 duo logic\n" +
       "[+] Flawless rotation & spacing\n" +
@@ -83,8 +84,9 @@ export const products: Product[] = [
       "**Graphics Card:** NVIDIA GTX 1050 Ti / AMD RX 560 or better\n" +
       "**Display Mode:** Fullscreen or Borderless Windowed\n\n" +
       "**Overview**\n" +
-      "Rocket League Requiem SSL Bot is the world's first AI engineered specifically for 2v2 domination. Unlike standard bots, it understands team synergy, rotation, and passing. Whether you need a perfect duo partner to boost your main or an automated machine to climb leaderboards, Rocket League Requiem SSL Bot is the apex predator.\n\n" +
-      "**Why Rocket League Requiem SSL Bot?**\n" +
+      "Rocket League Requiem v5 (Hell Mode) has achieved a major milestone—breaking into the Top 100 in 2v2 ranked play. This is the world's first AI engineered specifically for elite 2v2 domination. Unlike standard bots, it understands team synergy, rotation, and passing at the highest level. Whether you need a perfect duo partner to boost your main or an automated machine to climb leaderboards, Rocket League Requiem v5 is the apex predator.\n\n" +
+      "**Why Rocket League Requiem v5 (Hell Mode)?**\n" +
+      "[+] Top 100 Performance: Proven excellence in ranked 2v2 play\n" +
       "[+] Apex Duo Logic: Flawless 2v2 rotation and spacing\n" +
       "[+] God-Tier Mechanics: Double Taps & Flicks\n" +
       "[+] Human-Like Playstyle: Strategic defender removal & smart passing\n" +
@@ -92,15 +94,15 @@ export const products: Product[] = [
       "**Download Link**\n" +
       "https://transfer.it/t/429MysghGJzb\n\n" +
       "**Additional Info**\n" +
-      "Stop losing because of bad teammates. Get the perfect AI partner, lock down the field, and reach your peak rank today.",
+      "Requiem v5 represents a breakthrough in AI-assisted competitive gaming. These pricing adjustments reflect the exceptional capabilities of our AI while helping us maintain a balanced competitive environment. Stop losing because of bad teammates. Get the perfect AI partner, lock down the field, and reach your peak rank today.",
     category: "Rocket League",
     isFeatured: true,
     variants: [
-      { id: "var_efb5f9e8e9e2bb94247251fc58c501dc", name: "3 DAY", price: 29.99, stock: 10 },
-      { id: "var_dcb4dc217456c2bea81c9a3ef7cf1ac4", name: "1 WEEK", price: 59.99, stock: 8 },
-      { id: "var_1dad2805d8a0974604b6b92e6de2852e", name: "1 MONTH", price: 144.99, stock: 12 },
-      { id: "var_43fad353bfde6323ad72b4e4b0e9f145", name: "3 MONTH", price: 409.99, stock: 12 },
-      { id: "var_11233800c69fc2f429fafa36b3ea5a2a", name: "LIFETIME", price: 879.99, stock: 20 },
+      { id: "var_efb5f9e8e9e2bb94247251fc58c501dc", name: "3 DAY", price: 40, stock: 10 },
+      { id: "var_dcb4dc217456c2bea81c9a3ef7cf1ac4", name: "1 WEEK", price: 75, stock: 8 },
+      { id: "var_1dad2805d8a0974604b6b92e6de2852e", name: "1 MONTH", price: 140, stock: 12 },
+      { id: "var_43fad353bfde6323ad72b4e4b0e9f145", name: "3 MONTH", price: 300, stock: 12 },
+      { id: "var_8a5c3b1f9f2e7d4c1b6a9e3f2c8d5a1b", name: "6 MONTH", price: 520, stock: 10 },
     ],
     videoUrl: "https://www.youtube.com/embed/qxcWQy_XNGU",
     reviews: [
