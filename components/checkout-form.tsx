@@ -89,7 +89,7 @@ export default function CheckoutForm({ productSlug }: CheckoutFormProps) {
 
     if ((isHydrated && totalItems > 0 && itemsToProcess.length === 0) || (!isHydrated && hasStoredItems)) {
       setGraceActive(true)
-      const t = setTimeout(() => setGraceActive(false), 2500)
+      const t = setTimeout(() => setGraceActive(false), 5000)
       return () => clearTimeout(t)
     } else {
       setGraceActive(false)
@@ -119,7 +119,21 @@ export default function CheckoutForm({ productSlug }: CheckoutFormProps) {
       setError("You must agree to the Terms of Service.")
       return
     }
+    
+    // Check if items are in localStorage but haven't been mapped yet
+    let hasStoredItems = false
+    try {
+      if (typeof window !== "undefined") {
+        const raw = localStorage.getItem("nano_cart")
+        hasStoredItems = !!raw && JSON.parse(raw || "[]").length > 0
+      }
+    } catch {}
+    
     if (itemsToProcess.length === 0) {
+      if (hasStoredItems) {
+        setError("Your cart is loading. Please wait a moment and try again.")
+        return
+      }
       setError("No items to checkout.")
       return
     }
