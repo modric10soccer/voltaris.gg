@@ -765,7 +765,7 @@ export const products: Product[] = [
     category: "Rocket League",
     isFeatured: true,
     variants: [
-      { id: "var_c188f3f4fe54dbf7088b2b5a16b7b8e7", name: "PREMIUM RANKED READY", price: 29.99, stock: 10 },
+      { id: "var_c188f3f4fe54dbf7088b2b5a16b7b8e7", name: "PREMIUM RANKED READY", price: 5.99, stock: 10 },
     ],
     status: "Available",
     reviews: [
