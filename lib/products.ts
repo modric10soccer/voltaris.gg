@@ -729,6 +729,80 @@ export const products: Product[] = [
     status: "Undetected",
     detectionStatus: "Undetected", // Added detection status
   },
+  {
+    id: "prod_a9931083e38b856b76467e6554c9130c",
+    slug: "premium-ranked-ready",
+    name: "Premium Ranked Ready",
+    storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
+    storrikProductId: "prod_a9931083e38b856b76467e6554c9130c",
+    image: "/images/products/ranked-ready-box.png",
+    showcaseImages: ["/images/showcase/ranked-ready-showcase.png"],
+    description:
+      "[+] Fully hand-grinded account\n" +
+      "[+] No cheats or exploits used\n" +
+      "[+] Ranked unlocked and ready\n" +
+      "[+] Fresh account for grinding or progression\n" +
+      "[+] Clean competitive record\n" +
+      "[+] No bans or restrictions\n" +
+      "[+] Immediate rank availability\n" +
+      "[+] Perfect for competitive grinding\n\n" +
+      "**Account Features**\n" +
+      "**Rank Status:** Ranked Unlocked\n" +
+      "**Grind Level:** Fully hand-grinded\n" +
+      "**Account Status:** Clean & Fresh\n" +
+      "**Competitive Record:** No cheats or exploits\n\n" +
+      "**Overview**\n" +
+      "Premium Ranked Ready accounts are fully hand-grinded with zero cheats or exploits used. Every account comes with ranked unlocked and ready for immediate competitive play. Perfect for players who want a fresh start without the grind, or for those looking to boost their competitive ranking.\n\n" +
+      "**Why Premium Ranked Ready?**\n" +
+      "[+] Fully hand-grinded by professional players\n" +
+      "[+] Zero automation or exploit usage\n" +
+      "[+] Ranked mode immediately available\n" +
+      "[+] Clean account with no restrictions\n" +
+      "[+] Ready for competitive play instantly\n" +
+      "[+] Perfect foundation for rank progression\n\n" +
+      "**Additional Info**\n" +
+      "Each Premium Ranked Ready account has been carefully grinded using legitimate gameplay methods only. No cheats, no exploits, no shortcuts. Your fresh start to competitive glory begins here.",
+    category: "Rocket League",
+    isFeatured: true,
+    variants: [
+      { id: "var_c188f3f4fe54dbf7088b2b5a16b7b8e7", name: "PREMIUM RANKED READY", price: 29.99, stock: 10 },
+    ],
+    status: "Available",
+    reviews: [
+      {
+        quote: "Perfectly grinded account! Started my competitive journey with this. Highly recommend!",
+        author: "FreshStart_RL",
+        date: "Jan 24, 2025",
+        rating: 5,
+        verified: true,
+        variant: "PREMIUM RANKED READY",
+      },
+      {
+        quote: "No issues at all. Clean account, ranked unlocked immediately. Perfect!",
+        author: "CompetitivePlayer",
+        date: "Jan 23, 2025",
+        rating: 5,
+        verified: true,
+        variant: "PREMIUM RANKED READY",
+      },
+      {
+        quote: "Great value for a hand-grinded account. No exploits, all legit gameplay!",
+        author: "LegitimatePro",
+        date: "Jan 22, 2025",
+        rating: 5,
+        verified: true,
+        variant: "PREMIUM RANKED READY",
+      },
+      {
+        quote: "Saved me so much grinding time. Already at a competitive rank!",
+        author: "TimeIsGold",
+        date: "Jan 21, 2025",
+        rating: 5,
+        verified: true,
+        variant: "PREMIUM RANKED READY",
+      },
+    ],
+  },
 
 
 
