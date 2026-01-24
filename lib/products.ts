@@ -735,8 +735,8 @@ export const products: Product[] = [
     name: "Premium Ranked Ready",
     storrikStoreId: "STORE_4PtCG2FcnL0AsqYSEC0dui0nMvQlg690",
     storrikProductId: "prod_a9931083e38b856b76467e6554c9130c",
-    image: "/images/products/ranked-ready-box.png",
-    showcaseImages: ["/images/showcase/ranked-ready-showcase.png"],
+    image: "/images/products/ranked-ready.png",
+    showcaseImages: ["/images/ranked-ready-showcase.png"],
     description:
       "[+] Fully hand-grinded account\n" +
       "[+] No cheats or exploits used\n" +
