@@ -98,11 +98,13 @@ export const products: Product[] = [
     category: "Rocket League",
     isFeatured: true,
     variants: [
-      { id: "var_efb5f9e8e9e2bb94247251fc58c501dc", name: "3 DAY", price: 40, stock: 10 },
-      { id: "var_dcb4dc217456c2bea81c9a3ef7cf1ac4", name: "1 WEEK", price: 75, stock: 8 },
-      { id: "var_1dad2805d8a0974604b6b92e6de2852e", name: "1 MONTH", price: 140, stock: 12 },
-      { id: "var_43fad353bfde6323ad72b4e4b0e9f145", name: "3 MONTH", price: 300, stock: 12 },
-      { id: "var_8a5c3b1f9f2e7d4c1b6a9e3f2c8d5a1b", name: "6 MONTH", price: 520, stock: 10 },
+      { id: "var_919c71c038b84ec091933ce6309d4086", name: "1 DAY", price: 14.99, stock: 10 },
+      { id: "var_efb5f9e8e9e2bb94247251fc58c501dc", name: "3 DAY", price: 34.99, stock: 10 },
+      { id: "var_dcb4dc217456c2bea81c9a3ef7cf1ac4", name: "1 WEEK", price: 64.99, stock: 8 },
+      { id: "var_1dad2805d8a0974604b6b92e6de2852e", name: "1 MONTH", price: 144.99, stock: 12 },
+      { id: "var_43fad353bfde6323ad72b4e4b0e9f145", name: "3 MONTH", price: 304.99, stock: 12 },
+      { id: "var_11233800c69fc2f429fafa36b3ea5a2a", name: "6 MONTH", price: 524.99, stock: 10 },
+      { id: "var_077f9d5f30cc405cdfc7a478a44a5961", name: "LIFETIME", price: 804.99, stock: 5 },
     ],
     videoUrl: "https://www.youtube.com/embed/qxcWQy_XNGU",
     reviews: [
